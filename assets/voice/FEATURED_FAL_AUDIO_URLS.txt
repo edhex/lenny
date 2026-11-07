@@ -1,0 +1,8 @@
+hello.wav	https://v3b.fal.media/files/b/0ab17b3c/wqgy8CBBE-U_2xZUtv-Nd_gemini_tts_output.wav
+home.wav	https://v3b.fal.media/files/b/0ab17b42/Ko_rt7syQMV7vwkLHmMjQ_gemini_tts_output.wav
+mission.wav	https://v3b.fal.media/files/b/0ab17b42/72TxAItmbOaxabbOieu7m_gemini_tts_output.wav
+reward.wav	https://v3b.fal.media/files/b/0ab17b42/1Ek6vKDX3RQ-WRmSGOyjH_gemini_tts_output.wav
+feed.wav	https://v3b.fal.media/files/b/0ab17b42/B2gLdZI8CY6FCw3-LSjjg_gemini_tts_output.wav
+hug.wav	https://v3b.fal.media/files/b/0ab17b42/GwXLt0hjH3HOiy9SC1uOQ_gemini_tts_output.wav
+allhearts.wav	https://v3b.fal.media/files/b/0ab17b42/87UMjJhAiT3IPcnDtWmCa_gemini_tts_output.wav
+jokeprelude.wav	https://v3b.fal.media/files/b/0ab17b42/SgD4Vw-4itU9oglywlFBT_gemini_tts_output.wav

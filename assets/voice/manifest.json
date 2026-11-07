@@ -1,0 +1,2455 @@
+{
+  "edition": "Lenny scripted speech for Fal (Australian female)",
+  "voice": "Aoede",
+  "model": "google/gemini-3.8-flash-tts",
+  "names": [
+    "Banksia",
+    "Captain Banksia",
+    "Captain Comet",
+    "Rainbow Rocket",
+    "Thunder Paws",
+    "Super Sprout",
+    "Star Jumper",
+    "Princess Paws",
+    "Moonbeam",
+    "Rocket Ranger"
+  ],
+  "speech": [
+    {
+      "id": "65ce90a33b2c3b6b",
+      "text": "Hello, explorer! What should I call you? Type your name or nickname, then tap Let’s play.",
+      "group": "welcome",
+      "file": "assets/voice/library/65ce90a33b2c3b6b.mp3"
+    },
+    {
+      "id": "3bb3af1bc56fb696",
+      "text": "Oh, hello there! I’m Lenny. Hee hee! Shall we go on a little adventure?",
+      "group": "welcome",
+      "file": "assets/voice/library/3bb3af1bc56fb696.mp3"
+    },
+    {
+      "id": "faf7a9053b420276",
+      "text": "Oh, hello, Banksia! You can go on an adventure, talk to me, or hear a joke. Tap a big button.",
+      "group": "name",
+      "file": "assets/voice/library/faf7a9053b420276.mp3"
+    },
+    {
+      "id": "3664abac9d785ef9",
+      "text": "Mmm! That was scrumptious! High paws, Banksia!",
+      "group": "name",
+      "file": "assets/voice/library/3664abac9d785ef9.mp3"
+    },
+    {
+      "id": "2a4a533f06539d38",
+      "text": "A little lion hug, Banksia! You found a secret heart. Squeeeze!",
+      "group": "name",
+      "file": "assets/voice/library/2a4a533f06539d38.mp3"
+    },
+    {
+      "id": "ad733447da19344d",
+      "text": "All six! A giant lion hug, Banksia! You found a secret heart. Squeeeze!",
+      "group": "name",
+      "file": "assets/voice/library/ad733447da19344d.mp3"
+    },
+    {
+      "id": "eee4ba4b5ba4c0f9",
+      "text": "Oh, hello, Captain Banksia! You can go on an adventure, talk to me, or hear a joke. Tap a big button.",
+      "group": "name",
+      "file": "assets/voice/library/eee4ba4b5ba4c0f9.mp3"
+    },
+    {
+      "id": "e71231c1b633cc76",
+      "text": "Mmm! That was scrumptious! High paws, Captain Banksia!",
+      "group": "name",
+      "file": "assets/voice/library/e71231c1b633cc76.mp3"
+    },
+    {
+      "id": "06fdc38df9e43ba4",
+      "text": "A little lion hug, Captain Banksia! You found a secret heart. Squeeeze!",
+      "group": "name",
+      "file": "assets/voice/library/06fdc38df9e43ba4.mp3"
+    },
+    {
+      "id": "f1ed2e6fbf7de8e4",
+      "text": "All six! A giant lion hug, Captain Banksia! You found a secret heart. Squeeeze!",
+      "group": "name",
+      "file": "assets/voice/library/f1ed2e6fbf7de8e4.mp3"
+    },
+    {
+      "id": "aae753e28adc7361",
+      "text": "Oh, hello, Captain Comet! You can go on an adventure, talk to me, or hear a joke. Tap a big button.",
+      "group": "name",
+      "file": "assets/voice/library/aae753e28adc7361.mp3"
+    },
+    {
+      "id": "1ee53fe255898661",
+      "text": "Mmm! That was scrumptious! High paws, Captain Comet!",
+      "group": "name",
+      "file": "assets/voice/library/1ee53fe255898661.mp3"
+    },
+    {
+      "id": "7bf027f1fa53e34d",
+      "text": "A little lion hug, Captain Comet! You found a secret heart. Squeeeze!",
+      "group": "name",
+      "file": "assets/voice/library/7bf027f1fa53e34d.mp3"
+    },
+    {
+      "id": "8762754f59d0767e",
+      "text": "All six! A giant lion hug, Captain Comet! You found a secret heart. Squeeeze!",
+      "group": "name",
+      "file": "assets/voice/library/8762754f59d0767e.mp3"
+    },
+    {
+      "id": "65a362392da5eae7",
+      "text": "Oh, hello, Rainbow Rocket! You can go on an adventure, talk to me, or hear a joke. Tap a big button.",
+      "group": "name",
+      "file": "assets/voice/library/65a362392da5eae7.mp3"
+    },
+    {
+      "id": "6870d2982e0a1516",
+      "text": "Mmm! That was scrumptious! High paws, Rainbow Rocket!",
+      "group": "name",
+      "file": "assets/voice/library/6870d2982e0a1516.mp3"
+    },
+    {
+      "id": "dfcd11d4a4fc7db2",
+      "text": "A little lion hug, Rainbow Rocket! You found a secret heart. Squeeeze!",
+      "group": "name",
+      "file": "assets/voice/library/dfcd11d4a4fc7db2.mp3"
+    },
+    {
+      "id": "d9d5b3246e2f06c2",
+      "text": "All six! A giant lion hug, Rainbow Rocket! You found a secret heart. Squeeeze!",
+      "group": "name",
+      "file": "assets/voice/library/d9d5b3246e2f06c2.mp3"
+    },
+    {
+      "id": "665cff1362933b08",
+      "text": "Oh, hello, Thunder Paws! You can go on an adventure, talk to me, or hear a joke. Tap a big button.",
+      "group": "name",
+      "file": "assets/voice/library/665cff1362933b08.mp3"
+    },
+    {
+      "id": "2d502a2637c5c0e0",
+      "text": "Mmm! That was scrumptious! High paws, Thunder Paws!",
+      "group": "name",
+      "file": "assets/voice/library/2d502a2637c5c0e0.mp3"
+    },
+    {
+      "id": "0bbbd2e1ab16128c",
+      "text": "A little lion hug, Thunder Paws! You found a secret heart. Squeeeze!",
+      "group": "name",
+      "file": "assets/voice/library/0bbbd2e1ab16128c.mp3"
+    },
+    {
+      "id": "a4a636355b7b3f15",
+      "text": "All six! A giant lion hug, Thunder Paws! You found a secret heart. Squeeeze!",
+      "group": "name",
+      "file": "assets/voice/library/a4a636355b7b3f15.mp3"
+    },
+    {
+      "id": "d494ca258b401d9e",
+      "text": "Oh, hello, Super Sprout! You can go on an adventure, talk to me, or hear a joke. Tap a big button.",
+      "group": "name",
+      "file": "assets/voice/library/d494ca258b401d9e.mp3"
+    },
+    {
+      "id": "aec4f40ce3d044b3",
+      "text": "Mmm! That was scrumptious! High paws, Super Sprout!",
+      "group": "name",
+      "file": "assets/voice/library/aec4f40ce3d044b3.mp3"
+    },
+    {
+      "id": "c739db0b060b3a50",
+      "text": "A little lion hug, Super Sprout! You found a secret heart. Squeeeze!",
+      "group": "name",
+      "file": "assets/voice/library/c739db0b060b3a50.mp3"
+    },
+    {
+      "id": "0a23c86438d677db",
+      "text": "All six! A giant lion hug, Super Sprout! You found a secret heart. Squeeeze!",
+      "group": "name",
+      "file": "assets/voice/library/0a23c86438d677db.mp3"
+    },
+    {
+      "id": "ea84731b1543c2e6",
+      "text": "Oh, hello, Star Jumper! You can go on an adventure, talk to me, or hear a joke. Tap a big button.",
+      "group": "name",
+      "file": "assets/voice/library/ea84731b1543c2e6.mp3"
+    },
+    {
+      "id": "c8629786c160f0d6",
+      "text": "Mmm! That was scrumptious! High paws, Star Jumper!",
+      "group": "name",
+      "file": "assets/voice/library/c8629786c160f0d6.mp3"
+    },
+    {
+      "id": "e324e0451f641746",
+      "text": "A little lion hug, Star Jumper! You found a secret heart. Squeeeze!",
+      "group": "name",
+      "file": "assets/voice/library/e324e0451f641746.mp3"
+    },
+    {
+      "id": "3e08a315565ebe18",
+      "text": "All six! A giant lion hug, Star Jumper! You found a secret heart. Squeeeze!",
+      "group": "name",
+      "file": "assets/voice/library/3e08a315565ebe18.mp3"
+    },
+    {
+      "id": "85c58e802927fe2c",
+      "text": "Oh, hello, Princess Paws! You can go on an adventure, talk to me, or hear a joke. Tap a big button.",
+      "group": "name",
+      "file": "assets/voice/library/85c58e802927fe2c.mp3"
+    },
+    {
+      "id": "40a12ea74b6312ef",
+      "text": "Mmm! That was scrumptious! High paws, Princess Paws!",
+      "group": "name",
+      "file": "assets/voice/library/40a12ea74b6312ef.mp3"
+    },
+    {
+      "id": "4baa498cab909c72",
+      "text": "A little lion hug, Princess Paws! You found a secret heart. Squeeeze!",
+      "group": "name",
+      "file": "assets/voice/library/4baa498cab909c72.mp3"
+    },
+    {
+      "id": "06561fadacf1173a",
+      "text": "All six! A giant lion hug, Princess Paws! You found a secret heart. Squeeeze!",
+      "group": "name",
+      "file": "assets/voice/library/06561fadacf1173a.mp3"
+    },
+    {
+      "id": "a856b0787549c7ee",
+      "text": "Oh, hello, Moonbeam! You can go on an adventure, talk to me, or hear a joke. Tap a big button.",
+      "group": "name",
+      "file": "assets/voice/library/a856b0787549c7ee.mp3"
+    },
+    {
+      "id": "5ec2e9f3c8800674",
+      "text": "Mmm! That was scrumptious! High paws, Moonbeam!",
+      "group": "name",
+      "file": "assets/voice/library/5ec2e9f3c8800674.mp3"
+    },
+    {
+      "id": "d0566afa72276af9",
+      "text": "A little lion hug, Moonbeam! You found a secret heart. Squeeeze!",
+      "group": "name",
+      "file": "assets/voice/library/d0566afa72276af9.mp3"
+    },
+    {
+      "id": "34c36fbabafc0004",
+      "text": "All six! A giant lion hug, Moonbeam! You found a secret heart. Squeeeze!",
+      "group": "name",
+      "file": "assets/voice/library/34c36fbabafc0004.mp3"
+    },
+    {
+      "id": "19734d72eb025919",
+      "text": "Oh, hello, Rocket Ranger! You can go on an adventure, talk to me, or hear a joke. Tap a big button.",
+      "group": "name",
+      "file": "assets/voice/library/19734d72eb025919.mp3"
+    },
+    {
+      "id": "7355c4a8bba30156",
+      "text": "Mmm! That was scrumptious! High paws, Rocket Ranger!",
+      "group": "name",
+      "file": "assets/voice/library/7355c4a8bba30156.mp3"
+    },
+    {
+      "id": "83efee470f6d6fb9",
+      "text": "A little lion hug, Rocket Ranger! You found a secret heart. Squeeeze!",
+      "group": "name",
+      "file": "assets/voice/library/83efee470f6d6fb9.mp3"
+    },
+    {
+      "id": "587a581157a5822f",
+      "text": "All six! A giant lion hug, Rocket Ranger! You found a secret heart. Squeeeze!",
+      "group": "name",
+      "file": "assets/voice/library/587a581157a5822f.mp3"
+    },
+    {
+      "id": "e8513c6be566b29e",
+      "text": "Can your team find the treasure using words? Our mission is Secret Island Map. Tap Let’s go when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/e8513c6be566b29e.mp3"
+    },
+    {
+      "id": "345c1e8c35a323c7",
+      "text": "First, get ready. You need Paper, crayons, a small toy and a partner. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/345c1e8c35a323c7.mp3"
+    },
+    {
+      "id": "d3d4869f940731aa",
+      "text": "With a partner, make an island on paper. Add a start, a treasure and three obstacles. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/d3d4869f940731aa.mp3"
+    },
+    {
+      "id": "ed4bc1be51978d32",
+      "text": "Choose who gives directions first. Your partner moves a toy along the map, following your words. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/ed4bc1be51978d32.mp3"
+    },
+    {
+      "id": "5b5c588dc9e171c7",
+      "text": "Can you guide them to the treasure without touching an obstacle? Give one direction at a time. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/5b5c588dc9e171c7.mp3"
+    },
+    {
+      "id": "5d5c46e07e369782",
+      "text": "Swap jobs. Change any direction that was confusing, then tell each other which words helped. Show your partner the route and explain one direction you improved When you’re ready, show someone what you made or decided.",
+      "group": "mission",
+      "file": "assets/voice/library/5d5c46e07e369782.mp3"
+    },
+    {
+      "id": "9c7573e1598efc31",
+      "text": "Which direction did you change to help your partner? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.",
+      "group": "mission",
+      "file": "assets/voice/library/9c7573e1598efc31.mp3"
+    },
+    {
+      "id": "c1a2cc5eb7c62fad",
+      "text": "Let’s take one little part. Can your team find the treasure using words? Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/c1a2cc5eb7c62fad.mp3"
+    },
+    {
+      "id": "17aa293ecae7610d",
+      "text": "Let’s take one little part. With a partner, make an island on paper. Add a start, a treasure and three obstacles. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/17aa293ecae7610d.mp3"
+    },
+    {
+      "id": "9555ed03dc48d622",
+      "text": "Let’s take one little part. Choose who gives directions first. Your partner moves a toy along the map, following your words. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/9555ed03dc48d622.mp3"
+    },
+    {
+      "id": "04e15c5c6dc1d037",
+      "text": "Let’s take one little part. Can you guide them to the treasure without touching an obstacle? Give one direction at a time. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/04e15c5c6dc1d037.mp3"
+    },
+    {
+      "id": "0521b497c6c1aea2",
+      "text": "Let’s take one little part. Swap jobs. Change any direction that was confusing, then tell each other which words helped. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/0521b497c6c1aea2.mp3"
+    },
+    {
+      "id": "c0ddf351976fa7c5",
+      "text": "Can you build a picture in someone else’s mind? Our mission is The Secret Builder. Tap Let’s go when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/c0ddf351976fa7c5.mp3"
+    },
+    {
+      "id": "63c06cd7e8d6e86b",
+      "text": "First, get ready. You need Five safe objects, paper, crayons and a partner. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/63c06cd7e8d6e86b.mp3"
+    },
+    {
+      "id": "4287944346349c2f",
+      "text": "Choose five safe objects. One person makes a little model while the other looks away. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/4287944346349c2f.mp3"
+    },
+    {
+      "id": "e327abaf8d9a0d4e",
+      "text": "Describe your model to your partner. They draw it without looking. Use words like beside, above and between. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/e327abaf8d9a0d4e.mp3"
+    },
+    {
+      "id": "2ef51305522a1306",
+      "text": "Compare the drawing with the model. Find one detail your words could explain more clearly. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/2ef51305522a1306.mp3"
+    },
+    {
+      "id": "f9d581308a48291a",
+      "text": "Swap builder and artist. Try your clearer words and see what changes. Compare the drawing with your model and explain one clearer clue When you’re ready, show someone what you made or decided.",
+      "group": "mission",
+      "file": "assets/voice/library/f9d581308a48291a.mp3"
+    },
+    {
+      "id": "2475b964e465852d",
+      "text": "What did your partner’s drawing teach you about your clues? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.",
+      "group": "mission",
+      "file": "assets/voice/library/2475b964e465852d.mp3"
+    },
+    {
+      "id": "7788af1818ba210c",
+      "text": "Let’s take one little part. Can you build a picture in someone else’s mind? Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/7788af1818ba210c.mp3"
+    },
+    {
+      "id": "767085f393f59d5f",
+      "text": "Let’s take one little part. Choose five safe objects. One person makes a little model while the other looks away. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/767085f393f59d5f.mp3"
+    },
+    {
+      "id": "654e1b256ecd03c2",
+      "text": "Let’s take one little part. Describe your model to your partner. They draw it without looking. Use words like beside, above and between. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/654e1b256ecd03c2.mp3"
+    },
+    {
+      "id": "808615e2c2b3bb29",
+      "text": "Let’s take one little part. Compare the drawing with the model. Find one detail your words could explain more clearly. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/808615e2c2b3bb29.mp3"
+    },
+    {
+      "id": "79085d3d7b8698d3",
+      "text": "Let’s take one little part. Swap builder and artist. Try your clearer words and see what changes. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/79085d3d7b8698d3.mp3"
+    },
+    {
+      "id": "e82ad53183e77966",
+      "text": "A toy is stranded! Can your team bring it home? Our mission is Rescue Mission. Tap Let’s go when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/e82ad53183e77966.mp3"
+    },
+    {
+      "id": "76287929d0c4f31c",
+      "text": "First, get ready. You need A toy, paper for a river, two cushions, a towel and a partner. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/76287929d0c4f31c.mp3"
+    },
+    {
+      "id": "c8f213037ffc0cd1",
+      "text": "Put a toy beside a paper river on the floor. You have two cushions and a towel to make a safe route. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/c8f213037ffc0cd1.mp3"
+    },
+    {
+      "id": "da1820fe476ae492",
+      "text": "Make a rescue plan together. Each person adds an idea. Choose who plans the route and who moves the toy. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/da1820fe476ae492.mp3"
+    },
+    {
+      "id": "f96c25314b58d2ec",
+      "text": "Try the rescue. Keep your feet on the floor and pretend the toy cannot touch the river. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/f96c25314b58d2ec.mp3"
+    },
+    {
+      "id": "4552d6e02ddfdd0c",
+      "text": "Swap jobs and try a better route. Tell your partner which idea made the rescue work. Show your team’s rescue and explain which two ideas you used When you’re ready, show someone what you made or decided.",
+      "group": "mission",
+      "file": "assets/voice/library/4552d6e02ddfdd0c.mp3"
+    },
+    {
+      "id": "4003e00c00312665",
+      "text": "Which two ideas did your team use in the rescue? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.",
+      "group": "mission",
+      "file": "assets/voice/library/4003e00c00312665.mp3"
+    },
+    {
+      "id": "2291fee5fed9cf17",
+      "text": "Let’s take one little part. A toy is stranded! Can your team bring it home? Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/2291fee5fed9cf17.mp3"
+    },
+    {
+      "id": "c3986563cc348e55",
+      "text": "Let’s take one little part. Put a toy beside a paper river on the floor. You have two cushions and a towel to make a safe route. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/c3986563cc348e55.mp3"
+    },
+    {
+      "id": "b8766eb3a334a27a",
+      "text": "Let’s take one little part. Make a rescue plan together. Each person adds an idea. Choose who plans the route and who moves the toy. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/b8766eb3a334a27a.mp3"
+    },
+    {
+      "id": "0939b758497a38ab",
+      "text": "Let’s take one little part. Try the rescue. Keep your feet on the floor and pretend the toy cannot touch the river. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/0939b758497a38ab.mp3"
+    },
+    {
+      "id": "ae309b98c8076275",
+      "text": "Let’s take one little part. Swap jobs and try a better route. Tell your partner which idea made the rescue work. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/ae309b98c8076275.mp3"
+    },
+    {
+      "id": "bc8190e99f53264b",
+      "text": "One story. Two endings. Which will your audience choose? Our mission is The Wrong Ending. Tap Let’s go when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/bc8190e99f53264b.mp3"
+    },
+    {
+      "id": "54c144ea91ca34da",
+      "text": "First, get ready. You need Toys or drawing paper, and someone to hear your story. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/54c144ea91ca34da.mp3"
+    },
+    {
+      "id": "e06ae3b1e483a7e7",
+      "text": "Choose a character, a place and something the character wants. Draw them or use toys. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/e06ae3b1e483a7e7.mp3"
+    },
+    {
+      "id": "c8044e7807dbdfcf",
+      "text": "Tell a story with a beginning, a problem and an ending. Act it out for someone. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/c8044e7807dbdfcf.mp3"
+    },
+    {
+      "id": "cc7e5ad81254c8dd",
+      "text": "Now change the ending. What if your character makes a different choice? Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/cc7e5ad81254c8dd.mp3"
+    },
+    {
+      "id": "146c90406e7fe647",
+      "text": "Tell both endings. Ask your listener which they prefer and why. Tell both endings and explain which one your audience chose When you’re ready, show someone what you made or decided.",
+      "group": "mission",
+      "file": "assets/voice/library/146c90406e7fe647.mp3"
+    },
+    {
+      "id": "555169b97cb1c761",
+      "text": "Which ending did your audience choose? Why? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.",
+      "group": "mission",
+      "file": "assets/voice/library/555169b97cb1c761.mp3"
+    },
+    {
+      "id": "1951aef17301f26a",
+      "text": "Let’s take one little part. One story. Two endings. Which will your audience choose? Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/1951aef17301f26a.mp3"
+    },
+    {
+      "id": "3307d42e8c7d5fd5",
+      "text": "Let’s take one little part. Choose a character, a place and something the character wants. Draw them or use toys. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/3307d42e8c7d5fd5.mp3"
+    },
+    {
+      "id": "8ae636019a56f86f",
+      "text": "Let’s take one little part. Tell a story with a beginning, a problem and an ending. Act it out for someone. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/8ae636019a56f86f.mp3"
+    },
+    {
+      "id": "d3635d70af15fb30",
+      "text": "Let’s take one little part. Now change the ending. What if your character makes a different choice? Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/d3635d70af15fb30.mp3"
+    },
+    {
+      "id": "52a6488d5f5fc172",
+      "text": "Let’s take one little part. Tell both endings. Ask your listener which they prefer and why. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/52a6488d5f5fc172.mp3"
+    },
+    {
+      "id": "593052ed4e9dec6f",
+      "text": "Can you make an ordinary thing sound extraordinary? Our mission is The Mystery Object Show. Tap Let’s go when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/593052ed4e9dec6f.mp3"
+    },
+    {
+      "id": "a4135c5ce9598164",
+      "text": "First, get ready. You need One safe household object and a willing audience. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/a4135c5ce9598164.mp3"
+    },
+    {
+      "id": "5a8824c44c80c1ea",
+      "text": "Choose a safe object and imagine a new use for it. A sock could be a dragon’s sleeping bag! Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/5a8824c44c80c1ea.mp3"
+    },
+    {
+      "id": "b276f67f6d873acb",
+      "text": "Practise a short show. Tell your audience what it is, how it works and who would use it. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/b276f67f6d873acb.mp3"
+    },
+    {
+      "id": "3b731f7fdebdb946",
+      "text": "Give your show without naming the real object. Let your audience guess. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/3b731f7fdebdb946.mp3"
+    },
+    {
+      "id": "da698cae0b617e9f",
+      "text": "Listen to their question. Add one detail to make your explanation clearer, then try your show again. Show your invention and explain a detail you added after a question When you’re ready, show someone what you made or decided.",
+      "group": "mission",
+      "file": "assets/voice/library/da698cae0b617e9f.mp3"
+    },
+    {
+      "id": "a11a254c23745d4a",
+      "text": "What detail helped your audience understand your invention? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.",
+      "group": "mission",
+      "file": "assets/voice/library/a11a254c23745d4a.mp3"
+    },
+    {
+      "id": "ad38fdc24401aaf8",
+      "text": "Let’s take one little part. Can you make an ordinary thing sound extraordinary? Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/ad38fdc24401aaf8.mp3"
+    },
+    {
+      "id": "780dbb72c1806959",
+      "text": "Let’s take one little part. Choose a safe object and imagine a new use for it. A sock could be a dragon’s sleeping bag! Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/780dbb72c1806959.mp3"
+    },
+    {
+      "id": "4702f95ee17b89c7",
+      "text": "Let’s take one little part. Practise a short show. Tell your audience what it is, how it works and who would use it. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/4702f95ee17b89c7.mp3"
+    },
+    {
+      "id": "20479c4dd1462ceb",
+      "text": "Let’s take one little part. Give your show without naming the real object. Let your audience guess. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/20479c4dd1462ceb.mp3"
+    },
+    {
+      "id": "caae9357693a0137",
+      "text": "Let’s take one little part. Listen to their question. Add one detail to make your explanation clearer, then try your show again. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/caae9357693a0137.mp3"
+    },
+    {
+      "id": "58a08a4cf21e2859",
+      "text": "A visitor has landed on Lenny’s island. Get the story! Our mission is Lenny’s Newsroom. Tap Let’s go when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/58a08a4cf21e2859.mp3"
+    },
+    {
+      "id": "2f538adcb490d6b4",
+      "text": "First, get ready. You need A toy and a partner to play the visitor. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/2f538adcb490d6b4.mp3"
+    },
+    {
+      "id": "94a57655d1432af9",
+      "text": "Choose a toy to be a visitor from a made-up planet. Ask a partner to be the visitor. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/94a57655d1432af9.mp3"
+    },
+    {
+      "id": "7f9151e908a3ff3a",
+      "text": "Think of three questions. Find out where they live, what they eat and one surprising fact. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/7f9151e908a3ff3a.mp3"
+    },
+    {
+      "id": "c48c4d09c206de1f",
+      "text": "Listen to the answers. Give a short news report about your visitor using all three facts. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/c48c4d09c206de1f.mp3"
+    },
+    {
+      "id": "e798282bf8e57423",
+      "text": "Ask the visitor if you got the facts right. Fix one detail and give your report again. Give your report and explain a fact you checked with your visitor When you’re ready, show someone what you made or decided.",
+      "group": "mission",
+      "file": "assets/voice/library/e798282bf8e57423.mp3"
+    },
+    {
+      "id": "ffbf8d7b294ffef7",
+      "text": "Which fact did you fix after checking with your visitor? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.",
+      "group": "mission",
+      "file": "assets/voice/library/ffbf8d7b294ffef7.mp3"
+    },
+    {
+      "id": "b22e8b1d1820d90f",
+      "text": "Let’s take one little part. A visitor has landed on Lenny’s island. Get the story! Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/b22e8b1d1820d90f.mp3"
+    },
+    {
+      "id": "51b5a54b9e9f4456",
+      "text": "Let’s take one little part. Choose a toy to be a visitor from a made-up planet. Ask a partner to be the visitor. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/51b5a54b9e9f4456.mp3"
+    },
+    {
+      "id": "49f0088cd12f9ca3",
+      "text": "Let’s take one little part. Think of three questions. Find out where they live, what they eat and one surprising fact. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/49f0088cd12f9ca3.mp3"
+    },
+    {
+      "id": "dd8b30718c62cf7b",
+      "text": "Let’s take one little part. Listen to the answers. Give a short news report about your visitor using all three facts. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/dd8b30718c62cf7b.mp3"
+    },
+    {
+      "id": "45f1df272a4ef031",
+      "text": "Let’s take one little part. Ask the visitor if you got the facts right. Fix one detail and give your report again. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/45f1df272a4ef031.mp3"
+    },
+    {
+      "id": "a2f8dd7e388cafad",
+      "text": "Can you make a shop your customer wants to visit? Our mission is The Five-Coin Toy Shop. Tap Let’s go when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/a2f8dd7e388cafad.mp3"
+    },
+    {
+      "id": "6593c883917e23b7",
+      "text": "First, get ready. You need Paper, crayons, five large paper coins and a customer. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/6593c883917e23b7.mp3"
+    },
+    {
+      "id": "ddc8aed4cf3f3734",
+      "text": "Draw three things to sell. Give them prices of one, two and three paper coins. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/ddc8aed4cf3f3734.mp3"
+    },
+    {
+      "id": "2b10e778fe9a1189",
+      "text": "Give your customer five paper coins. Explain what makes each thing worth buying. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/2b10e778fe9a1189.mp3"
+    },
+    {
+      "id": "c43e8aa28a62fda5",
+      "text": "Let them choose what to buy. Count the cost and how many coins they have left. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/c43e8aa28a62fda5.mp3"
+    },
+    {
+      "id": "7aa4cd3fdfbe6bda",
+      "text": "Ask why they chose it. Improve one thing in your shop, then swap jobs and try again. Show a purchase, count the coins and explain your customer’s choice When you’re ready, show someone what you made or decided.",
+      "group": "mission",
+      "file": "assets/voice/library/7aa4cd3fdfbe6bda.mp3"
+    },
+    {
+      "id": "bafa43203ba76b87",
+      "text": "Why did your customer choose that item? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.",
+      "group": "mission",
+      "file": "assets/voice/library/bafa43203ba76b87.mp3"
+    },
+    {
+      "id": "135f5bda015dda09",
+      "text": "Let’s take one little part. Can you make a shop your customer wants to visit? Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/135f5bda015dda09.mp3"
+    },
+    {
+      "id": "8741bfef345ce4bc",
+      "text": "Let’s take one little part. Draw three things to sell. Give them prices of one, two and three paper coins. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/8741bfef345ce4bc.mp3"
+    },
+    {
+      "id": "507baeeabff81d2b",
+      "text": "Let’s take one little part. Give your customer five paper coins. Explain what makes each thing worth buying. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/507baeeabff81d2b.mp3"
+    },
+    {
+      "id": "cca4f96d14ca8085",
+      "text": "Let’s take one little part. Let them choose what to buy. Count the cost and how many coins they have left. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/cca4f96d14ca8085.mp3"
+    },
+    {
+      "id": "f5cbfcdab7aa8846",
+      "text": "Let’s take one little part. Ask why they chose it. Improve one thing in your shop, then swap jobs and try again. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/f5cbfcdab7aa8846.mp3"
+    },
+    {
+      "id": "0b42af74c7f981f2",
+      "text": "Make something useful for someone else. What do they need? Our mission is Invent for Someone. Tap Let’s go when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/0b42af74c7f981f2.mp3"
+    },
+    {
+      "id": "192f0c00fad4d445",
+      "text": "First, get ready. You need A toy, paper, a towel or box, and a customer. A grown-up can help with tape. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/192f0c00fad4d445.mp3"
+    },
+    {
+      "id": "f827352be48f9027",
+      "text": "Ask someone which toy needs a bed, a shelter or a carrying box. Listen to what it must do. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/f827352be48f9027.mp3"
+    },
+    {
+      "id": "6b19e7c976b5df74",
+      "text": "Draw two different ideas. Ask which one they would like you to build and why. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/6b19e7c976b5df74.mp3"
+    },
+    {
+      "id": "f45fa7549386de5e",
+      "text": "Build their choice using paper, a towel or a box. Ask a grown-up for help if you need tape. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/f45fa7549386de5e.mp3"
+    },
+    {
+      "id": "aac6734c186a1712",
+      "text": "Let your customer test it with the toy. Use their feedback to change one thing, then show what improved. Show your design and explain a change your customer helped you make When you’re ready, show someone what you made or decided.",
+      "group": "mission",
+      "file": "assets/voice/library/aac6734c186a1712.mp3"
+    },
+    {
+      "id": "f60aea4a65e39356",
+      "text": "What did you change after your customer tested it? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.",
+      "group": "mission",
+      "file": "assets/voice/library/f60aea4a65e39356.mp3"
+    },
+    {
+      "id": "7bffc478a8bae6b5",
+      "text": "Let’s take one little part. Make something useful for someone else. What do they need? Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/7bffc478a8bae6b5.mp3"
+    },
+    {
+      "id": "168a3585e09e8fac",
+      "text": "Let’s take one little part. Ask someone which toy needs a bed, a shelter or a carrying box. Listen to what it must do. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/168a3585e09e8fac.mp3"
+    },
+    {
+      "id": "4b24e948cb4e6ee3",
+      "text": "Let’s take one little part. Draw two different ideas. Ask which one they would like you to build and why. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/4b24e948cb4e6ee3.mp3"
+    },
+    {
+      "id": "b8a2a879e48d4985",
+      "text": "Let’s take one little part. Build their choice using paper, a towel or a box. Ask a grown-up for help if you need tape. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/b8a2a879e48d4985.mp3"
+    },
+    {
+      "id": "9f813de3afddef30",
+      "text": "Let’s take one little part. Let your customer test it with the toy. Use their feedback to change one thing, then show what improved. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/9f813de3afddef30.mp3"
+    },
+    {
+      "id": "3183a4b92e0248f2",
+      "text": "Lenny has eight coins for a party. How will you spend them? Our mission is The Party Planner. Tap Let’s go when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/3183a4b92e0248f2.mp3"
+    },
+    {
+      "id": "858eeabb774aa330",
+      "text": "First, get ready. You need Paper, crayons, eight large paper coins and a partner. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/858eeabb774aa330.mp3"
+    },
+    {
+      "id": "b1a2e6d77f26ea4c",
+      "text": "Plan a pretend party for a toy. Make eight large paper coins. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/b1a2e6d77f26ea4c.mp3"
+    },
+    {
+      "id": "a773597e996dc528",
+      "text": "Draw choices for snacks, games and decorations. Give each choice a price from one to three coins. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/a773597e996dc528.mp3"
+    },
+    {
+      "id": "82c40030c8f2813e",
+      "text": "Pick things for your party without spending more than eight coins. Count what is left. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/82c40030c8f2813e.mp3"
+    },
+    {
+      "id": "3c3aa5dd0fd3bdd1",
+      "text": "A guest wants one more game. Decide what you could swap or remove to pay for it. Explain your choice. Show your eight-coin party plan and explain a choice you gave up When you’re ready, show someone what you made or decided.",
+      "group": "mission",
+      "file": "assets/voice/library/3c3aa5dd0fd3bdd1.mp3"
+    },
+    {
+      "id": "f6c8da45af52d019",
+      "text": "What did you give up so you could afford your party? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.",
+      "group": "mission",
+      "file": "assets/voice/library/f6c8da45af52d019.mp3"
+    },
+    {
+      "id": "3fdebbd3ae5e88c1",
+      "text": "Let’s take one little part. Lenny has eight coins for a party. How will you spend them? Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/3fdebbd3ae5e88c1.mp3"
+    },
+    {
+      "id": "96202ab1c52a02cf",
+      "text": "Let’s take one little part. Plan a pretend party for a toy. Make eight large paper coins. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/96202ab1c52a02cf.mp3"
+    },
+    {
+      "id": "756a3473e97461a2",
+      "text": "Let’s take one little part. Draw choices for snacks, games and decorations. Give each choice a price from one to three coins. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/756a3473e97461a2.mp3"
+    },
+    {
+      "id": "ac1d074002988226",
+      "text": "Let’s take one little part. Pick things for your party without spending more than eight coins. Count what is left. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/ac1d074002988226.mp3"
+    },
+    {
+      "id": "0e194609e1e36740",
+      "text": "Let’s take one little part. A guest wants one more game. Decide what you could swap or remove to pay for it. Explain your choice. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/0e194609e1e36740.mp3"
+    },
+    {
+      "id": "fda5bf21784e3485",
+      "text": "Two toys. One special crayon. What should they do? Our mission is The Fair-Play Puzzle. Tap Let’s go when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/fda5bf21784e3485.mp3"
+    },
+    {
+      "id": "c0fe342d6f1d4f72",
+      "text": "First, get ready. You need Two toys, one crayon and a partner. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/c0fe342d6f1d4f72.mp3"
+    },
+    {
+      "id": "d7a9ed09b3ef2d18",
+      "text": "Pretend two toys both want the same special crayon. Ask a partner to speak for one toy. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/d7a9ed09b3ef2d18.mp3"
+    },
+    {
+      "id": "5a5af5ac29bf9e0f",
+      "text": "Each toy explains why it wants the crayon. Listen before you suggest a plan. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/5a5af5ac29bf9e0f.mp3"
+    },
+    {
+      "id": "8b2ecf48ffb7d7c1",
+      "text": "Think of two ways to share it. Ask what each toy likes or dislikes about each plan. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/8b2ecf48ffb7d7c1.mp3"
+    },
+    {
+      "id": "8ddb4e8c520c69f4",
+      "text": "Choose a plan together and act it out. If one toy is unhappy, change the plan and try again. Act out your sharing plan and explain why both toys can use it When you’re ready, show someone what you made or decided.",
+      "group": "mission",
+      "file": "assets/voice/library/8ddb4e8c520c69f4.mp3"
+    },
+    {
+      "id": "9f0d5ae4f2128e31",
+      "text": "Why did you choose that plan? What might the other toy say? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.",
+      "group": "mission",
+      "file": "assets/voice/library/9f0d5ae4f2128e31.mp3"
+    },
+    {
+      "id": "b27dfd1eba2bb4f2",
+      "text": "Let’s take one little part. Two toys. One special crayon. What should they do? Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/b27dfd1eba2bb4f2.mp3"
+    },
+    {
+      "id": "35f49756e0852972",
+      "text": "Let’s take one little part. Pretend two toys both want the same special crayon. Ask a partner to speak for one toy. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/35f49756e0852972.mp3"
+    },
+    {
+      "id": "124e357734c4f7be",
+      "text": "Let’s take one little part. Each toy explains why it wants the crayon. Listen before you suggest a plan. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/124e357734c4f7be.mp3"
+    },
+    {
+      "id": "49faada3dd660e5c",
+      "text": "Let’s take one little part. Think of two ways to share it. Ask what each toy likes or dislikes about each plan. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/49faada3dd660e5c.mp3"
+    },
+    {
+      "id": "542ec3818d010d7a",
+      "text": "Let’s take one little part. Choose a plan together and act it out. If one toy is unhappy, change the plan and try again. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/542ec3818d010d7a.mp3"
+    },
+    {
+      "id": "c09fc0e3690d3b91",
+      "text": "Someone new wants to play. Help them feel they belong. Our mission is The Welcome Mission. Tap Let’s go when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/c09fc0e3690d3b91.mp3"
+    },
+    {
+      "id": "81e735cc47d4afa3",
+      "text": "First, get ready. You need A toy, a partner and a simple game you both know. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/81e735cc47d4afa3.mp3"
+    },
+    {
+      "id": "3da6334a89526de3",
+      "text": "Imagine a toy is new to a game. Ask a partner to play the new toy. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/3da6334a89526de3.mp3"
+    },
+    {
+      "id": "06f20620bb4e93cf",
+      "text": "Ask the newcomer what they like and what they are unsure about. Listen to the answer. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/06f20620bb4e93cf.mp3"
+    },
+    {
+      "id": "1519fdde351801a7",
+      "text": "Change one rule or give them a useful role so they can join in. Play a short round. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/1519fdde351801a7.mp3"
+    },
+    {
+      "id": "ef05c9b1f5ad8358",
+      "text": "Ask how it felt to join. Use their answer to make your welcome even better. Show how you changed a game so someone new could join When you’re ready, show someone what you made or decided.",
+      "group": "mission",
+      "file": "assets/voice/library/ef05c9b1f5ad8358.mp3"
+    },
+    {
+      "id": "01eb3c7b613def93",
+      "text": "What did you change so the newcomer could join in? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.",
+      "group": "mission",
+      "file": "assets/voice/library/01eb3c7b613def93.mp3"
+    },
+    {
+      "id": "c4ba7120ca5fc207",
+      "text": "Let’s take one little part. Someone new wants to play. Help them feel they belong. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/c4ba7120ca5fc207.mp3"
+    },
+    {
+      "id": "11cc5c5a834ac314",
+      "text": "Let’s take one little part. Imagine a toy is new to a game. Ask a partner to play the new toy. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/11cc5c5a834ac314.mp3"
+    },
+    {
+      "id": "cacb9c32dbcf9717",
+      "text": "Let’s take one little part. Ask the newcomer what they like and what they are unsure about. Listen to the answer. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/cacb9c32dbcf9717.mp3"
+    },
+    {
+      "id": "067bcee652f1134a",
+      "text": "Let’s take one little part. Change one rule or give them a useful role so they can join in. Play a short round. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/067bcee652f1134a.mp3"
+    },
+    {
+      "id": "bc92f0514cae2f18",
+      "text": "Let’s take one little part. Ask how it felt to join. Use their answer to make your welcome even better. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/bc92f0514cae2f18.mp3"
+    },
+    {
+      "id": "344c4eccbe32dd2e",
+      "text": "Find a real problem and make someone’s day a little better. Our mission is The Kindness Detective. Tap Let’s go when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/344c4eccbe32dd2e.mp3"
+    },
+    {
+      "id": "20d73cc3acac5529",
+      "text": "First, get ready. You need Someone at home who would like a small helping hand. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/20d73cc3acac5529.mp3"
+    },
+    {
+      "id": "a2aa026880d2c4d0",
+      "text": "Ask someone at home what small thing would make their day easier. Listen without guessing. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/a2aa026880d2c4d0.mp3"
+    },
+    {
+      "id": "c3156cf33004d5b2",
+      "text": "Think of two ways you could help. Ask which would be most useful. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/c3156cf33004d5b2.mp3"
+    },
+    {
+      "id": "60de0a95dcf63641",
+      "text": "Do the chosen job with their permission. Ask a grown-up to help if you need it. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/60de0a95dcf63641.mp3"
+    },
+    {
+      "id": "bae719a456dd5b3a",
+      "text": "Ask whether your help worked. Tell Lenny what you noticed and what you would do next time. Show the help you gave and explain how you found out it was useful When you’re ready, show someone what you made or decided.",
+      "group": "mission",
+      "file": "assets/voice/library/bae719a456dd5b3a.mp3"
+    },
+    {
+      "id": "8cc8f78c0b09f321",
+      "text": "How did you find out which help was really useful? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.",
+      "group": "mission",
+      "file": "assets/voice/library/8cc8f78c0b09f321.mp3"
+    },
+    {
+      "id": "74175d3adb0ee425",
+      "text": "Let’s take one little part. Find a real problem and make someone’s day a little better. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/74175d3adb0ee425.mp3"
+    },
+    {
+      "id": "f5158787f839a61e",
+      "text": "Let’s take one little part. Ask someone at home what small thing would make their day easier. Listen without guessing. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/f5158787f839a61e.mp3"
+    },
+    {
+      "id": "7761100cc99eb59f",
+      "text": "Let’s take one little part. Think of two ways you could help. Ask which would be most useful. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/7761100cc99eb59f.mp3"
+    },
+    {
+      "id": "b171a1bedcacca2c",
+      "text": "Let’s take one little part. Do the chosen job with their permission. Ask a grown-up to help if you need it. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/b171a1bedcacca2c.mp3"
+    },
+    {
+      "id": "5f6a26984012b094",
+      "text": "Let’s take one little part. Ask whether your help worked. Tell Lenny what you noticed and what you would do next time. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/5f6a26984012b094.mp3"
+    },
+    {
+      "id": "60da690f611e9c78",
+      "text": "Can one sheet of paper become a stronger bridge? Our mission is The Paper Bridge Lab. Tap Let’s go when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/60da690f611e9c78.mp3"
+    },
+    {
+      "id": "41ced40bc8414cfc",
+      "text": "First, get ready. You need Two low books, one sheet of paper and three paper balls. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/41ced40bc8414cfc.mp3"
+    },
+    {
+      "id": "2424d1203cf3d0b7",
+      "text": "Put two low books a hand-width apart. Use one sheet of paper to make a bridge. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/2424d1203cf3d0b7.mp3"
+    },
+    {
+      "id": "616047f300d4af8e",
+      "text": "Test it with three paper balls. How many stay on before the bridge bends? Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/616047f300d4af8e.mp3"
+    },
+    {
+      "id": "21091590b130371d",
+      "text": "Use the same sheet to make a different bridge. Try folds or a rolled edge. Test with the same balls. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/21091590b130371d.mp3"
+    },
+    {
+      "id": "a4fcd451d6926d95",
+      "text": "Compare your tests. Choose the stronger design and explain what you changed. Show both bridge tests and explain which design worked better When you’re ready, show someone what you made or decided.",
+      "group": "mission",
+      "file": "assets/voice/library/a4fcd451d6926d95.mp3"
+    },
+    {
+      "id": "2e80230f96a0bdbe",
+      "text": "What stayed the same in your two tests? What changed? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.",
+      "group": "mission",
+      "file": "assets/voice/library/2e80230f96a0bdbe.mp3"
+    },
+    {
+      "id": "ff512674d04585cd",
+      "text": "Let’s take one little part. Can one sheet of paper become a stronger bridge? Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/ff512674d04585cd.mp3"
+    },
+    {
+      "id": "45207fd6b6e52d3f",
+      "text": "Let’s take one little part. Put two low books a hand-width apart. Use one sheet of paper to make a bridge. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/45207fd6b6e52d3f.mp3"
+    },
+    {
+      "id": "5764b4794951a980",
+      "text": "Let’s take one little part. Test it with three paper balls. How many stay on before the bridge bends? Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/5764b4794951a980.mp3"
+    },
+    {
+      "id": "cef6dfd1c044911f",
+      "text": "Let’s take one little part. Use the same sheet to make a different bridge. Try folds or a rolled edge. Test with the same balls. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/cef6dfd1c044911f.mp3"
+    },
+    {
+      "id": "e89b2c8ed717a5a2",
+      "text": "Let’s take one little part. Compare your tests. Choose the stronger design and explain what you changed. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/e89b2c8ed717a5a2.mp3"
+    },
+    {
+      "id": "297e88dc3bf550b7",
+      "text": "Your first tower is only the beginning. Can you improve it? Our mission is The Tower That Learns. Tap Let’s go when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/297e88dc3bf550b7.mp3"
+    },
+    {
+      "id": "a0468dd163d6e078",
+      "text": "First, get ready. You need Six paper cups or safe blocks, paper for a flag, and crayons. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/a0468dd163d6e078.mp3"
+    },
+    {
+      "id": "c03e3713e2a5aaab",
+      "text": "Build a tower with six paper cups or safe blocks. Draw or remember your first design. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/c03e3713e2a5aaab.mp3"
+    },
+    {
+      "id": "4a2080a098b5754f",
+      "text": "Make a little paper flag. Can your tower hold it while you count to ten? Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/4a2080a098b5754f.mp3"
+    },
+    {
+      "id": "dbbdfd5a0fb2a8de",
+      "text": "Build again with the same pieces. Change just one thing, such as the width of the base. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/dbbdfd5a0fb2a8de.mp3"
+    },
+    {
+      "id": "14abefc0488a3b25",
+      "text": "Test with the same flag. Compare your towers and explain what helped one stay up. Show both towers and explain which change helped When you’re ready, show someone what you made or decided.",
+      "group": "mission",
+      "file": "assets/voice/library/14abefc0488a3b25.mp3"
+    },
+    {
+      "id": "f7f4e09559a355ff",
+      "text": "Which change helped your tower stay up? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.",
+      "group": "mission",
+      "file": "assets/voice/library/f7f4e09559a355ff.mp3"
+    },
+    {
+      "id": "6114638fdb2e8478",
+      "text": "Let’s take one little part. Your first tower is only the beginning. Can you improve it? Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/6114638fdb2e8478.mp3"
+    },
+    {
+      "id": "bb64f56e8f90ac2b",
+      "text": "Let’s take one little part. Build a tower with six paper cups or safe blocks. Draw or remember your first design. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/bb64f56e8f90ac2b.mp3"
+    },
+    {
+      "id": "5f7ccd785d94039a",
+      "text": "Let’s take one little part. Make a little paper flag. Can your tower hold it while you count to ten? Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/5f7ccd785d94039a.mp3"
+    },
+    {
+      "id": "5d9644b7b94b997e",
+      "text": "Let’s take one little part. Build again with the same pieces. Change just one thing, such as the width of the base. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/5d9644b7b94b997e.mp3"
+    },
+    {
+      "id": "249cb8048c03bf1c",
+      "text": "Let’s take one little part. Test with the same flag. Compare your towers and explain what helped one stay up. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/249cb8048c03bf1c.mp3"
+    },
+    {
+      "id": "4124ff953f11be4e",
+      "text": "Build a puzzle that is tricky, fair and fun. Our mission is Make a Marble-Free Maze. Tap Let’s go when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/4124ff953f11be4e.mp3"
+    },
+    {
+      "id": "883b07f9aa0500ad",
+      "text": "First, get ready. You need Paper, crayons, one large paper ball and a tester. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/883b07f9aa0500ad.mp3"
+    },
+    {
+      "id": "0e862625907b1476",
+      "text": "Draw a maze for a large paper ball. Add a start, a finish and three tricky turns. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/0e862625907b1476.mp3"
+    },
+    {
+      "id": "8a84abb1206220fd",
+      "text": "Move the ball through with one finger. Notice where it is too easy or gets stuck. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/8a84abb1206220fd.mp3"
+    },
+    {
+      "id": "fe4b5e3a6d96fd81",
+      "text": "Change two parts of the maze. Try to make it tricky but possible. Tap Next when you’re ready.",
+      "group": "mission",
+      "file": "assets/voice/library/fe4b5e3a6d96fd81.mp3"
+    },
+    {
+      "id": "f2a7b14e444b9df4",
+      "text": "Ask someone to test it. Watch where they struggle, then improve one clue or turn. Show your maze and explain how your tester helped you improve it When you’re ready, show someone what you made or decided.",
+      "group": "mission",
+      "file": "assets/voice/library/f2a7b14e444b9df4.mp3"
+    },
+    {
+      "id": "2e50cc239e58f9c4",
+      "text": "What did you learn when someone else tried your maze? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.",
+      "group": "mission",
+      "file": "assets/voice/library/2e50cc239e58f9c4.mp3"
+    },
+    {
+      "id": "62394b237ae36ca1",
+      "text": "Let’s take one little part. Build a puzzle that is tricky, fair and fun. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/62394b237ae36ca1.mp3"
+    },
+    {
+      "id": "4487c4cc3702d5e0",
+      "text": "Let’s take one little part. Draw a maze for a large paper ball. Add a start, a finish and three tricky turns. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/4487c4cc3702d5e0.mp3"
+    },
+    {
+      "id": "b63a852ebec21632",
+      "text": "Let’s take one little part. Move the ball through with one finger. Notice where it is too easy or gets stuck. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/b63a852ebec21632.mp3"
+    },
+    {
+      "id": "4dced95a5be6fd38",
+      "text": "Let’s take one little part. Change two parts of the maze. Try to make it tricky but possible. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/4dced95a5be6fd38.mp3"
+    },
+    {
+      "id": "1cad28ce9fab8f41",
+      "text": "Let’s take one little part. Ask someone to test it. Watch where they struggle, then improve one clue or turn. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/1cad28ce9fab8f41.mp3"
+    },
+    {
+      "id": "5b8e2b6d162fad89",
+      "text": "Choose a real person. Ask what would make their day more fun or easier. Decide what you want to make for them. Who are you making it for?",
+      "group": "project",
+      "file": "assets/voice/library/5b8e2b6d162fad89.mp3"
+    },
+    {
+      "id": "ebce62bddbe87c68",
+      "text": "Let’s take one little part. Choose a real person. Ask what would make their day more fun or easier. Decide what you want to make for them. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/ebce62bddbe87c68.mp3"
+    },
+    {
+      "id": "bcc78b4918047a04",
+      "text": "Draw two ideas. Choose one and build a small version using things at home. You choose how it works. Which idea did you choose, and why?",
+      "group": "project",
+      "file": "assets/voice/library/bcc78b4918047a04.mp3"
+    },
+    {
+      "id": "12b373fc6bb96f81",
+      "text": "Let’s take one little part. Draw two ideas. Choose one and build a small version using things at home. You choose how it works. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/12b373fc6bb96f81.mp3"
+    },
+    {
+      "id": "4e6191880f9f7504",
+      "text": "Let your person try it. Ask what works and what could be better. Change one thing using their feedback. What did your tester help you change?",
+      "group": "project",
+      "file": "assets/voice/library/4e6191880f9f7504.mp3"
+    },
+    {
+      "id": "396cb1e0bb37f8b1",
+      "text": "Let’s take one little part. Let your person try it. Ask what works and what could be better. Change one thing using their feedback. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/396cb1e0bb37f8b1.mp3"
+    },
+    {
+      "id": "30ea51b8fdc8189c",
+      "text": "Show your invention to someone. Explain who it helps, how it works and what you changed after testing. Let them ask a question. What are you proud of, and what would you try next?",
+      "group": "project",
+      "file": "assets/voice/library/30ea51b8fdc8189c.mp3"
+    },
+    {
+      "id": "367eb8fc9e6bd502",
+      "text": "Let’s take one little part. Show your invention to someone. Explain who it helps, how it works and what you changed after testing. Let them ask a question. Ask someone nearby to try it with you. Which part shall you try first?",
+      "group": "help",
+      "file": "assets/voice/library/367eb8fc9e6bd502.mp3"
+    },
+    {
+      "id": "86936ba87b5bf879",
+      "text": "You did it! You earned a silly meat treat. Tap Feed Lenny and see what happens!",
+      "group": "celebration",
+      "file": "assets/voice/library/86936ba87b5bf879.mp3"
+    },
+    {
+      "id": "f0faa46a53f7418c",
+      "text": "Nom, nom, nom!",
+      "group": "celebration",
+      "file": "assets/voice/library/f0faa46a53f7418c.mp3"
+    },
+    {
+      "id": "d049f9a59d771a55",
+      "text": "You’ve unlocked all five skills! Now use them to make something of your own. Who will you make it for?",
+      "group": "project",
+      "file": "assets/voice/library/d049f9a59d771a55.mp3"
+    },
+    {
+      "id": "83c8849fe2b822a5",
+      "text": "What do lions wear to bed?",
+      "group": "joke-question",
+      "file": "assets/voice/library/83c8849fe2b822a5.mp3"
+    },
+    {
+      "id": "09e45c97fe4e16d8",
+      "text": "Their roar-jamas!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/09e45c97fe4e16d8.mp3"
+    },
+    {
+      "id": "fae39b23f30eba9c",
+      "text": "What is a lion’s favourite type of music?",
+      "group": "joke-question",
+      "file": "assets/voice/library/fae39b23f30eba9c.mp3"
+    },
+    {
+      "id": "8d538e239a1e0da1",
+      "text": "Anything with a good roar-thm!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/8d538e239a1e0da1.mp3"
+    },
+    {
+      "id": "aeda41f5c92d2cb9",
+      "text": "Why did the lion bring a pencil to the party?",
+      "group": "joke-question",
+      "file": "assets/voice/library/aeda41f5c92d2cb9.mp3"
+    },
+    {
+      "id": "2ea426d4c64a095e",
+      "text": "To draw a crowd!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/2ea426d4c64a095e.mp3"
+    },
+    {
+      "id": "efde85d5746e2cae",
+      "text": "What did the lion say to his new shoes?",
+      "group": "joke-question",
+      "file": "assets/voice/library/efde85d5746e2cae.mp3"
+    },
+    {
+      "id": "131d4730500de6bd",
+      "text": "You’re pawsome!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/131d4730500de6bd.mp3"
+    },
+    {
+      "id": "2b62782c46810e71",
+      "text": "Why was the lion so good at hide-and-seek?",
+      "group": "joke-question",
+      "file": "assets/voice/library/2b62782c46810e71.mp3"
+    },
+    {
+      "id": "1a9bd2cd84095a86",
+      "text": "Because nobody could find his mane hiding spot!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/1a9bd2cd84095a86.mp3"
+    },
+    {
+      "id": "cb4f1fb3f9d24163",
+      "text": "What’s a lion’s favourite snack?",
+      "group": "joke-question",
+      "file": "assets/voice/library/cb4f1fb3f9d24163.mp3"
+    },
+    {
+      "id": "217617831a616e49",
+      "text": "Anything that goes crunch-a-munch!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/217617831a616e49.mp3"
+    },
+    {
+      "id": "86a3a34d4dc834d5",
+      "text": "Why was Lenny late to the picnic?",
+      "group": "joke-question",
+      "file": "assets/voice/library/86a3a34d4dc834d5.mp3"
+    },
+    {
+      "id": "4f5919effd7ec150",
+      "text": "He was having a bad mane day!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/4f5919effd7ec150.mp3"
+    },
+    {
+      "id": "cd0dc733c483ae50",
+      "text": "What do you call a lion wearing sunglasses?",
+      "group": "joke-question",
+      "file": "assets/voice/library/cd0dc733c483ae50.mp3"
+    },
+    {
+      "id": "354a1823ca4445a2",
+      "text": "A cool cat!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/354a1823ca4445a2.mp3"
+    },
+    {
+      "id": "51bc93125245d020",
+      "text": "What do you call a lion who likes building things?",
+      "group": "joke-question",
+      "file": "assets/voice/library/51bc93125245d020.mp3"
+    },
+    {
+      "id": "b3d1ec5b98eb789d",
+      "text": "A roar-chitect!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/b3d1ec5b98eb789d.mp3"
+    },
+    {
+      "id": "d08d932a8bb7330f",
+      "text": "Why did Lenny bring a map to the kitchen?",
+      "group": "joke-question",
+      "file": "assets/voice/library/d08d932a8bb7330f.mp3"
+    },
+    {
+      "id": "6d2bba64bab4b78d",
+      "text": "He was hunting for the snack treasure!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/6d2bba64bab4b78d.mp3"
+    },
+    {
+      "id": "9a00044a1cea44d8",
+      "text": "What did Lenny say when the biscuit disappeared?",
+      "group": "joke-question",
+      "file": "assets/voice/library/9a00044a1cea44d8.mp3"
+    },
+    {
+      "id": "34827c0437c39e0f",
+      "text": "Crikey! That was my last crumb!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/34827c0437c39e0f.mp3"
+    },
+    {
+      "id": "edf8fca9311d33e4",
+      "text": "What do you call a lion with a microphone?",
+      "group": "joke-question",
+      "file": "assets/voice/library/edf8fca9311d33e4.mp3"
+    },
+    {
+      "id": "30d82e4dd85f2d0c",
+      "text": "The king of the sing-along!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/30d82e4dd85f2d0c.mp3"
+    },
+    {
+      "id": "5b91e431419011d6",
+      "text": "Why did Lenny sleep under the stars?",
+      "group": "joke-question",
+      "file": "assets/voice/library/5b91e431419011d6.mp3"
+    },
+    {
+      "id": "63b3bfee94e16d45",
+      "text": "He wanted a million-star hotel!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/63b3bfee94e16d45.mp3"
+    },
+    {
+      "id": "ae45e2a20c6429e2",
+      "text": "What do you call a bear with no teeth?",
+      "group": "joke-question",
+      "file": "assets/voice/library/ae45e2a20c6429e2.mp3"
+    },
+    {
+      "id": "53c221d30d4f2495",
+      "text": "A gummy bear!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/53c221d30d4f2495.mp3"
+    },
+    {
+      "id": "5a73357849a4d8b0",
+      "text": "What do you call a sleeping dinosaur?",
+      "group": "joke-question",
+      "file": "assets/voice/library/5a73357849a4d8b0.mp3"
+    },
+    {
+      "id": "6db157c9cd72ba7b",
+      "text": "A dino-snore!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/6db157c9cd72ba7b.mp3"
+    },
+    {
+      "id": "999cb33c42080bf3",
+      "text": "Why did the teddy bear say no to cake?",
+      "group": "joke-question",
+      "file": "assets/voice/library/999cb33c42080bf3.mp3"
+    },
+    {
+      "id": "24f57c28246d3e56",
+      "text": "It was already stuffed!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/24f57c28246d3e56.mp3"
+    },
+    {
+      "id": "00c2b8defe6ff2f8",
+      "text": "What do you call a sleeping bull?",
+      "group": "joke-question",
+      "file": "assets/voice/library/00c2b8defe6ff2f8.mp3"
+    },
+    {
+      "id": "e1fe551de4788cb3",
+      "text": "A bulldozer!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/e1fe551de4788cb3.mp3"
+    },
+    {
+      "id": "c30d919dae48ed14",
+      "text": "Why did the chicken join the band?",
+      "group": "joke-question",
+      "file": "assets/voice/library/c30d919dae48ed14.mp3"
+    },
+    {
+      "id": "96798d25812dc5e2",
+      "text": "It had the drumsticks!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/96798d25812dc5e2.mp3"
+    },
+    {
+      "id": "017e8106030c83db",
+      "text": "Why did the cow go to space?",
+      "group": "joke-question",
+      "file": "assets/voice/library/017e8106030c83db.mp3"
+    },
+    {
+      "id": "3a6a0ebbac33f1b2",
+      "text": "To see the moooon!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/3a6a0ebbac33f1b2.mp3"
+    },
+    {
+      "id": "be84c6e117f1d943",
+      "text": "What do you call a crocodile detective?",
+      "group": "joke-question",
+      "file": "assets/voice/library/be84c6e117f1d943.mp3"
+    },
+    {
+      "id": "0e8d6b3c10847cef",
+      "text": "An investi-gator!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/0e8d6b3c10847cef.mp3"
+    },
+    {
+      "id": "618142d14cb9d7c4",
+      "text": "What do you call a dog magician?",
+      "group": "joke-question",
+      "file": "assets/voice/library/618142d14cb9d7c4.mp3"
+    },
+    {
+      "id": "52175e4d98beb88a",
+      "text": "A labra-cadabra-dor!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/52175e4d98beb88a.mp3"
+    },
+    {
+      "id": "38ca560283f78837",
+      "text": "What do you call a bear in the rain?",
+      "group": "joke-question",
+      "file": "assets/voice/library/38ca560283f78837.mp3"
+    },
+    {
+      "id": "c74bdd5f784154e3",
+      "text": "A drizzly bear!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/c74bdd5f784154e3.mp3"
+    },
+    {
+      "id": "b31008825d1c7652",
+      "text": "What’s a frog’s favourite drink?",
+      "group": "joke-question",
+      "file": "assets/voice/library/b31008825d1c7652.mp3"
+    },
+    {
+      "id": "01b0457a05279fbd",
+      "text": "Croak-a-cola!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/01b0457a05279fbd.mp3"
+    },
+    {
+      "id": "69eb4663d935f0fa",
+      "text": "Why did the kangaroo become a comedian?",
+      "group": "joke-question",
+      "file": "assets/voice/library/69eb4663d935f0fa.mp3"
+    },
+    {
+      "id": "18fe5639a41f1921",
+      "text": "It had everyone jumping with laughter!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/18fe5639a41f1921.mp3"
+    },
+    {
+      "id": "4d67d103677791f8",
+      "text": "What did the emu do at the playground?",
+      "group": "joke-question",
+      "file": "assets/voice/library/4d67d103677791f8.mp3"
+    },
+    {
+      "id": "1ffbbd7603c67808",
+      "text": "It went down the slide, feet first!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/1ffbbd7603c67808.mp3"
+    },
+    {
+      "id": "31b2ad967d6fb67c",
+      "text": "What do you call a koala who sings?",
+      "group": "joke-question",
+      "file": "assets/voice/library/31b2ad967d6fb67c.mp3"
+    },
+    {
+      "id": "0a6f9a6a163b5963",
+      "text": "A koala-ty performer!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/0a6f9a6a163b5963.mp3"
+    },
+    {
+      "id": "90eaece2792019d7",
+      "text": "Why did the duck take a pencil to the pond?",
+      "group": "joke-question",
+      "file": "assets/voice/library/90eaece2792019d7.mp3"
+    },
+    {
+      "id": "cbcf8ee043cadfb2",
+      "text": "To draw a quack-ture!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/cbcf8ee043cadfb2.mp3"
+    },
+    {
+      "id": "bb139f40bcf945c0",
+      "text": "What did the duck say when it bought a hat?",
+      "group": "joke-question",
+      "file": "assets/voice/library/bb139f40bcf945c0.mp3"
+    },
+    {
+      "id": "293447fd8c92875e",
+      "text": "Put it on my bill!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/293447fd8c92875e.mp3"
+    },
+    {
+      "id": "e9167f888c6729de",
+      "text": "What do you call a rabbit who tells jokes?",
+      "group": "joke-question",
+      "file": "assets/voice/library/e9167f888c6729de.mp3"
+    },
+    {
+      "id": "1d8a9380f4edfd5c",
+      "text": "A funny bunny!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/1d8a9380f4edfd5c.mp3"
+    },
+    {
+      "id": "7da6a2af11d515e4",
+      "text": "What do cats eat for breakfast?",
+      "group": "joke-question",
+      "file": "assets/voice/library/7da6a2af11d515e4.mp3"
+    },
+    {
+      "id": "017c0b458e669278",
+      "text": "Mice crispies!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/017c0b458e669278.mp3"
+    },
+    {
+      "id": "da5cddfaa02e50ad",
+      "text": "What do you call a monkey with a banana phone?",
+      "group": "joke-question",
+      "file": "assets/voice/library/da5cddfaa02e50ad.mp3"
+    },
+    {
+      "id": "22c56b34f8c6fa50",
+      "text": "A-peeling!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/22c56b34f8c6fa50.mp3"
+    },
+    {
+      "id": "f950eeccaf59cd53",
+      "text": "Why did the bee have sticky hair?",
+      "group": "joke-question",
+      "file": "assets/voice/library/f950eeccaf59cd53.mp3"
+    },
+    {
+      "id": "71fe647187653f1a",
+      "text": "It used a honeycomb!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/71fe647187653f1a.mp3"
+    },
+    {
+      "id": "078d97d4b5cb45cb",
+      "text": "What do you call a magic owl?",
+      "group": "joke-question",
+      "file": "assets/voice/library/078d97d4b5cb45cb.mp3"
+    },
+    {
+      "id": "a61a0bea5c0c49f2",
+      "text": "Hoo-dini!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/a61a0bea5c0c49f2.mp3"
+    },
+    {
+      "id": "f469cf698f9ddd32",
+      "text": "What do you call a bee who can’t decide?",
+      "group": "joke-question",
+      "file": "assets/voice/library/f469cf698f9ddd32.mp3"
+    },
+    {
+      "id": "b28713aaef3f129a",
+      "text": "A maybe!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/b28713aaef3f129a.mp3"
+    },
+    {
+      "id": "676db71f89e0ac73",
+      "text": "Why did the fish blush?",
+      "group": "joke-question",
+      "file": "assets/voice/library/676db71f89e0ac73.mp3"
+    },
+    {
+      "id": "dbb4c93c6536402e",
+      "text": "Because it saw the ocean’s bottom!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/dbb4c93c6536402e.mp3"
+    },
+    {
+      "id": "f5b61c39d7ecf82b",
+      "text": "What did the ocean say to the beach?",
+      "group": "joke-question",
+      "file": "assets/voice/library/f5b61c39d7ecf82b.mp3"
+    },
+    {
+      "id": "aa3caa1ed108e73b",
+      "text": "Nothing. It just waved!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/aa3caa1ed108e73b.mp3"
+    },
+    {
+      "id": "17fb7a910b9389b1",
+      "text": "Why did the banana visit the doctor?",
+      "group": "joke-question",
+      "file": "assets/voice/library/17fb7a910b9389b1.mp3"
+    },
+    {
+      "id": "5b922484b6b1e935",
+      "text": "It wasn’t peeling well!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/5b922484b6b1e935.mp3"
+    },
+    {
+      "id": "82cdf4ed0f37254a",
+      "text": "Why did the orange stop running?",
+      "group": "joke-question",
+      "file": "assets/voice/library/82cdf4ed0f37254a.mp3"
+    },
+    {
+      "id": "53c5d7353357a5d4",
+      "text": "It ran out of juice!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/53c5d7353357a5d4.mp3"
+    },
+    {
+      "id": "5aafc7232585ec07",
+      "text": "What do you call cheese that isn’t yours?",
+      "group": "joke-question",
+      "file": "assets/voice/library/5aafc7232585ec07.mp3"
+    },
+    {
+      "id": "712d7954bb0b6eab",
+      "text": "Nacho cheese!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/712d7954bb0b6eab.mp3"
+    },
+    {
+      "id": "3998eb0c56f54857",
+      "text": "Why did the cookie go to the doctor?",
+      "group": "joke-question",
+      "file": "assets/voice/library/3998eb0c56f54857.mp3"
+    },
+    {
+      "id": "6eb4f32a2b939807",
+      "text": "It felt crumby!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/6eb4f32a2b939807.mp3"
+    },
+    {
+      "id": "f887101bfecbfe9f",
+      "text": "What did the big flower say to the little flower?",
+      "group": "joke-question",
+      "file": "assets/voice/library/f887101bfecbfe9f.mp3"
+    },
+    {
+      "id": "6627923a014c7f4d",
+      "text": "Hi, bud!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/6627923a014c7f4d.mp3"
+    },
+    {
+      "id": "3941a3067d49d6a3",
+      "text": "What do you call a room with no doors or windows?",
+      "group": "joke-question",
+      "file": "assets/voice/library/3941a3067d49d6a3.mp3"
+    },
+    {
+      "id": "e1d0374989049dff",
+      "text": "A mushroom!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/e1d0374989049dff.mp3"
+    },
+    {
+      "id": "450023c2a8c88f6b",
+      "text": "Why did the bicycle fall over?",
+      "group": "joke-question",
+      "file": "assets/voice/library/450023c2a8c88f6b.mp3"
+    },
+    {
+      "id": "f50e90908457cd1b",
+      "text": "It was two-tired!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/f50e90908457cd1b.mp3"
+    },
+    {
+      "id": "14da04029ad8f564",
+      "text": "Why was the broom late?",
+      "group": "joke-question",
+      "file": "assets/voice/library/14da04029ad8f564.mp3"
+    },
+    {
+      "id": "bfed5ab54dc81648",
+      "text": "It overswept!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/bfed5ab54dc81648.mp3"
+    },
+    {
+      "id": "60718a4acaf67b30",
+      "text": "What did the blanket say to the bed?",
+      "group": "joke-question",
+      "file": "assets/voice/library/60718a4acaf67b30.mp3"
+    },
+    {
+      "id": "148dfe7d1bd3b2ff",
+      "text": "I’ve got you covered!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/148dfe7d1bd3b2ff.mp3"
+    },
+    {
+      "id": "7d2bf1d5d8885ce8",
+      "text": "What did one plate say to the other?",
+      "group": "joke-question",
+      "file": "assets/voice/library/7d2bf1d5d8885ce8.mp3"
+    },
+    {
+      "id": "87370b17588c3cf7",
+      "text": "Dinner is on me!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/87370b17588c3cf7.mp3"
+    },
+    {
+      "id": "3c3892235448e22c",
+      "text": "What did the pencil say to the paper?",
+      "group": "joke-question",
+      "file": "assets/voice/library/3c3892235448e22c.mp3"
+    },
+    {
+      "id": "cd71901198fa96d3",
+      "text": "You’ve got a point!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/cd71901198fa96d3.mp3"
+    },
+    {
+      "id": "8784110c51630163",
+      "text": "Why did the clock get into trouble?",
+      "group": "joke-question",
+      "file": "assets/voice/library/8784110c51630163.mp3"
+    },
+    {
+      "id": "4295826eee6ff90b",
+      "text": "It kept tocking!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/4295826eee6ff90b.mp3"
+    },
+    {
+      "id": "d232e686307d11bc",
+      "text": "What did the zero say to the eight?",
+      "group": "joke-question",
+      "file": "assets/voice/library/d232e686307d11bc.mp3"
+    },
+    {
+      "id": "a95e958d94083c5f",
+      "text": "Nice belt!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/a95e958d94083c5f.mp3"
+    },
+    {
+      "id": "c08d101eb62130b1",
+      "text": "Why did the maths book look worried?",
+      "group": "joke-question",
+      "file": "assets/voice/library/c08d101eb62130b1.mp3"
+    },
+    {
+      "id": "503e12cb68af5c7a",
+      "text": "It had too many problems!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/503e12cb68af5c7a.mp3"
+    },
+    {
+      "id": "92b397af3131dd38",
+      "text": "Why did the cupcake go to school?",
+      "group": "joke-question",
+      "file": "assets/voice/library/92b397af3131dd38.mp3"
+    },
+    {
+      "id": "76c442aadc56e6d2",
+      "text": "To get a little batter!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/76c442aadc56e6d2.mp3"
+    },
+    {
+      "id": "38d15748faf6e90f",
+      "text": "Why did the pirate learn the alphabet slowly?",
+      "group": "joke-question",
+      "file": "assets/voice/library/38d15748faf6e90f.mp3"
+    },
+    {
+      "id": "4e52594e63228408",
+      "text": "He got stuck at C!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/4e52594e63228408.mp3"
+    },
+    {
+      "id": "61366ceb80b2e10a",
+      "text": "Why did the pirate go to the doctor?",
+      "group": "joke-question",
+      "file": "assets/voice/library/61366ceb80b2e10a.mp3"
+    },
+    {
+      "id": "56468262c46e3328",
+      "text": "To get his arrrr checked!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/56468262c46e3328.mp3"
+    },
+    {
+      "id": "de3cca0bf37cda1b",
+      "text": "What did the volcano say to its friend?",
+      "group": "joke-question",
+      "file": "assets/voice/library/de3cca0bf37cda1b.mp3"
+    },
+    {
+      "id": "286e837f9877e141",
+      "text": "I lava you!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/286e837f9877e141.mp3"
+    },
+    {
+      "id": "ed4d3655f9fc91ad",
+      "text": "How do you organise a space party?",
+      "group": "joke-question",
+      "file": "assets/voice/library/ed4d3655f9fc91ad.mp3"
+    },
+    {
+      "id": "7ea8e6efa316533b",
+      "text": "You planet!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/7ea8e6efa316533b.mp3"
+    },
+    {
+      "id": "5745c9c10e9f748e",
+      "text": "Why did the rocket bring a spoon?",
+      "group": "joke-question",
+      "file": "assets/voice/library/5745c9c10e9f748e.mp3"
+    },
+    {
+      "id": "9fde513bd97d5f25",
+      "text": "For a taste of the Milky Way!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/9fde513bd97d5f25.mp3"
+    },
+    {
+      "id": "3ab340fc78b49ea1",
+      "text": "What kind of music do planets love?",
+      "group": "joke-question",
+      "file": "assets/voice/library/3ab340fc78b49ea1.mp3"
+    },
+    {
+      "id": "097afcaeacd45346",
+      "text": "Neptunes!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/097afcaeacd45346.mp3"
+    },
+    {
+      "id": "a5194ed2cd226191",
+      "text": "How does the moon get a haircut?",
+      "group": "joke-question",
+      "file": "assets/voice/library/a5194ed2cd226191.mp3"
+    },
+    {
+      "id": "8c00f73eebd53ac6",
+      "text": "Eclipse it!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/8c00f73eebd53ac6.mp3"
+    },
+    {
+      "id": "61f269a2bfad2d63",
+      "text": "What does a cloud wear under its raincoat?",
+      "group": "joke-question",
+      "file": "assets/voice/library/61f269a2bfad2d63.mp3"
+    },
+    {
+      "id": "47f07f0acdac4feb",
+      "text": "Thunderwear!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/47f07f0acdac4feb.mp3"
+    },
+    {
+      "id": "a37ab8db489ed4e4",
+      "text": "What did one snowflake say to another?",
+      "group": "joke-question",
+      "file": "assets/voice/library/a37ab8db489ed4e4.mp3"
+    },
+    {
+      "id": "be195a97ab1e6f25",
+      "text": "You’re one of a kind!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/be195a97ab1e6f25.mp3"
+    },
+    {
+      "id": "4f85c376942345e1",
+      "text": "What kind of tree fits in your hand?",
+      "group": "joke-question",
+      "file": "assets/voice/library/4f85c376942345e1.mp3"
+    },
+    {
+      "id": "68641352016562c8",
+      "text": "A palm tree!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/68641352016562c8.mp3"
+    },
+    {
+      "id": "035efd36d8822851",
+      "text": "Where does a sheep get its wool cut?",
+      "group": "joke-question",
+      "file": "assets/voice/library/035efd36d8822851.mp3"
+    },
+    {
+      "id": "fab1f385132311fc",
+      "text": "At the baa-ber!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/fab1f385132311fc.mp3"
+    },
+    {
+      "id": "23fd82721cca9a47",
+      "text": "Why did the scarecrow get a medal?",
+      "group": "joke-question",
+      "file": "assets/voice/library/23fd82721cca9a47.mp3"
+    },
+    {
+      "id": "b1fb966447362e53",
+      "text": "It was outstanding in its field!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/b1fb966447362e53.mp3"
+    },
+    {
+      "id": "400b70447f017d55",
+      "text": "What do you call a funny mountain?",
+      "group": "joke-question",
+      "file": "assets/voice/library/400b70447f017d55.mp3"
+    },
+    {
+      "id": "53352a46a080067c",
+      "text": "Hill-arious!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/53352a46a080067c.mp3"
+    },
+    {
+      "id": "ea14ca2228f79c35",
+      "text": "What did the left eye say to the right eye?",
+      "group": "joke-question",
+      "file": "assets/voice/library/ea14ca2228f79c35.mp3"
+    },
+    {
+      "id": "336afd47cdb8b93e",
+      "text": "Between us, something smells!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/336afd47cdb8b93e.mp3"
+    },
+    {
+      "id": "52d9b9dc05d49a70",
+      "text": "What do you call a superhero potato?",
+      "group": "joke-question",
+      "file": "assets/voice/library/52d9b9dc05d49a70.mp3"
+    },
+    {
+      "id": "6b6d685482f87611",
+      "text": "Super Spud!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/6b6d685482f87611.mp3"
+    },
+    {
+      "id": "365c8bf501f18bb5",
+      "text": "Why did the superhero bring string?",
+      "group": "joke-question",
+      "file": "assets/voice/library/365c8bf501f18bb5.mp3"
+    },
+    {
+      "id": "504ff22ca5064a44",
+      "text": "To tie up the loose ends!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/504ff22ca5064a44.mp3"
+    },
+    {
+      "id": "6cb4dd08f3f05fdd",
+      "text": "Where do superheroes eat lunch?",
+      "group": "joke-question",
+      "file": "assets/voice/library/6cb4dd08f3f05fdd.mp3"
+    },
+    {
+      "id": "887651c6a0a51ae5",
+      "text": "At the super-market!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/887651c6a0a51ae5.mp3"
+    },
+    {
+      "id": "6a9359de5141eb2e",
+      "text": "Why did Captain Comet take a sandwich to the moon?",
+      "group": "joke-question",
+      "file": "assets/voice/library/6a9359de5141eb2e.mp3"
+    },
+    {
+      "id": "72cfdaddd388ab18",
+      "text": "Because space snacks are out of this world!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/72cfdaddd388ab18.mp3"
+    },
+    {
+      "id": "a5d62324da078154",
+      "text": "What did Rainbow Rocket say before taking off?",
+      "group": "joke-question",
+      "file": "assets/voice/library/a5d62324da078154.mp3"
+    },
+    {
+      "id": "0e41a540784e7383",
+      "text": "Ready, steady, rainbow!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/0e41a540784e7383.mp3"
+    },
+    {
+      "id": "60ee8c9cc8ecb341",
+      "text": "Why did Thunder Paws bring an umbrella?",
+      "group": "joke-question",
+      "file": "assets/voice/library/60ee8c9cc8ecb341.mp3"
+    },
+    {
+      "id": "b76d9fa16f423397",
+      "text": "There was a chance of paw-shower!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/b76d9fa16f423397.mp3"
+    },
+    {
+      "id": "5cb2f1195afde311",
+      "text": "Why did Super Sprout bring a watering can?",
+      "group": "joke-question",
+      "file": "assets/voice/library/5cb2f1195afde311.mp3"
+    },
+    {
+      "id": "2b51f779ed107b8b",
+      "text": "To grow her superpowers!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/2b51f779ed107b8b.mp3"
+    },
+    {
+      "id": "9fa98e4263e34460",
+      "text": "What did the star say after its first race?",
+      "group": "joke-question",
+      "file": "assets/voice/library/9fa98e4263e34460.mp3"
+    },
+    {
+      "id": "449f12f3d65781bc",
+      "text": "I really shone out there!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/449f12f3d65781bc.mp3"
+    },
+    {
+      "id": "1aed0afb46d09af9",
+      "text": "What did the sock say to the shoe?",
+      "group": "joke-question",
+      "file": "assets/voice/library/1aed0afb46d09af9.mp3"
+    },
+    {
+      "id": "3cdf2872dea316f9",
+      "text": "I’ve got your back heel!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/3cdf2872dea316f9.mp3"
+    },
+    {
+      "id": "5f59c177175247be",
+      "text": "Why did the computer feel cold?",
+      "group": "joke-question",
+      "file": "assets/voice/library/5f59c177175247be.mp3"
+    },
+    {
+      "id": "e4dd5b0e343a256b",
+      "text": "It left its windows open!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/e4dd5b0e343a256b.mp3"
+    },
+    {
+      "id": "cd3e9f717d4c8a79",
+      "text": "What did the wall say to the other wall?",
+      "group": "joke-question",
+      "file": "assets/voice/library/cd3e9f717d4c8a79.mp3"
+    },
+    {
+      "id": "e3e03f01cde3652b",
+      "text": "Meet you at the corner!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/e3e03f01cde3652b.mp3"
+    },
+    {
+      "id": "bd0850904f3f17c7",
+      "text": "Why did the crayon win the race?",
+      "group": "joke-question",
+      "file": "assets/voice/library/bd0850904f3f17c7.mp3"
+    },
+    {
+      "id": "f6ef76955b5d708b",
+      "text": "It took the colourful shortcut!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/f6ef76955b5d708b.mp3"
+    },
+    {
+      "id": "33271b963018a386",
+      "text": "How do you make a tissue dance?",
+      "group": "joke-question",
+      "file": "assets/voice/library/33271b963018a386.mp3"
+    },
+    {
+      "id": "d3b783fdd2c46377",
+      "text": "Put a little boogie in it!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/d3b783fdd2c46377.mp3"
+    },
+    {
+      "id": "56418dcf30cd9964",
+      "text": "Why did the egg hide behind the curtain?",
+      "group": "joke-question",
+      "file": "assets/voice/library/56418dcf30cd9964.mp3"
+    },
+    {
+      "id": "562ff78b15350666",
+      "text": "It was a little chicken!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/562ff78b15350666.mp3"
+    },
+    {
+      "id": "aca666282981f4af",
+      "text": "What do you call a sleeping pizza?",
+      "group": "joke-question",
+      "file": "assets/voice/library/aca666282981f4af.mp3"
+    },
+    {
+      "id": "77aae913649322f6",
+      "text": "A pi-z-z-z-a!",
+      "group": "joke-answer",
+      "file": "assets/voice/library/77aae913649322f6.mp3"
+    },
+    {
+      "id": "f919c90a0d56258e",
+      "text": "Oh, hello! Lovely to see you. What shall we chat about?",
+      "group": "chat",
+      "file": "assets/voice/library/f919c90a0d56258e.mp3"
+    },
+    {
+      "id": "d453f83108820eb6",
+      "text": "Bye for now, little explorer!",
+      "group": "chat",
+      "file": "assets/voice/library/d453f83108820eb6.mp3"
+    },
+    {
+      "id": "efaad5b46bf5cdb8",
+      "text": "I’m here with you. Please tell a grown-up nearby how you’re feeling. You can ask them to stay with you.",
+      "group": "chat",
+      "file": "assets/voice/library/efaad5b46bf5cdb8.mp3"
+    },
+    {
+      "id": "6ac2e14b76a74d5a",
+      "text": "Ooh, what a mighty little roar! That deserves a paw clap.",
+      "group": "chat",
+      "file": "assets/voice/library/6ac2e14b76a74d5a.mp3"
+    },
+    {
+      "id": "8b801f5a98a5d012",
+      "text": "Roar! Hee hee. That tickled my whiskers. Can you do a tiny roar?",
+      "group": "chat",
+      "file": "assets/voice/library/8b801f5a98a5d012.mp3"
+    },
+    {
+      "id": "7d7e3af61a5875ec",
+      "text": "My favourite game is hiding. But my fluffy mane always gives me away! What’s your favourite game?",
+      "group": "chat",
+      "file": "assets/voice/library/7d7e3af61a5875ec.mp3"
+    },
+    {
+      "id": "e8e3224719526b9a",
+      "text": "That sounds fun! I’d give it a go with my little lion paws. Want an adventure?",
+      "group": "chat",
+      "file": "assets/voice/library/e8e3224719526b9a.mp3"
+    },
+    {
+      "id": "2a074db84c6d6f81",
+      "text": "I’m Lenny! I live on a floating island. My mane is fluffy, my paws are little, and my roar is sometimes a squeak.",
+      "group": "chat",
+      "file": "assets/voice/library/2a074db84c6d6f81.mp3"
+    },
+    {
+      "id": "2ce13a29268a0862",
+      "text": "I feel bouncy today! Like my paws have springs. How do you feel?",
+      "group": "chat",
+      "file": "assets/voice/library/2ce13a29268a0862.mp3"
+    },
+    {
+      "id": "f9285bf163bc3690",
+      "text": "Happy paws! I’m doing a little wiggle with you.",
+      "group": "chat",
+      "file": "assets/voice/library/f9285bf163bc3690.mp3"
+    },
+    {
+      "id": "e02130a09b18263b",
+      "text": "A sleepy lion stretch sounds lovely. Lift your paws, give a little yawn, then let them flop.",
+      "group": "chat",
+      "file": "assets/voice/library/e02130a09b18263b.mp3"
+    },
+    {
+      "id": "e124e45cb9ee7c77",
+      "text": "Hello, hello! I’m very happy you’re here. Shall we do a tiny roar together?",
+      "group": "chat",
+      "file": "assets/voice/library/e124e45cb9ee7c77.mp3"
+    },
+    {
+      "id": "e858667ad20508c6",
+      "text": "My ears missed a little bit. Shall we try a roar, hear a joke, or go on an adventure?",
+      "group": "chat",
+      "file": "assets/voice/library/e858667ad20508c6.mp3"
+    }
+  ]
+}

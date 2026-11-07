@@ -109,7 +109,7 @@ main{min-height:100vh;min-height:100svh;padding-left:max(35px,env(safe-area-inse
 @keyframes paw-right{from{transform:translateX(0) rotate(-18deg) scaleX(-1)}to{transform:translateX(-45px) rotate(-35deg) scaleX(-1)}}
 @media(max-width:720px){.secret-heart{padding:13px}.secret-heart svg{width:18px;height:18px}.header-heart{margin-right:0}.stage-heart-one{left:2%;top:20%}.stage-heart-two{right:2%;top:25%}.stage-heart-three{left:3%;bottom:8%}.hug-paw{width:65px;height:65px;top:20%}.hug-message{bottom:-4px;padding:8px;left:7%;right:7%;border-radius:19px}.hug-message strong{font-size:.96rem}.hug-message p{font-size:.68rem;margin:4px 0}.hug-message .small{min-height:44px;padding:5px 11px;font-size:.75rem}}
 @media(prefers-reduced-motion:reduce){.stage[data-hug=true] .puppet-body,.hug-paw{animation:none!important}}
-</style></head><body><main>
+</style><meta name="theme-color" content="#fff5df"></head><body><main>
 <header><div class="brand"><span aria-hidden="true">🐾</span>Lenny’s little adventure</div><span id="headerHeart" class="heart-slot header-heart"></span><button id="homeButton" class="small" hidden>⌂ Home</button></header>
 <div class="shell"><section class="stage" id="stage" aria-label="Lenny’s puppet stage"><svg class="scene" viewBox="0 0 1086 1448" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Lenny the plush lion on a colourful floating island puppet stage">
 <defs>
@@ -142,7 +142,7 @@ main{min-height:100vh;min-height:100svh;padding-left:max(35px,env(safe-area-inse
 <details class="parents"><summary>Grown-ups</summary><p>For Prep kids aged 5–6. Inspired by Alpha-style life-skill workshops: leadership and teamwork, storytelling and public speaking, entrepreneurship and money, relationships, and grit. Each stop has a 10–15 minute mission. Children plan, make, test or discuss a choice, then explain what they learned. Instructions appear one at a time, with a practical show-or-tell goal. A completed show-or-tell mission earns a saved pixel meat treat. Feeding a treat to Lenny triggers the surprise celebration. Children or a grown-up confirm completion. Children can answer each mission by voice or typing, ask for help, and say “next” or “home”. Lenny acknowledges the answer and asks a mission question. Children or their grown-up decide whether the goal has been met. After five missions, children create, test and present a project for a real person. A grown-up can help with materials, join in or celebrate their effort.</p>
 <div class="parent-grid"><label for="voice">Lenny’s voice</label><select id="voice"><option value="">Automatic</option></select><button class="small" id="preview">Hear a hello</button><button class="small" id="switchPlayer">Switch player</button><button class="small" id="reset">Start a new adventure</button></div>
 <p id="resetNote" hidden>This player’s badges, treats and secret hearts will be cleared. <button class="small" id="confirmReset">Yes, start again</button> <button class="small" id="cancelReset">Keep my stamps</button></p>
-<p>Ask a grown-up before using the microphone. After you tap it, Lenny listens again after each reply. Home, muting sound or saying “stop” ends the chat. This site uses built-in conversations and browser speech. Your browser may send audio to its speech service. Nicknames, adventure progress and earned treats stay in this browser. Found hearts are saved with each nickname. Six hidden hearts give Lenny a hug animation, with a bigger message after all six are discovered. The site does not save questions or recordings. Task instructions are read aloud when selected. Tap the task title or Read it again to hear the current step once more. Voice choice and microphone support vary by device. Keep personal details out of questions.</p></details><div class="heart-footer"><span id="heartCount" hidden></span><span id="footerHeart" class="heart-slot"></span></div>
+<p>Lenny’s featured moments use fal-generated Australian female recordings. The full scripted voice catalogue can be generated once through the included private GitHub Action; until generated, mission instructions, jokes, names and free chat use the best Australian device voice available. Dynamic responses and new names need a live server to guarantee the same prerecorded voice. <strong>Some iPhones and iPads do not support speech-to-text in this browser; typed or button answers always remain available.</strong></p><p>Ask a grown-up before using the microphone. After you tap it, Lenny listens again after each reply. Home, muting sound or saying “stop” ends the chat. This site uses built-in conversations and browser speech. Your browser may send audio to its speech service. Nicknames, adventure progress and earned treats stay in this browser. Found hearts are saved with each nickname. Six hidden hearts give Lenny a hug animation, with a bigger message after all six are discovered. The site does not save questions or recordings. Task instructions are read aloud when selected. Tap the task title or Read it again to hear the current step once more. Voice choice and microphone support vary by device. Keep personal details out of questions.</p></details><div class="heart-footer"><span id="heartCount" hidden></span><span id="footerHeart" class="heart-slot"></span></div>
 </main><script>
 const quests = [[0, "Secret Island Map", 12, "pair", ["With a partner, make an island on paper. Add a start, a treasure and three obstacles.", "Choose who gives directions first. Your partner moves a toy along the map, following your words.", "Can you guide them to the treasure without touching an obstacle? Give one direction at a time.", "Swap jobs. Change any direction that was confusing, then tell each other which words helped."], "Show your partner the route and explain one direction you improved", "Can your team find the treasure using words?"], [0, "The Secret Builder", 12, "pair", ["Choose five safe objects. One person makes a little model while the other looks away.", "Describe your model to your partner. They draw it without looking. Use words like beside, above and between.", "Compare the drawing with the model. Find one detail your words could explain more clearly.", "Swap builder and artist. Try your clearer words and see what changes."], "Compare the drawing with your model and explain one clearer clue", "Can you build a picture in someone else’s mind?"], [0, "Rescue Mission", 12, "pair", ["Put a toy beside a paper river on the floor. You have two cushions and a towel to make a safe route.", "Make a rescue plan together. Each person adds an idea. Choose who plans the route and who moves the toy.", "Try the rescue. Keep your feet on the floor and pretend the toy cannot touch the river.", "Swap jobs and try a better route. Tell your partner which idea made the rescue work."], "Show your team’s rescue and explain which two ideas you used", "A toy is stranded! Can your team bring it home?"], [1, "The Wrong Ending", 12, "solo", ["Choose a character, a place and something the character wants. Draw them or use toys.", "Tell a story with a beginning, a problem and an ending. Act it out for someone.", "Now change the ending. What if your character makes a different choice?", "Tell both endings. Ask your listener which they prefer and why."], "Tell both endings and explain which one your audience chose", "One story. Two endings. Which will your audience choose?"], [1, "The Mystery Object Show", 10, "solo", ["Choose a safe object and imagine a new use for it. A sock could be a dragon’s sleeping bag!", "Practise a short show. Tell your audience what it is, how it works and who would use it.", "Give your show without naming the real object. Let your audience guess.", "Listen to their question. Add one detail to make your explanation clearer, then try your show again."], "Show your invention and explain a detail you added after a question", "Can you make an ordinary thing sound extraordinary?"], [1, "Lenny’s Newsroom", 12, "pair", ["Choose a toy to be a visitor from a made-up planet. Ask a partner to be the visitor.", "Think of three questions. Find out where they live, what they eat and one surprising fact.", "Listen to the answers. Give a short news report about your visitor using all three facts.", "Ask the visitor if you got the facts right. Fix one detail and give your report again."], "Give your report and explain a fact you checked with your visitor", "A visitor has landed on Lenny’s island. Get the story!"], [2, "The Five-Coin Toy Shop", 15, "pair", ["Draw three things to sell. Give them prices of one, two and three paper coins.", "Give your customer five paper coins. Explain what makes each thing worth buying.", "Let them choose what to buy. Count the cost and how many coins they have left.", "Ask why they chose it. Improve one thing in your shop, then swap jobs and try again."], "Show a purchase, count the coins and explain your customer’s choice", "Can you make a shop your customer wants to visit?"], [2, "Invent for Someone", 15, "pair", ["Ask someone which toy needs a bed, a shelter or a carrying box. Listen to what it must do.", "Draw two different ideas. Ask which one they would like you to build and why.", "Build their choice using paper, a towel or a box. Ask a grown-up for help if you need tape.", "Let your customer test it with the toy. Use their feedback to change one thing, then show what improved."], "Show your design and explain a change your customer helped you make", "Make something useful for someone else. What do they need?"], [2, "The Party Planner", 15, "pair", ["Plan a pretend party for a toy. Make eight large paper coins.", "Draw choices for snacks, games and decorations. Give each choice a price from one to three coins.", "Pick things for your party without spending more than eight coins. Count what is left.", "A guest wants one more game. Decide what you could swap or remove to pay for it. Explain your choice."], "Show your eight-coin party plan and explain a choice you gave up", "Lenny has eight coins for a party. How will you spend them?"], [3, "The Fair-Play Puzzle", 10, "pair", ["Pretend two toys both want the same special crayon. Ask a partner to speak for one toy.", "Each toy explains why it wants the crayon. Listen before you suggest a plan.", "Think of two ways to share it. Ask what each toy likes or dislikes about each plan.", "Choose a plan together and act it out. If one toy is unhappy, change the plan and try again."], "Act out your sharing plan and explain why both toys can use it", "Two toys. One special crayon. What should they do?"], [3, "The Welcome Mission", 12, "pair", ["Imagine a toy is new to a game. Ask a partner to play the new toy.", "Ask the newcomer what they like and what they are unsure about. Listen to the answer.", "Change one rule or give them a useful role so they can join in. Play a short round.", "Ask how it felt to join. Use their answer to make your welcome even better."], "Show how you changed a game so someone new could join", "Someone new wants to play. Help them feel they belong."], [3, "The Kindness Detective", 12, "pair", ["Ask someone at home what small thing would make their day easier. Listen without guessing.", "Think of two ways you could help. Ask which would be most useful.", "Do the chosen job with their permission. Ask a grown-up to help if you need it.", "Ask whether your help worked. Tell Lenny what you noticed and what you would do next time."], "Show the help you gave and explain how you found out it was useful", "Find a real problem and make someone’s day a little better."], [4, "The Paper Bridge Lab", 15, "solo", ["Put two low books a hand-width apart. Use one sheet of paper to make a bridge.", "Test it with three paper balls. How many stay on before the bridge bends?", "Use the same sheet to make a different bridge. Try folds or a rolled edge. Test with the same balls.", "Compare your tests. Choose the stronger design and explain what you changed."], "Show both bridge tests and explain which design worked better", "Can one sheet of paper become a stronger bridge?"], [4, "The Tower That Learns", 15, "solo", ["Build a tower with six paper cups or safe blocks. Draw or remember your first design.", "Make a little paper flag. Can your tower hold it while you count to ten?", "Build again with the same pieces. Change just one thing, such as the width of the base.", "Test with the same flag. Compare your towers and explain what helped one stay up."], "Show both towers and explain which change helped", "Your first tower is only the beginning. Can you improve it?"], [4, "Make a Marble-Free Maze", 15, "solo", ["Draw a maze for a large paper ball. Add a start, a finish and three tricky turns.", "Move the ball through with one finger. Notice where it is too easy or gets stuck.", "Change two parts of the maze. Try to make it tricky but possible.", "Ask someone to test it. Watch where they struggle, then improve one clue or turn."], "Show your maze and explain how your tester helped you improve it", "Build a puzzle that is tricky, fair and fun."]];
 const categories = [
@@ -154,14 +154,399 @@ const categories = [
 ];
 const supplies = ["Paper, crayons, a small toy and a partner.", "Five safe objects, paper, crayons and a partner.", "A toy, paper for a river, two cushions, a towel and a partner.", "Toys or drawing paper, and someone to hear your story.", "One safe household object and a willing audience.", "A toy and a partner to play the visitor.", "Paper, crayons, five large paper coins and a customer.", "A toy, paper, a towel or box, and a customer. A grown-up can help with tape.", "Paper, crayons, eight large paper coins and a partner.", "Two toys, one crayon and a partner.", "A toy, a partner and a simple game you both know.", "Someone at home who would like a small helping hand.", "Two low books, one sheet of paper and three paper balls.", "Six paper cups or safe blocks, paper for a flag, and crayons.", "Paper, crayons, one large paper ball and a tester."];
 const jokes = [
- ['What do lions wear to bed?','Their roar-jamas!'],
- ['What do you call a sleeping dinosaur?','A dino-snore!'],
- ['What do you call a bear with no teeth?','A gummy bear!'],
- ['Why did the teddy say no to pudding?','Because it was already stuffed!']
+ [
+  "What do lions wear to bed?",
+  "Their roar-jamas!"
+ ],
+ [
+  "What is a lion’s favourite type of music?",
+  "Anything with a good roar-thm!"
+ ],
+ [
+  "Why did the lion bring a pencil to the party?",
+  "To draw a crowd!"
+ ],
+ [
+  "What did the lion say to his new shoes?",
+  "You’re pawsome!"
+ ],
+ [
+  "Why was the lion so good at hide-and-seek?",
+  "Because nobody could find his mane hiding spot!"
+ ],
+ [
+  "What’s a lion’s favourite snack?",
+  "Anything that goes crunch-a-munch!"
+ ],
+ [
+  "Why was Lenny late to the picnic?",
+  "He was having a bad mane day!"
+ ],
+ [
+  "What do you call a lion wearing sunglasses?",
+  "A cool cat!"
+ ],
+ [
+  "What do you call a lion who likes building things?",
+  "A roar-chitect!"
+ ],
+ [
+  "Why did Lenny bring a map to the kitchen?",
+  "He was hunting for the snack treasure!"
+ ],
+ [
+  "What did Lenny say when the biscuit disappeared?",
+  "Crikey! That was my last crumb!"
+ ],
+ [
+  "What do you call a lion with a microphone?",
+  "The king of the sing-along!"
+ ],
+ [
+  "Why did Lenny sleep under the stars?",
+  "He wanted a million-star hotel!"
+ ],
+ [
+  "What do you call a bear with no teeth?",
+  "A gummy bear!"
+ ],
+ [
+  "What do you call a sleeping dinosaur?",
+  "A dino-snore!"
+ ],
+ [
+  "Why did the teddy bear say no to cake?",
+  "It was already stuffed!"
+ ],
+ [
+  "What do you call a sleeping bull?",
+  "A bulldozer!"
+ ],
+ [
+  "Why did the chicken join the band?",
+  "It had the drumsticks!"
+ ],
+ [
+  "Why did the cow go to space?",
+  "To see the moooon!"
+ ],
+ [
+  "What do you call a crocodile detective?",
+  "An investi-gator!"
+ ],
+ [
+  "What do you call a dog magician?",
+  "A labra-cadabra-dor!"
+ ],
+ [
+  "What do you call a bear in the rain?",
+  "A drizzly bear!"
+ ],
+ [
+  "What’s a frog’s favourite drink?",
+  "Croak-a-cola!"
+ ],
+ [
+  "Why did the kangaroo become a comedian?",
+  "It had everyone jumping with laughter!"
+ ],
+ [
+  "What did the emu do at the playground?",
+  "It went down the slide, feet first!"
+ ],
+ [
+  "What do you call a koala who sings?",
+  "A koala-ty performer!"
+ ],
+ [
+  "Why did the duck take a pencil to the pond?",
+  "To draw a quack-ture!"
+ ],
+ [
+  "What did the duck say when it bought a hat?",
+  "Put it on my bill!"
+ ],
+ [
+  "What do you call a rabbit who tells jokes?",
+  "A funny bunny!"
+ ],
+ [
+  "What do cats eat for breakfast?",
+  "Mice crispies!"
+ ],
+ [
+  "What do you call a monkey with a banana phone?",
+  "A-peeling!"
+ ],
+ [
+  "Why did the bee have sticky hair?",
+  "It used a honeycomb!"
+ ],
+ [
+  "What do you call a magic owl?",
+  "Hoo-dini!"
+ ],
+ [
+  "What do you call a bee who can’t decide?",
+  "A maybe!"
+ ],
+ [
+  "Why did the fish blush?",
+  "Because it saw the ocean’s bottom!"
+ ],
+ [
+  "What did the ocean say to the beach?",
+  "Nothing. It just waved!"
+ ],
+ [
+  "Why did the banana visit the doctor?",
+  "It wasn’t peeling well!"
+ ],
+ [
+  "Why did the orange stop running?",
+  "It ran out of juice!"
+ ],
+ [
+  "What do you call cheese that isn’t yours?",
+  "Nacho cheese!"
+ ],
+ [
+  "Why did the cookie go to the doctor?",
+  "It felt crumby!"
+ ],
+ [
+  "What did the big flower say to the little flower?",
+  "Hi, bud!"
+ ],
+ [
+  "What do you call a room with no doors or windows?",
+  "A mushroom!"
+ ],
+ [
+  "Why did the bicycle fall over?",
+  "It was two-tired!"
+ ],
+ [
+  "Why was the broom late?",
+  "It overswept!"
+ ],
+ [
+  "What did the blanket say to the bed?",
+  "I’ve got you covered!"
+ ],
+ [
+  "What did one plate say to the other?",
+  "Dinner is on me!"
+ ],
+ [
+  "What did the pencil say to the paper?",
+  "You’ve got a point!"
+ ],
+ [
+  "Why did the clock get into trouble?",
+  "It kept tocking!"
+ ],
+ [
+  "What did the zero say to the eight?",
+  "Nice belt!"
+ ],
+ [
+  "Why did the maths book look worried?",
+  "It had too many problems!"
+ ],
+ [
+  "Why did the cupcake go to school?",
+  "To get a little batter!"
+ ],
+ [
+  "Why did the pirate learn the alphabet slowly?",
+  "He got stuck at C!"
+ ],
+ [
+  "Why did the pirate go to the doctor?",
+  "To get his arrrr checked!"
+ ],
+ [
+  "What did the volcano say to its friend?",
+  "I lava you!"
+ ],
+ [
+  "How do you organise a space party?",
+  "You planet!"
+ ],
+ [
+  "Why did the rocket bring a spoon?",
+  "For a taste of the Milky Way!"
+ ],
+ [
+  "What kind of music do planets love?",
+  "Neptunes!"
+ ],
+ [
+  "How does the moon get a haircut?",
+  "Eclipse it!"
+ ],
+ [
+  "What does a cloud wear under its raincoat?",
+  "Thunderwear!"
+ ],
+ [
+  "What did one snowflake say to another?",
+  "You’re one of a kind!"
+ ],
+ [
+  "What kind of tree fits in your hand?",
+  "A palm tree!"
+ ],
+ [
+  "Where does a sheep get its wool cut?",
+  "At the baa-ber!"
+ ],
+ [
+  "Why did the scarecrow get a medal?",
+  "It was outstanding in its field!"
+ ],
+ [
+  "What do you call a funny mountain?",
+  "Hill-arious!"
+ ],
+ [
+  "What did the left eye say to the right eye?",
+  "Between us, something smells!"
+ ],
+ [
+  "What do you call a superhero potato?",
+  "Super Spud!"
+ ],
+ [
+  "Why did the superhero bring string?",
+  "To tie up the loose ends!"
+ ],
+ [
+  "Where do superheroes eat lunch?",
+  "At the super-market!"
+ ],
+ [
+  "Why did Captain Comet take a sandwich to the moon?",
+  "Because space snacks are out of this world!"
+ ],
+ [
+  "What did Rainbow Rocket say before taking off?",
+  "Ready, steady, rainbow!"
+ ],
+ [
+  "Why did Thunder Paws bring an umbrella?",
+  "There was a chance of paw-shower!"
+ ],
+ [
+  "Why did Super Sprout bring a watering can?",
+  "To grow her superpowers!"
+ ],
+ [
+  "What did the star say after its first race?",
+  "I really shone out there!"
+ ],
+ [
+  "What did the sock say to the shoe?",
+  "I’ve got your back heel!"
+ ],
+ [
+  "Why did the computer feel cold?",
+  "It left its windows open!"
+ ],
+ [
+  "What did the wall say to the other wall?",
+  "Meet you at the corner!"
+ ],
+ [
+  "Why did the crayon win the race?",
+  "It took the colourful shortcut!"
+ ],
+ [
+  "How do you make a tissue dance?",
+  "Put a little boogie in it!"
+ ],
+ [
+  "Why did the egg hide behind the curtain?",
+  "It was a little chicken!"
+ ],
+ [
+  "What do you call a sleeping pizza?",
+  "A pi-z-z-z-a!"
+ ]
 ];
 const get = id => document.getElementById(id);
 const synthesis = window.speechSynthesis;
 const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+// Featured Lenny moments use the prerecorded Australian female voice.
+// If the audio is unavailable, the game falls back to the best local English (Australia) speech voice.
+const lennyClips = {"hello": "https://v3b.fal.media/files/b/0ab17b3c/wqgy8CBBE-U_2xZUtv-Nd_gemini_tts_output.wav", "home": "https://v3b.fal.media/files/b/0ab17b42/Ko_rt7syQMV7vwkLHmMjQ_gemini_tts_output.wav", "mission": "https://v3b.fal.media/files/b/0ab17b42/72TxAItmbOaxabbOieu7m_gemini_tts_output.wav", "reward": "https://v3b.fal.media/files/b/0ab17b42/1Ek6vKDX3RQ-WRmSGOyjH_gemini_tts_output.wav", "feed": "https://v3b.fal.media/files/b/0ab17b42/B2gLdZI8CY6FCw3-LSjjg_gemini_tts_output.wav", "hug": "https://v3b.fal.media/files/b/0ab17b42/GwXLt0hjH3HOiy9SC1uOQ_gemini_tts_output.wav", "allhearts": "https://v3b.fal.media/files/b/0ab17b42/87UMjJhAiT3IPcnDtWmCa_gemini_tts_output.wav", "jokeprelude": "https://v3b.fal.media/files/b/0ab17b42/SgD4Vw-4itU9oglywlFBT_gemini_tts_output.wav"};
+let lennyAudio=null;
+let clipSequence=0;
+function featuredClipKey(text){
+ if(mode==='reward' && /earned/i.test(text))return 'reward';
+ if(mode==='feed' && (/Nom, nom, nom/i.test(text)||/scrumptious/i.test(text)))return 'feed';
+ if(mode==='home' && /You can go on an adventure/i.test(text))return 'home';
+ return null;
+}
+function playLennyClip(key, fallbackText, reopen=false){
+ const generation=++clipSequence;
+ const audio = new Audio('assets/voice/'+key+'.wav');
+ audio.preload='auto';
+ audio.playsInline=true;
+ lennyAudio=audio;
+ let usedRemote=false,done=false;
+ const finish=()=>{if(done||generation!==clipSequence)return;done=true;lennyAudio=null;state('LENNY IS READY');if(reopen&&keepChatting&&mode==='talk')listenTimer=setTimeout(listen,500);};
+ const fallback=()=>{
+  if(done||generation!==clipSequence)return;
+  if(!usedRemote){
+   usedRemote=true;
+   audio.src=lennyClips[key];
+   audio.load();
+   audio.play().catch(()=>{if(generation===clipSequence){done=true;lennyAudio=null;sayBrowser(fallbackText,reopen);}});
+  }else{done=true;lennyAudio=null;sayBrowser(fallbackText,reopen);}
+ };
+ audio.addEventListener('error',fallback);
+ audio.addEventListener('ended',finish);
+ audio.addEventListener('playing',()=>{if(generation===clipSequence)state('LENNY IS TALKING','speaking');});
+ audio.play().catch(fallback);
+ return true;
+}
+
+
+// VOICE EDITION: A GitHub Pages site never exposes a fal API key.
+// Run the included GitHub Action to record every scripted utterance from this catalogue.
+const LENNY_VOICE_IDS = /* VOICE_MAP_START */ {"Hello, explorer! What should I call you? Type your name or nickname, then tap Let’s play.":"65ce90a33b2c3b6b","Oh, hello there! I’m Lenny. Hee hee! Shall we go on a little adventure?":"3bb3af1bc56fb696","Oh, hello, Banksia! You can go on an adventure, talk to me, or hear a joke. Tap a big button.":"faf7a9053b420276","Mmm! That was scrumptious! High paws, Banksia!":"3664abac9d785ef9","A little lion hug, Banksia! You found a secret heart. Squeeeze!":"2a4a533f06539d38","All six! A giant lion hug, Banksia! You found a secret heart. Squeeeze!":"ad733447da19344d","Oh, hello, Captain Banksia! You can go on an adventure, talk to me, or hear a joke. Tap a big button.":"eee4ba4b5ba4c0f9","Mmm! That was scrumptious! High paws, Captain Banksia!":"e71231c1b633cc76","A little lion hug, Captain Banksia! You found a secret heart. Squeeeze!":"06fdc38df9e43ba4","All six! A giant lion hug, Captain Banksia! You found a secret heart. Squeeeze!":"f1ed2e6fbf7de8e4","Oh, hello, Captain Comet! You can go on an adventure, talk to me, or hear a joke. Tap a big button.":"aae753e28adc7361","Mmm! That was scrumptious! High paws, Captain Comet!":"1ee53fe255898661","A little lion hug, Captain Comet! You found a secret heart. Squeeeze!":"7bf027f1fa53e34d","All six! A giant lion hug, Captain Comet! You found a secret heart. Squeeeze!":"8762754f59d0767e","Oh, hello, Rainbow Rocket! You can go on an adventure, talk to me, or hear a joke. Tap a big button.":"65a362392da5eae7","Mmm! That was scrumptious! High paws, Rainbow Rocket!":"6870d2982e0a1516","A little lion hug, Rainbow Rocket! You found a secret heart. Squeeeze!":"dfcd11d4a4fc7db2","All six! A giant lion hug, Rainbow Rocket! You found a secret heart. Squeeeze!":"d9d5b3246e2f06c2","Oh, hello, Thunder Paws! You can go on an adventure, talk to me, or hear a joke. Tap a big button.":"665cff1362933b08","Mmm! That was scrumptious! High paws, Thunder Paws!":"2d502a2637c5c0e0","A little lion hug, Thunder Paws! You found a secret heart. Squeeeze!":"0bbbd2e1ab16128c","All six! A giant lion hug, Thunder Paws! You found a secret heart. Squeeeze!":"a4a636355b7b3f15","Oh, hello, Super Sprout! You can go on an adventure, talk to me, or hear a joke. Tap a big button.":"d494ca258b401d9e","Mmm! That was scrumptious! High paws, Super Sprout!":"aec4f40ce3d044b3","A little lion hug, Super Sprout! You found a secret heart. Squeeeze!":"c739db0b060b3a50","All six! A giant lion hug, Super Sprout! You found a secret heart. Squeeeze!":"0a23c86438d677db","Oh, hello, Star Jumper! You can go on an adventure, talk to me, or hear a joke. Tap a big button.":"ea84731b1543c2e6","Mmm! That was scrumptious! High paws, Star Jumper!":"c8629786c160f0d6","A little lion hug, Star Jumper! You found a secret heart. Squeeeze!":"e324e0451f641746","All six! A giant lion hug, Star Jumper! You found a secret heart. Squeeeze!":"3e08a315565ebe18","Oh, hello, Princess Paws! You can go on an adventure, talk to me, or hear a joke. Tap a big button.":"85c58e802927fe2c","Mmm! That was scrumptious! High paws, Princess Paws!":"40a12ea74b6312ef","A little lion hug, Princess Paws! You found a secret heart. Squeeeze!":"4baa498cab909c72","All six! A giant lion hug, Princess Paws! You found a secret heart. Squeeeze!":"06561fadacf1173a","Oh, hello, Moonbeam! You can go on an adventure, talk to me, or hear a joke. Tap a big button.":"a856b0787549c7ee","Mmm! That was scrumptious! High paws, Moonbeam!":"5ec2e9f3c8800674","A little lion hug, Moonbeam! You found a secret heart. Squeeeze!":"d0566afa72276af9","All six! A giant lion hug, Moonbeam! You found a secret heart. Squeeeze!":"34c36fbabafc0004","Oh, hello, Rocket Ranger! You can go on an adventure, talk to me, or hear a joke. Tap a big button.":"19734d72eb025919","Mmm! That was scrumptious! High paws, Rocket Ranger!":"7355c4a8bba30156","A little lion hug, Rocket Ranger! You found a secret heart. Squeeeze!":"83efee470f6d6fb9","All six! A giant lion hug, Rocket Ranger! You found a secret heart. Squeeeze!":"587a581157a5822f","Can your team find the treasure using words? Our mission is Secret Island Map. Tap Let’s go when you’re ready.":"e8513c6be566b29e","First, get ready. You need Paper, crayons, a small toy and a partner. Tap Next when you’re ready.":"345c1e8c35a323c7","With a partner, make an island on paper. Add a start, a treasure and three obstacles. Tap Next when you’re ready.":"d3d4869f940731aa","Choose who gives directions first. Your partner moves a toy along the map, following your words. Tap Next when you’re ready.":"ed4bc1be51978d32","Can you guide them to the treasure without touching an obstacle? Give one direction at a time. Tap Next when you’re ready.":"5b5c588dc9e171c7","Swap jobs. Change any direction that was confusing, then tell each other which words helped. Show your partner the route and explain one direction you improved When you’re ready, show someone what you made or decided.":"5d5c46e07e369782","Which direction did you change to help your partner? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.":"9c7573e1598efc31","Let’s take one little part. Can your team find the treasure using words? Ask someone nearby to try it with you. Which part shall you try first?":"c1a2cc5eb7c62fad","Let’s take one little part. With a partner, make an island on paper. Add a start, a treasure and three obstacles. Ask someone nearby to try it with you. Which part shall you try first?":"17aa293ecae7610d","Let’s take one little part. Choose who gives directions first. Your partner moves a toy along the map, following your words. Ask someone nearby to try it with you. Which part shall you try first?":"9555ed03dc48d622","Let’s take one little part. Can you guide them to the treasure without touching an obstacle? Give one direction at a time. Ask someone nearby to try it with you. Which part shall you try first?":"04e15c5c6dc1d037","Let’s take one little part. Swap jobs. Change any direction that was confusing, then tell each other which words helped. Ask someone nearby to try it with you. Which part shall you try first?":"0521b497c6c1aea2","Can you build a picture in someone else’s mind? Our mission is The Secret Builder. Tap Let’s go when you’re ready.":"c0ddf351976fa7c5","First, get ready. You need Five safe objects, paper, crayons and a partner. Tap Next when you’re ready.":"63c06cd7e8d6e86b","Choose five safe objects. One person makes a little model while the other looks away. Tap Next when you’re ready.":"4287944346349c2f","Describe your model to your partner. They draw it without looking. Use words like beside, above and between. Tap Next when you’re ready.":"e327abaf8d9a0d4e","Compare the drawing with the model. Find one detail your words could explain more clearly. Tap Next when you’re ready.":"2ef51305522a1306","Swap builder and artist. Try your clearer words and see what changes. Compare the drawing with your model and explain one clearer clue When you’re ready, show someone what you made or decided.":"f9d581308a48291a","What did your partner’s drawing teach you about your clues? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.":"2475b964e465852d","Let’s take one little part. Can you build a picture in someone else’s mind? Ask someone nearby to try it with you. Which part shall you try first?":"7788af1818ba210c","Let’s take one little part. Choose five safe objects. One person makes a little model while the other looks away. Ask someone nearby to try it with you. Which part shall you try first?":"767085f393f59d5f","Let’s take one little part. Describe your model to your partner. They draw it without looking. Use words like beside, above and between. Ask someone nearby to try it with you. Which part shall you try first?":"654e1b256ecd03c2","Let’s take one little part. Compare the drawing with the model. Find one detail your words could explain more clearly. Ask someone nearby to try it with you. Which part shall you try first?":"808615e2c2b3bb29","Let’s take one little part. Swap builder and artist. Try your clearer words and see what changes. Ask someone nearby to try it with you. Which part shall you try first?":"79085d3d7b8698d3","A toy is stranded! Can your team bring it home? Our mission is Rescue Mission. Tap Let’s go when you’re ready.":"e82ad53183e77966","First, get ready. You need A toy, paper for a river, two cushions, a towel and a partner. Tap Next when you’re ready.":"76287929d0c4f31c","Put a toy beside a paper river on the floor. You have two cushions and a towel to make a safe route. Tap Next when you’re ready.":"c8f213037ffc0cd1","Make a rescue plan together. Each person adds an idea. Choose who plans the route and who moves the toy. Tap Next when you’re ready.":"da1820fe476ae492","Try the rescue. Keep your feet on the floor and pretend the toy cannot touch the river. Tap Next when you’re ready.":"f96c25314b58d2ec","Swap jobs and try a better route. Tell your partner which idea made the rescue work. Show your team’s rescue and explain which two ideas you used When you’re ready, show someone what you made or decided.":"4552d6e02ddfdd0c","Which two ideas did your team use in the rescue? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.":"4003e00c00312665","Let’s take one little part. A toy is stranded! Can your team bring it home? Ask someone nearby to try it with you. Which part shall you try first?":"2291fee5fed9cf17","Let’s take one little part. Put a toy beside a paper river on the floor. You have two cushions and a towel to make a safe route. Ask someone nearby to try it with you. Which part shall you try first?":"c3986563cc348e55","Let’s take one little part. Make a rescue plan together. Each person adds an idea. Choose who plans the route and who moves the toy. Ask someone nearby to try it with you. Which part shall you try first?":"b8766eb3a334a27a","Let’s take one little part. Try the rescue. Keep your feet on the floor and pretend the toy cannot touch the river. Ask someone nearby to try it with you. Which part shall you try first?":"0939b758497a38ab","Let’s take one little part. Swap jobs and try a better route. Tell your partner which idea made the rescue work. Ask someone nearby to try it with you. Which part shall you try first?":"ae309b98c8076275","One story. Two endings. Which will your audience choose? Our mission is The Wrong Ending. Tap Let’s go when you’re ready.":"bc8190e99f53264b","First, get ready. You need Toys or drawing paper, and someone to hear your story. Tap Next when you’re ready.":"54c144ea91ca34da","Choose a character, a place and something the character wants. Draw them or use toys. Tap Next when you’re ready.":"e06ae3b1e483a7e7","Tell a story with a beginning, a problem and an ending. Act it out for someone. Tap Next when you’re ready.":"c8044e7807dbdfcf","Now change the ending. What if your character makes a different choice? Tap Next when you’re ready.":"cc7e5ad81254c8dd","Tell both endings. Ask your listener which they prefer and why. Tell both endings and explain which one your audience chose When you’re ready, show someone what you made or decided.":"146c90406e7fe647","Which ending did your audience choose? Why? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.":"555169b97cb1c761","Let’s take one little part. One story. Two endings. Which will your audience choose? Ask someone nearby to try it with you. Which part shall you try first?":"1951aef17301f26a","Let’s take one little part. Choose a character, a place and something the character wants. Draw them or use toys. Ask someone nearby to try it with you. Which part shall you try first?":"3307d42e8c7d5fd5","Let’s take one little part. Tell a story with a beginning, a problem and an ending. Act it out for someone. Ask someone nearby to try it with you. Which part shall you try first?":"8ae636019a56f86f","Let’s take one little part. Now change the ending. What if your character makes a different choice? Ask someone nearby to try it with you. Which part shall you try first?":"d3635d70af15fb30","Let’s take one little part. Tell both endings. Ask your listener which they prefer and why. Ask someone nearby to try it with you. Which part shall you try first?":"52a6488d5f5fc172","Can you make an ordinary thing sound extraordinary? Our mission is The Mystery Object Show. Tap Let’s go when you’re ready.":"593052ed4e9dec6f","First, get ready. You need One safe household object and a willing audience. Tap Next when you’re ready.":"a4135c5ce9598164","Choose a safe object and imagine a new use for it. A sock could be a dragon’s sleeping bag! Tap Next when you’re ready.":"5a8824c44c80c1ea","Practise a short show. Tell your audience what it is, how it works and who would use it. Tap Next when you’re ready.":"b276f67f6d873acb","Give your show without naming the real object. Let your audience guess. Tap Next when you’re ready.":"3b731f7fdebdb946","Listen to their question. Add one detail to make your explanation clearer, then try your show again. Show your invention and explain a detail you added after a question When you’re ready, show someone what you made or decided.":"da698cae0b617e9f","What detail helped your audience understand your invention? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.":"a11a254c23745d4a","Let’s take one little part. Can you make an ordinary thing sound extraordinary? Ask someone nearby to try it with you. Which part shall you try first?":"ad38fdc24401aaf8","Let’s take one little part. Choose a safe object and imagine a new use for it. A sock could be a dragon’s sleeping bag! Ask someone nearby to try it with you. Which part shall you try first?":"780dbb72c1806959","Let’s take one little part. Practise a short show. Tell your audience what it is, how it works and who would use it. Ask someone nearby to try it with you. Which part shall you try first?":"4702f95ee17b89c7","Let’s take one little part. Give your show without naming the real object. Let your audience guess. Ask someone nearby to try it with you. Which part shall you try first?":"20479c4dd1462ceb","Let’s take one little part. Listen to their question. Add one detail to make your explanation clearer, then try your show again. Ask someone nearby to try it with you. Which part shall you try first?":"caae9357693a0137","A visitor has landed on Lenny’s island. Get the story! Our mission is Lenny’s Newsroom. Tap Let’s go when you’re ready.":"58a08a4cf21e2859","First, get ready. You need A toy and a partner to play the visitor. Tap Next when you’re ready.":"2f538adcb490d6b4","Choose a toy to be a visitor from a made-up planet. Ask a partner to be the visitor. Tap Next when you’re ready.":"94a57655d1432af9","Think of three questions. Find out where they live, what they eat and one surprising fact. Tap Next when you’re ready.":"7f9151e908a3ff3a","Listen to the answers. Give a short news report about your visitor using all three facts. Tap Next when you’re ready.":"c48c4d09c206de1f","Ask the visitor if you got the facts right. Fix one detail and give your report again. Give your report and explain a fact you checked with your visitor When you’re ready, show someone what you made or decided.":"e798282bf8e57423","Which fact did you fix after checking with your visitor? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.":"ffbf8d7b294ffef7","Let’s take one little part. A visitor has landed on Lenny’s island. Get the story! Ask someone nearby to try it with you. Which part shall you try first?":"b22e8b1d1820d90f","Let’s take one little part. Choose a toy to be a visitor from a made-up planet. Ask a partner to be the visitor. Ask someone nearby to try it with you. Which part shall you try first?":"51b5a54b9e9f4456","Let’s take one little part. Think of three questions. Find out where they live, what they eat and one surprising fact. Ask someone nearby to try it with you. Which part shall you try first?":"49f0088cd12f9ca3","Let’s take one little part. Listen to the answers. Give a short news report about your visitor using all three facts. Ask someone nearby to try it with you. Which part shall you try first?":"dd8b30718c62cf7b","Let’s take one little part. Ask the visitor if you got the facts right. Fix one detail and give your report again. Ask someone nearby to try it with you. Which part shall you try first?":"45f1df272a4ef031","Can you make a shop your customer wants to visit? Our mission is The Five-Coin Toy Shop. Tap Let’s go when you’re ready.":"a2f8dd7e388cafad","First, get ready. You need Paper, crayons, five large paper coins and a customer. Tap Next when you’re ready.":"6593c883917e23b7","Draw three things to sell. Give them prices of one, two and three paper coins. Tap Next when you’re ready.":"ddc8aed4cf3f3734","Give your customer five paper coins. Explain what makes each thing worth buying. Tap Next when you’re ready.":"2b10e778fe9a1189","Let them choose what to buy. Count the cost and how many coins they have left. Tap Next when you’re ready.":"c43e8aa28a62fda5","Ask why they chose it. Improve one thing in your shop, then swap jobs and try again. Show a purchase, count the coins and explain your customer’s choice When you’re ready, show someone what you made or decided.":"7aa4cd3fdfbe6bda","Why did your customer choose that item? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.":"bafa43203ba76b87","Let’s take one little part. Can you make a shop your customer wants to visit? Ask someone nearby to try it with you. Which part shall you try first?":"135f5bda015dda09","Let’s take one little part. Draw three things to sell. Give them prices of one, two and three paper coins. Ask someone nearby to try it with you. Which part shall you try first?":"8741bfef345ce4bc","Let’s take one little part. Give your customer five paper coins. Explain what makes each thing worth buying. Ask someone nearby to try it with you. Which part shall you try first?":"507baeeabff81d2b","Let’s take one little part. Let them choose what to buy. Count the cost and how many coins they have left. Ask someone nearby to try it with you. Which part shall you try first?":"cca4f96d14ca8085","Let’s take one little part. Ask why they chose it. Improve one thing in your shop, then swap jobs and try again. Ask someone nearby to try it with you. Which part shall you try first?":"f5cbfcdab7aa8846","Make something useful for someone else. What do they need? Our mission is Invent for Someone. Tap Let’s go when you’re ready.":"0b42af74c7f981f2","First, get ready. You need A toy, paper, a towel or box, and a customer. A grown-up can help with tape. Tap Next when you’re ready.":"192f0c00fad4d445","Ask someone which toy needs a bed, a shelter or a carrying box. Listen to what it must do. Tap Next when you’re ready.":"f827352be48f9027","Draw two different ideas. Ask which one they would like you to build and why. Tap Next when you’re ready.":"6b19e7c976b5df74","Build their choice using paper, a towel or a box. Ask a grown-up for help if you need tape. Tap Next when you’re ready.":"f45fa7549386de5e","Let your customer test it with the toy. Use their feedback to change one thing, then show what improved. Show your design and explain a change your customer helped you make When you’re ready, show someone what you made or decided.":"aac6734c186a1712","What did you change after your customer tested it? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.":"f60aea4a65e39356","Let’s take one little part. Make something useful for someone else. What do they need? Ask someone nearby to try it with you. Which part shall you try first?":"7bffc478a8bae6b5","Let’s take one little part. Ask someone which toy needs a bed, a shelter or a carrying box. Listen to what it must do. Ask someone nearby to try it with you. Which part shall you try first?":"168a3585e09e8fac","Let’s take one little part. Draw two different ideas. Ask which one they would like you to build and why. Ask someone nearby to try it with you. Which part shall you try first?":"4b24e948cb4e6ee3","Let’s take one little part. Build their choice using paper, a towel or a box. Ask a grown-up for help if you need tape. Ask someone nearby to try it with you. Which part shall you try first?":"b8a2a879e48d4985","Let’s take one little part. Let your customer test it with the toy. Use their feedback to change one thing, then show what improved. Ask someone nearby to try it with you. Which part shall you try first?":"9f813de3afddef30","Lenny has eight coins for a party. How will you spend them? Our mission is The Party Planner. Tap Let’s go when you’re ready.":"3183a4b92e0248f2","First, get ready. You need Paper, crayons, eight large paper coins and a partner. Tap Next when you’re ready.":"858eeabb774aa330","Plan a pretend party for a toy. Make eight large paper coins. Tap Next when you’re ready.":"b1a2e6d77f26ea4c","Draw choices for snacks, games and decorations. Give each choice a price from one to three coins. Tap Next when you’re ready.":"a773597e996dc528","Pick things for your party without spending more than eight coins. Count what is left. Tap Next when you’re ready.":"82c40030c8f2813e","A guest wants one more game. Decide what you could swap or remove to pay for it. Explain your choice. Show your eight-coin party plan and explain a choice you gave up When you’re ready, show someone what you made or decided.":"3c3aa5dd0fd3bdd1","What did you give up so you could afford your party? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.":"f6c8da45af52d019","Let’s take one little part. Lenny has eight coins for a party. How will you spend them? Ask someone nearby to try it with you. Which part shall you try first?":"3fdebbd3ae5e88c1","Let’s take one little part. Plan a pretend party for a toy. Make eight large paper coins. Ask someone nearby to try it with you. Which part shall you try first?":"96202ab1c52a02cf","Let’s take one little part. Draw choices for snacks, games and decorations. Give each choice a price from one to three coins. Ask someone nearby to try it with you. Which part shall you try first?":"756a3473e97461a2","Let’s take one little part. Pick things for your party without spending more than eight coins. Count what is left. Ask someone nearby to try it with you. Which part shall you try first?":"ac1d074002988226","Let’s take one little part. A guest wants one more game. Decide what you could swap or remove to pay for it. Explain your choice. Ask someone nearby to try it with you. Which part shall you try first?":"0e194609e1e36740","Two toys. One special crayon. What should they do? Our mission is The Fair-Play Puzzle. Tap Let’s go when you’re ready.":"fda5bf21784e3485","First, get ready. You need Two toys, one crayon and a partner. Tap Next when you’re ready.":"c0fe342d6f1d4f72","Pretend two toys both want the same special crayon. Ask a partner to speak for one toy. Tap Next when you’re ready.":"d7a9ed09b3ef2d18","Each toy explains why it wants the crayon. Listen before you suggest a plan. Tap Next when you’re ready.":"5a5af5ac29bf9e0f","Think of two ways to share it. Ask what each toy likes or dislikes about each plan. Tap Next when you’re ready.":"8b2ecf48ffb7d7c1","Choose a plan together and act it out. If one toy is unhappy, change the plan and try again. Act out your sharing plan and explain why both toys can use it When you’re ready, show someone what you made or decided.":"8ddb4e8c520c69f4","Why did you choose that plan? What might the other toy say? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.":"9f0d5ae4f2128e31","Let’s take one little part. Two toys. One special crayon. What should they do? Ask someone nearby to try it with you. Which part shall you try first?":"b27dfd1eba2bb4f2","Let’s take one little part. Pretend two toys both want the same special crayon. Ask a partner to speak for one toy. Ask someone nearby to try it with you. Which part shall you try first?":"35f49756e0852972","Let’s take one little part. Each toy explains why it wants the crayon. Listen before you suggest a plan. Ask someone nearby to try it with you. Which part shall you try first?":"124e357734c4f7be","Let’s take one little part. Think of two ways to share it. Ask what each toy likes or dislikes about each plan. Ask someone nearby to try it with you. Which part shall you try first?":"49faada3dd660e5c","Let’s take one little part. Choose a plan together and act it out. If one toy is unhappy, change the plan and try again. Ask someone nearby to try it with you. Which part shall you try first?":"542ec3818d010d7a","Someone new wants to play. Help them feel they belong. Our mission is The Welcome Mission. Tap Let’s go when you’re ready.":"c09fc0e3690d3b91","First, get ready. You need A toy, a partner and a simple game you both know. Tap Next when you’re ready.":"81e735cc47d4afa3","Imagine a toy is new to a game. Ask a partner to play the new toy. Tap Next when you’re ready.":"3da6334a89526de3","Ask the newcomer what they like and what they are unsure about. Listen to the answer. Tap Next when you’re ready.":"06f20620bb4e93cf","Change one rule or give them a useful role so they can join in. Play a short round. Tap Next when you’re ready.":"1519fdde351801a7","Ask how it felt to join. Use their answer to make your welcome even better. Show how you changed a game so someone new could join When you’re ready, show someone what you made or decided.":"ef05c9b1f5ad8358","What did you change so the newcomer could join in? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.":"01eb3c7b613def93","Let’s take one little part. Someone new wants to play. Help them feel they belong. Ask someone nearby to try it with you. Which part shall you try first?":"c4ba7120ca5fc207","Let’s take one little part. Imagine a toy is new to a game. Ask a partner to play the new toy. Ask someone nearby to try it with you. Which part shall you try first?":"11cc5c5a834ac314","Let’s take one little part. Ask the newcomer what they like and what they are unsure about. Listen to the answer. Ask someone nearby to try it with you. Which part shall you try first?":"cacb9c32dbcf9717","Let’s take one little part. Change one rule or give them a useful role so they can join in. Play a short round. Ask someone nearby to try it with you. Which part shall you try first?":"067bcee652f1134a","Let’s take one little part. Ask how it felt to join. Use their answer to make your welcome even better. Ask someone nearby to try it with you. Which part shall you try first?":"bc92f0514cae2f18","Find a real problem and make someone’s day a little better. Our mission is The Kindness Detective. Tap Let’s go when you’re ready.":"344c4eccbe32dd2e","First, get ready. You need Someone at home who would like a small helping hand. Tap Next when you’re ready.":"20d73cc3acac5529","Ask someone at home what small thing would make their day easier. Listen without guessing. Tap Next when you’re ready.":"a2aa026880d2c4d0","Think of two ways you could help. Ask which would be most useful. Tap Next when you’re ready.":"c3156cf33004d5b2","Do the chosen job with their permission. Ask a grown-up to help if you need it. Tap Next when you’re ready.":"60de0a95dcf63641","Ask whether your help worked. Tell Lenny what you noticed and what you would do next time. Show the help you gave and explain how you found out it was useful When you’re ready, show someone what you made or decided.":"bae719a456dd5b3a","How did you find out which help was really useful? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.":"8cc8f78c0b09f321","Let’s take one little part. Find a real problem and make someone’s day a little better. Ask someone nearby to try it with you. Which part shall you try first?":"74175d3adb0ee425","Let’s take one little part. Ask someone at home what small thing would make their day easier. Listen without guessing. Ask someone nearby to try it with you. Which part shall you try first?":"f5158787f839a61e","Let’s take one little part. Think of two ways you could help. Ask which would be most useful. Ask someone nearby to try it with you. Which part shall you try first?":"7761100cc99eb59f","Let’s take one little part. Do the chosen job with their permission. Ask a grown-up to help if you need it. Ask someone nearby to try it with you. Which part shall you try first?":"b171a1bedcacca2c","Let’s take one little part. Ask whether your help worked. Tell Lenny what you noticed and what you would do next time. Ask someone nearby to try it with you. Which part shall you try first?":"5f6a26984012b094","Can one sheet of paper become a stronger bridge? Our mission is The Paper Bridge Lab. Tap Let’s go when you’re ready.":"60da690f611e9c78","First, get ready. You need Two low books, one sheet of paper and three paper balls. Tap Next when you’re ready.":"41ced40bc8414cfc","Put two low books a hand-width apart. Use one sheet of paper to make a bridge. Tap Next when you’re ready.":"2424d1203cf3d0b7","Test it with three paper balls. How many stay on before the bridge bends? Tap Next when you’re ready.":"616047f300d4af8e","Use the same sheet to make a different bridge. Try folds or a rolled edge. Test with the same balls. Tap Next when you’re ready.":"21091590b130371d","Compare your tests. Choose the stronger design and explain what you changed. Show both bridge tests and explain which design worked better When you’re ready, show someone what you made or decided.":"a4fcd451d6926d95","What stayed the same in your two tests? What changed? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.":"2e80230f96a0bdbe","Let’s take one little part. Can one sheet of paper become a stronger bridge? Ask someone nearby to try it with you. Which part shall you try first?":"ff512674d04585cd","Let’s take one little part. Put two low books a hand-width apart. Use one sheet of paper to make a bridge. Ask someone nearby to try it with you. Which part shall you try first?":"45207fd6b6e52d3f","Let’s take one little part. Test it with three paper balls. How many stay on before the bridge bends? Ask someone nearby to try it with you. Which part shall you try first?":"5764b4794951a980","Let’s take one little part. Use the same sheet to make a different bridge. Try folds or a rolled edge. Test with the same balls. Ask someone nearby to try it with you. Which part shall you try first?":"cef6dfd1c044911f","Let’s take one little part. Compare your tests. Choose the stronger design and explain what you changed. Ask someone nearby to try it with you. Which part shall you try first?":"e89b2c8ed717a5a2","Your first tower is only the beginning. Can you improve it? Our mission is The Tower That Learns. Tap Let’s go when you’re ready.":"297e88dc3bf550b7","First, get ready. You need Six paper cups or safe blocks, paper for a flag, and crayons. Tap Next when you’re ready.":"a0468dd163d6e078","Build a tower with six paper cups or safe blocks. Draw or remember your first design. Tap Next when you’re ready.":"c03e3713e2a5aaab","Make a little paper flag. Can your tower hold it while you count to ten? Tap Next when you’re ready.":"4a2080a098b5754f","Build again with the same pieces. Change just one thing, such as the width of the base. Tap Next when you’re ready.":"dbbdfd5a0fb2a8de","Test with the same flag. Compare your towers and explain what helped one stay up. Show both towers and explain which change helped When you’re ready, show someone what you made or decided.":"14abefc0488a3b25","Which change helped your tower stay up? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.":"f7f4e09559a355ff","Let’s take one little part. Your first tower is only the beginning. Can you improve it? Ask someone nearby to try it with you. Which part shall you try first?":"6114638fdb2e8478","Let’s take one little part. Build a tower with six paper cups or safe blocks. Draw or remember your first design. Ask someone nearby to try it with you. Which part shall you try first?":"bb64f56e8f90ac2b","Let’s take one little part. Make a little paper flag. Can your tower hold it while you count to ten? Ask someone nearby to try it with you. Which part shall you try first?":"5f7ccd785d94039a","Let’s take one little part. Build again with the same pieces. Change just one thing, such as the width of the base. Ask someone nearby to try it with you. Which part shall you try first?":"5d9644b7b94b997e","Let’s take one little part. Test with the same flag. Compare your towers and explain what helped one stay up. Ask someone nearby to try it with you. Which part shall you try first?":"249cb8048c03bf1c","Build a puzzle that is tricky, fair and fun. Our mission is Make a Marble-Free Maze. Tap Let’s go when you’re ready.":"4124ff953f11be4e","First, get ready. You need Paper, crayons, one large paper ball and a tester. Tap Next when you’re ready.":"883b07f9aa0500ad","Draw a maze for a large paper ball. Add a start, a finish and three tricky turns. Tap Next when you’re ready.":"0e862625907b1476","Move the ball through with one finger. Notice where it is too easy or gets stuck. Tap Next when you’re ready.":"8a84abb1206220fd","Change two parts of the maze. Try to make it tricky but possible. Tap Next when you’re ready.":"fe4b5e3a6d96fd81","Ask someone to test it. Watch where they struggle, then improve one clue or turn. Show your maze and explain how your tester helped you improve it When you’re ready, show someone what you made or decided.":"f2a7b14e444b9df4","What did you learn when someone else tried your maze? You can tell me your idea, or show someone beside you. If it needs another go, that’s what inventors do.":"2e50cc239e58f9c4","Let’s take one little part. Build a puzzle that is tricky, fair and fun. Ask someone nearby to try it with you. Which part shall you try first?":"62394b237ae36ca1","Let’s take one little part. Draw a maze for a large paper ball. Add a start, a finish and three tricky turns. Ask someone nearby to try it with you. Which part shall you try first?":"4487c4cc3702d5e0","Let’s take one little part. Move the ball through with one finger. Notice where it is too easy or gets stuck. Ask someone nearby to try it with you. Which part shall you try first?":"b63a852ebec21632","Let’s take one little part. Change two parts of the maze. Try to make it tricky but possible. Ask someone nearby to try it with you. Which part shall you try first?":"4dced95a5be6fd38","Let’s take one little part. Ask someone to test it. Watch where they struggle, then improve one clue or turn. Ask someone nearby to try it with you. Which part shall you try first?":"1cad28ce9fab8f41","Choose a real person. Ask what would make their day more fun or easier. Decide what you want to make for them. Who are you making it for?":"5b8e2b6d162fad89","Let’s take one little part. Choose a real person. Ask what would make their day more fun or easier. Decide what you want to make for them. Ask someone nearby to try it with you. Which part shall you try first?":"ebce62bddbe87c68","Draw two ideas. Choose one and build a small version using things at home. You choose how it works. Which idea did you choose, and why?":"bcc78b4918047a04","Let’s take one little part. Draw two ideas. Choose one and build a small version using things at home. You choose how it works. Ask someone nearby to try it with you. Which part shall you try first?":"12b373fc6bb96f81","Let your person try it. Ask what works and what could be better. Change one thing using their feedback. What did your tester help you change?":"4e6191880f9f7504","Let’s take one little part. Let your person try it. Ask what works and what could be better. Change one thing using their feedback. Ask someone nearby to try it with you. Which part shall you try first?":"396cb1e0bb37f8b1","Show your invention to someone. Explain who it helps, how it works and what you changed after testing. Let them ask a question. What are you proud of, and what would you try next?":"30ea51b8fdc8189c","Let’s take one little part. Show your invention to someone. Explain who it helps, how it works and what you changed after testing. Let them ask a question. Ask someone nearby to try it with you. Which part shall you try first?":"367eb8fc9e6bd502","You did it! You earned a silly meat treat. Tap Feed Lenny and see what happens!":"86936ba87b5bf879","Nom, nom, nom!":"f0faa46a53f7418c","You’ve unlocked all five skills! Now use them to make something of your own. Who will you make it for?":"d049f9a59d771a55","What do lions wear to bed?":"83c8849fe2b822a5","Their roar-jamas!":"09e45c97fe4e16d8","What is a lion’s favourite type of music?":"fae39b23f30eba9c","Anything with a good roar-thm!":"8d538e239a1e0da1","Why did the lion bring a pencil to the party?":"aeda41f5c92d2cb9","To draw a crowd!":"2ea426d4c64a095e","What did the lion say to his new shoes?":"efde85d5746e2cae","You’re pawsome!":"131d4730500de6bd","Why was the lion so good at hide-and-seek?":"2b62782c46810e71","Because nobody could find his mane hiding spot!":"1a9bd2cd84095a86","What’s a lion’s favourite snack?":"cb4f1fb3f9d24163","Anything that goes crunch-a-munch!":"217617831a616e49","Why was Lenny late to the picnic?":"86a3a34d4dc834d5","He was having a bad mane day!":"4f5919effd7ec150","What do you call a lion wearing sunglasses?":"cd0dc733c483ae50","A cool cat!":"354a1823ca4445a2","What do you call a lion who likes building things?":"51bc93125245d020","A roar-chitect!":"b3d1ec5b98eb789d","Why did Lenny bring a map to the kitchen?":"d08d932a8bb7330f","He was hunting for the snack treasure!":"6d2bba64bab4b78d","What did Lenny say when the biscuit disappeared?":"9a00044a1cea44d8","Crikey! That was my last crumb!":"34827c0437c39e0f","What do you call a lion with a microphone?":"edf8fca9311d33e4","The king of the sing-along!":"30d82e4dd85f2d0c","Why did Lenny sleep under the stars?":"5b91e431419011d6","He wanted a million-star hotel!":"63b3bfee94e16d45","What do you call a bear with no teeth?":"ae45e2a20c6429e2","A gummy bear!":"53c221d30d4f2495","What do you call a sleeping dinosaur?":"5a73357849a4d8b0","A dino-snore!":"6db157c9cd72ba7b","Why did the teddy bear say no to cake?":"999cb33c42080bf3","It was already stuffed!":"24f57c28246d3e56","What do you call a sleeping bull?":"00c2b8defe6ff2f8","A bulldozer!":"e1fe551de4788cb3","Why did the chicken join the band?":"c30d919dae48ed14","It had the drumsticks!":"96798d25812dc5e2","Why did the cow go to space?":"017e8106030c83db","To see the moooon!":"3a6a0ebbac33f1b2","What do you call a crocodile detective?":"be84c6e117f1d943","An investi-gator!":"0e8d6b3c10847cef","What do you call a dog magician?":"618142d14cb9d7c4","A labra-cadabra-dor!":"52175e4d98beb88a","What do you call a bear in the rain?":"38ca560283f78837","A drizzly bear!":"c74bdd5f784154e3","What’s a frog’s favourite drink?":"b31008825d1c7652","Croak-a-cola!":"01b0457a05279fbd","Why did the kangaroo become a comedian?":"69eb4663d935f0fa","It had everyone jumping with laughter!":"18fe5639a41f1921","What did the emu do at the playground?":"4d67d103677791f8","It went down the slide, feet first!":"1ffbbd7603c67808","What do you call a koala who sings?":"31b2ad967d6fb67c","A koala-ty performer!":"0a6f9a6a163b5963","Why did the duck take a pencil to the pond?":"90eaece2792019d7","To draw a quack-ture!":"cbcf8ee043cadfb2","What did the duck say when it bought a hat?":"bb139f40bcf945c0","Put it on my bill!":"293447fd8c92875e","What do you call a rabbit who tells jokes?":"e9167f888c6729de","A funny bunny!":"1d8a9380f4edfd5c","What do cats eat for breakfast?":"7da6a2af11d515e4","Mice crispies!":"017c0b458e669278","What do you call a monkey with a banana phone?":"da5cddfaa02e50ad","A-peeling!":"22c56b34f8c6fa50","Why did the bee have sticky hair?":"f950eeccaf59cd53","It used a honeycomb!":"71fe647187653f1a","What do you call a magic owl?":"078d97d4b5cb45cb","Hoo-dini!":"a61a0bea5c0c49f2","What do you call a bee who can’t decide?":"f469cf698f9ddd32","A maybe!":"b28713aaef3f129a","Why did the fish blush?":"676db71f89e0ac73","Because it saw the ocean’s bottom!":"dbb4c93c6536402e","What did the ocean say to the beach?":"f5b61c39d7ecf82b","Nothing. It just waved!":"aa3caa1ed108e73b","Why did the banana visit the doctor?":"17fb7a910b9389b1","It wasn’t peeling well!":"5b922484b6b1e935","Why did the orange stop running?":"82cdf4ed0f37254a","It ran out of juice!":"53c5d7353357a5d4","What do you call cheese that isn’t yours?":"5aafc7232585ec07","Nacho cheese!":"712d7954bb0b6eab","Why did the cookie go to the doctor?":"3998eb0c56f54857","It felt crumby!":"6eb4f32a2b939807","What did the big flower say to the little flower?":"f887101bfecbfe9f","Hi, bud!":"6627923a014c7f4d","What do you call a room with no doors or windows?":"3941a3067d49d6a3","A mushroom!":"e1d0374989049dff","Why did the bicycle fall over?":"450023c2a8c88f6b","It was two-tired!":"f50e90908457cd1b","Why was the broom late?":"14da04029ad8f564","It overswept!":"bfed5ab54dc81648","What did the blanket say to the bed?":"60718a4acaf67b30","I’ve got you covered!":"148dfe7d1bd3b2ff","What did one plate say to the other?":"7d2bf1d5d8885ce8","Dinner is on me!":"87370b17588c3cf7","What did the pencil say to the paper?":"3c3892235448e22c","You’ve got a point!":"cd71901198fa96d3","Why did the clock get into trouble?":"8784110c51630163","It kept tocking!":"4295826eee6ff90b","What did the zero say to the eight?":"d232e686307d11bc","Nice belt!":"a95e958d94083c5f","Why did the maths book look worried?":"c08d101eb62130b1","It had too many problems!":"503e12cb68af5c7a","Why did the cupcake go to school?":"92b397af3131dd38","To get a little batter!":"76c442aadc56e6d2","Why did the pirate learn the alphabet slowly?":"38d15748faf6e90f","He got stuck at C!":"4e52594e63228408","Why did the pirate go to the doctor?":"61366ceb80b2e10a","To get his arrrr checked!":"56468262c46e3328","What did the volcano say to its friend?":"de3cca0bf37cda1b","I lava you!":"286e837f9877e141","How do you organise a space party?":"ed4d3655f9fc91ad","You planet!":"7ea8e6efa316533b","Why did the rocket bring a spoon?":"5745c9c10e9f748e","For a taste of the Milky Way!":"9fde513bd97d5f25","What kind of music do planets love?":"3ab340fc78b49ea1","Neptunes!":"097afcaeacd45346","How does the moon get a haircut?":"a5194ed2cd226191","Eclipse it!":"8c00f73eebd53ac6","What does a cloud wear under its raincoat?":"61f269a2bfad2d63","Thunderwear!":"47f07f0acdac4feb","What did one snowflake say to another?":"a37ab8db489ed4e4","You’re one of a kind!":"be195a97ab1e6f25","What kind of tree fits in your hand?":"4f85c376942345e1","A palm tree!":"68641352016562c8","Where does a sheep get its wool cut?":"035efd36d8822851","At the baa-ber!":"fab1f385132311fc","Why did the scarecrow get a medal?":"23fd82721cca9a47","It was outstanding in its field!":"b1fb966447362e53","What do you call a funny mountain?":"400b70447f017d55","Hill-arious!":"53352a46a080067c","What did the left eye say to the right eye?":"ea14ca2228f79c35","Between us, something smells!":"336afd47cdb8b93e","What do you call a superhero potato?":"52d9b9dc05d49a70","Super Spud!":"6b6d685482f87611","Why did the superhero bring string?":"365c8bf501f18bb5","To tie up the loose ends!":"504ff22ca5064a44","Where do superheroes eat lunch?":"6cb4dd08f3f05fdd","At the super-market!":"887651c6a0a51ae5","Why did Captain Comet take a sandwich to the moon?":"6a9359de5141eb2e","Because space snacks are out of this world!":"72cfdaddd388ab18","What did Rainbow Rocket say before taking off?":"a5d62324da078154","Ready, steady, rainbow!":"0e41a540784e7383","Why did Thunder Paws bring an umbrella?":"60ee8c9cc8ecb341","There was a chance of paw-shower!":"b76d9fa16f423397","Why did Super Sprout bring a watering can?":"5cb2f1195afde311","To grow her superpowers!":"2b51f779ed107b8b","What did the star say after its first race?":"9fa98e4263e34460","I really shone out there!":"449f12f3d65781bc","What did the sock say to the shoe?":"1aed0afb46d09af9","I’ve got your back heel!":"3cdf2872dea316f9","Why did the computer feel cold?":"5f59c177175247be","It left its windows open!":"e4dd5b0e343a256b","What did the wall say to the other wall?":"cd3e9f717d4c8a79","Meet you at the corner!":"e3e03f01cde3652b","Why did the crayon win the race?":"bd0850904f3f17c7","It took the colourful shortcut!":"f6ef76955b5d708b","How do you make a tissue dance?":"33271b963018a386","Put a little boogie in it!":"d3b783fdd2c46377","Why did the egg hide behind the curtain?":"56418dcf30cd9964","It was a little chicken!":"562ff78b15350666","What do you call a sleeping pizza?":"aca666282981f4af","A pi-z-z-z-a!":"77aae913649322f6","Oh, hello! Lovely to see you. What shall we chat about?":"f919c90a0d56258e","Bye for now, little explorer!":"d453f83108820eb6","I’m here with you. Please tell a grown-up nearby how you’re feeling. You can ask them to stay with you.":"efaad5b46bf5cdb8","Ooh, what a mighty little roar! That deserves a paw clap.":"6ac2e14b76a74d5a","Roar! Hee hee. That tickled my whiskers. Can you do a tiny roar?":"8b801f5a98a5d012","My favourite game is hiding. But my fluffy mane always gives me away! What’s your favourite game?":"7d7e3af61a5875ec","That sounds fun! I’d give it a go with my little lion paws. Want an adventure?":"e8e3224719526b9a","I’m Lenny! I live on a floating island. My mane is fluffy, my paws are little, and my roar is sometimes a squeak.":"2a074db84c6d6f81","I feel bouncy today! Like my paws have springs. How do you feel?":"2ce13a29268a0862","Happy paws! I’m doing a little wiggle with you.":"f9285bf163bc3690","A sleepy lion stretch sounds lovely. Lift your paws, give a little yawn, then let them flop.":"e02130a09b18263b","Hello, hello! I’m very happy you’re here. Shall we do a tiny roar together?":"e124e45cb9ee7c77","My ears missed a little bit. Shall we try a roar, hear a joke, or go on an adventure?":"e858667ad20508c6"} /* VOICE_MAP_END */;
+const LENNY_RENDERED = new Set(/* VOICE_PRESENT_START */ [] /* VOICE_PRESENT_END */);
+const HERO_NAMES = ["Banksia", "Captain Banksia", "Captain Comet", "Rainbow Rocket", "Thunder Paws", "Super Sprout", "Star Jumper", "Princess Paws", "Moonbeam", "Rocket Ranger"];
+let activeClipKey = null;
+function voiceFile(text){
+ const key=LENNY_VOICE_IDS[text];
+ return (key&&LENNY_RENDERED.has(key))?'assets/voice/library/'+key+'.mp3':null;
+}
+function voiceBrowserPronunciation(text){
+ return text.replace(/\bBanksia\b/gi, 'BANK-see-ah');
+}
+function voiceClipPlay(src, fallbackText, reopen=false){
+ const generation=++clipSequence,token=viewToken;
+ const audio=new Audio(src);
+ audio.preload='auto';audio.playsInline=true;
+ lennyAudio=audio;
+ let handled=false;
+ const failed=()=>{
+   if(handled||generation!==clipSequence||token!==viewToken)return;
+   handled=true;lennyAudio=null;sayBrowser(fallbackText,reopen);
+ };
+ audio.onended=()=>{
+   if(handled||generation!==clipSequence||token!==viewToken)return;
+   handled=true;lennyAudio=null;state(reopen?'YOUR TURN!':'LENNY IS READY');
+   if(reopen&&keepChatting&&mode==='talk')listenTimer=setTimeout(listen,500);
+ };
+ audio.onerror=failed;
+ audio.onplaying=()=>{if(generation===clipSequence)state('LENNY IS TALKING','speaking');};
+ audio.play().catch(failed);
+}
+
 let mode = 'home', taskPage = 0, projectPage = 0, jokeIndex = -1, jokeAnswer = false;
 let spoken = '', muted = false, activeSpeech = null, listener = null, keepChatting = false, listenTimer;
 let voicePreference = '', pending = '', viewToken = 0;
@@ -193,6 +578,14 @@ function enterName(){
  interrupt();mode='welcome';playerName='';
  content('<p class="eyebrow">Your adventure starts here</p><h1>Hello, explorer!</h1><p class="sub">What should Lenny call you?</p><form id="nameForm"><label for="playerName">Your name or nickname</label><input id="playerName" name="nickname" maxlength="24" autocomplete="off" enterkeyhint="go" required><p class="name-note">A made-up name is fine.</p><button class="big" type="submit">Let’s play! 🐾</button></form>',
  'Hello, explorer! What should I call you? Type your name or nickname, then tap Let’s play.',false);
+ const heroRow=document.createElement('div');heroRow.className='hero-picker';
+ const heroLabel=document.createElement('p');heroLabel.className='hero-label';heroLabel.textContent='Or pick a hero name:';heroRow.append(heroLabel);
+ const heroButtons=document.createElement('div');heroButtons.className='hero-buttons';
+ HERO_NAMES.forEach((name,index)=>{
+  const pick=button((index===0?'🌸 ':index===1?'🦸 ':'⭐ ')+name,()=>{get('playerName').value=name;get('playerName').focus();},'hero-pick');
+  pick.type='button';heroButtons.append(pick);
+ });heroRow.append(heroButtons);
+ get('nameForm').insertBefore(heroRow,get('nameForm').querySelector('button[type=submit]'));
  try{get('playerName').value=localStorage.getItem('lenny-last-player')||'';}catch{}
  get('nameForm').onsubmit=event=>{
    event.preventDefault();
@@ -211,6 +604,7 @@ function enterName(){
 }
 function state(text, kind=''){get('lionState').textContent=text;get('stage').dataset.state=kind;}
 function stopVoice(){
+ clipSequence++;if(lennyAudio){lennyAudio.pause();lennyAudio.removeAttribute('src');lennyAudio=null;}
  clearTimeout(listenTimer);clearTimeout(speechPause);speechEpoch++;activeSpeech=null;
  if(synthesis) synthesis.cancel();
  state('LENNY IS READY');
@@ -229,18 +623,31 @@ function chooseVoice(){
  if(selected)return selected;
  const score=v=>{
    const name=v.name.toLowerCase();
-   const favourites=['samantha','ava','zoe','sonia','google uk english female','matilda','tessa','karen'];
+   const favourites=['karen','catherine','matilda','natasha','olivia','samantha','ava','zoe','tessa','sonia'];
    const favourite=favourites.findIndex(label=>name.includes(label));
    return (favourite<0?0:100-favourite*5)
      + (/natural|enhanced|premium|online/.test(name)?35:0)
-     + (/^en-au$/i.test(v.lang)?5:0);
+     + (/^en-au$/i.test(v.lang)?120:0)
+     + (/female|woman/.test(name)?40:0)
+     - (/male(?!.*female)/.test(name)?60:0);
  };
  return voices.sort((a,b)=>score(b)-score(a))[0];
 }
-function say(text=spoken, reopen=false){
+function say(text=spoken, reopen=false, clipKey=null){
+ stopVoice();spoken=text;
+ if(muted)return;
+ const localSpeech=voiceFile(text);
+ if(localSpeech){voiceClipPlay(localSpeech,text,reopen);return;}
+ if(playerName && text.includes(playerName) && HERO_NAMES.includes(playerName)){sayBrowser(text,reopen);return;}
+ const key=clipKey || (!reopen?featuredClipKey(text):null);
+ if(key){playLennyClip(key,text,reopen);return;}
+ sayBrowser(text,reopen);
+}
+function sayBrowser(text=spoken,reopen=false){
  stopVoice();spoken=text;
  if(muted||!synthesis){keepChatting=false;return;}
  const voice=chooseVoice(),token=viewToken,epoch=speechEpoch;
+ text=voiceBrowserPronunciation(text);
  const phrases=text.match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[text];
  let index=0;
  function readPhrase(){
@@ -708,7 +1115,7 @@ function findHeart(id){
  get('hugText').textContent=line;
  get('hugCount').textContent=all?'You found every secret heart!':progress.hearts.length+' of 6 secret hearts found';
  const taskSpeech=spoken;
- say(line+' You found a secret heart. Squeeeze!');
+ say(line+' You found a secret heart. Squeeeze!',false,all&&isNew?'allhearts':'hug');
  spoken=taskSpeech;
  hugTimer=setTimeout(closeHug,all?6000:4200);
 }
@@ -772,12 +1179,21 @@ function confetti(){
  rewardTimer=setTimeout(clearReward,4800);
 }
 preparePixelArt();
+let jokeBag=[];
+function nextJokeIndex(){
+ if(!jokeBag.length){
+   jokeBag=jokes.map((_,i)=>i);
+   for(let i=jokeBag.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[jokeBag[i],jokeBag[j]]=[jokeBag[j],jokeBag[i]];}
+   if(jokeBag.length>1&&jokeBag[jokeBag.length-1]===jokeIndex){[jokeBag[0],jokeBag[jokeBag.length-1]]=[jokeBag[jokeBag.length-1],jokeBag[0]];}
+ }
+ return jokeBag.pop();
+}
 function newJoke(){
- interrupt();mode='joke';jokeIndex=(jokeIndex+1)%jokes.length;jokeAnswer=false;renderJoke();
+ interrupt();mode='joke';jokeIndex=nextJokeIndex();jokeAnswer=false;renderJoke();
 }
 function renderJoke(){
  const text=jokes[jokeIndex][jokeAnswer?1:0];
- content('<p class="eyebrow">A little giggle</p><h1>Hee hee!</h1><div class="activity-icon" aria-hidden="true">'+(jokeAnswer?'😂':'🤔')+'</div><div class="bubble"><p>'+text+'</p></div><div id="jokeButton"></div>',text);
+ content('<p class="eyebrow">The giggle vault · '+jokes.length+' jokes</p><h1>Hee hee!</h1><div class="activity-icon" aria-hidden="true">'+(jokeAnswer?'😂':'🤔')+'</div><div class="bubble"><p>'+text+'</p></div><div id="jokeButton"></div>',text);
  get('jokeButton').append(button(jokeAnswer?'Another joke 🤭':'Tell me! →',()=>{
    if(jokeAnswer){newJoke();return;}
    interrupt();jokeAnswer=true;renderJoke();
@@ -848,7 +1264,7 @@ function updateMute(){get('mute').textContent=muted?'♫ Sound off':'♫ Sound o
 get('mute').onclick=()=>{muted=!muted;updateMute();if(muted){keepChatting=false;cancelMic();stopVoice();}};
 function loadVoices(){
  const select=get('voice');select.replaceChildren();
- const auto=document.createElement('option');auto.value='';auto.textContent='Lenny’s warm storyteller voice';select.append(auto);
+ const auto=document.createElement('option');auto.value='';auto.textContent='Australian Lenny · fal clips + Australian fallback';select.append(auto);
  const voices=synthesis?synthesis.getVoices().filter(v=>/^en[-_]/i.test(v.lang)):[];
  voices.forEach(v=>{const option=document.createElement('option');option.value=v.voiceURI;option.textContent=v.name+' · '+v.lang;select.append(option);});
  select.value=voices.some(v=>v.voiceURI===voicePreference)?voicePreference:'';select.disabled=!voices.length;
@@ -857,7 +1273,7 @@ get('voice').onchange=e=>{
  voicePreference=e.target.value;
  try { localStorage.setItem('lenny-voice',voicePreference); } catch {}
 };
-get('preview').onclick=()=>{interrupt();if(muted){muted=false;updateMute();}say('Oh, hello there! I’m Lenny. Hee hee! Shall we go on a little adventure?');};
+get('preview').onclick=()=>{interrupt();if(muted){muted=false;updateMute();}say('Oh, hello there! I’m Lenny. Hee hee! Shall we go on a little adventure?',false,'hello');};
 get('switchPlayer').onclick=()=>enterName();
 get('reset').onclick=()=>{get('resetNote').hidden=false;};
 get('cancelReset').onclick=()=>{get('resetNote').hidden=true;};
