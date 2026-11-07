@@ -1,24 +1,35 @@
-# Lenny’s Little Adventure — Australian Female Voice, Simplified Edition
+# Lenny’s Little Adventure — recorded Australian voice only
 
-Updated 7 November 2026. The game includes 80 jokes, 15 missions, 5 learning stops, a grand project, meat-treat rewards, and six secret hearts.
+**8 November 2026 · Audio-delay fix**
 
-## What changed
-- **Two screens per mission**: All four real-world steps plus materials on one screen, then a *single optional* show-and-tell screen. No repeated Next pages or microphone prompts through the mission.
-- **Talk to Lenny removed from home.** The microphone is offered only after the activity, and can be skipped without affecting rewards. The grand project is similarly consolidated.
-- **80 jokes**: The question and answer appear on the same screen, and Lenny speaks the whole joke in one recording; use “Another joke” to continue.
-- **Banksia and Captain Banksia remain hidden** and are not suggested as selectable hero names. Typing Banksia into the normal name field triggers a recorded personal greeting, rewards and hugs. Eight public hero names are included.
-- **162 Australian female voice recordings generated with fal (Google Gemini 3.8 TTS, Aoede with explicit Australian-accent instructions)** and linked to their actual spoken scripts. The links are listed in `assets/voice/remote_paths.txt`.
+This is the simplified Lenny game: 15 missions (one instructions screen + one optional show-and-tell screen), 80 jokes, meat treats, six secret hearts/hugs, player profiles, eight visible hero names, and a hidden **Banksia** Easter egg.
 
-## How to publish and preserve the recorded voice
-1. Extract this ZIP and upload **all files and folders**, including `.github/`, `assets/voice/`, and `archive_existing_voice.py`, to the root of your GitHub repository. Do not upload the ZIP itself.
-2. Open **GitHub → Actions → Save Lenny Australian voice in GitHub → Run workflow**. The workflow also triggers when the new voice catalogue is pushed. It downloads the **already generated** recordings, converts them to compact MP3, and commits them to `assets/voice/library/`. **No fal API key or additional fal credits are needed.**
-3. In **GitHub → Settings → Pages → Build and deployment**, select **Deploy from a branch → main → /(root)** and save. Wait for your Pages deployment to finish.
-4. Refresh the live site and tap **Hear Lenny** under Grown-ups. On iPhone/iPad tap a button to start audio; mobile Safari prohibits unsolicited autoplay before a tap.
+## What was fixed
 
-**Important**: The original fal CDN links can expire, which is why step 2 should be done promptly. I could not transfer the binary WAV files directly into this ChatGPT ZIP; until the GitHub Action copies them, the website plays the completed clips over fal CDN. If the Action fails after URL expiry, missing clips must be recreated from the retained script manifest.
+The old build first tried an absent `assets/voice/hello.wav`, then a fal CDN URL, then a device-generated voice. This could produce a long pause, an unwanted generic voice, or a recording that started after the child had moved on.
 
-## Audio behaviour
-Recorded lines include 15 full activity narrations, 15 optional reflection prompts, 80 complete joke deliveries, recorded greetings/rewards/hugs for hero names, and core celebration lines. A new custom name or free-form response that was not prerecorded can still use device synthesis, with an Australian voice preference. The site has **no live fal API key** and no backend or Supabase requirement.
+**The new build uses one audio system:** recorded Australian female MP3s stored in your own GitHub repository (`assets/voice/library/`). There is **no browser/computer text-to-speech and no live fal CDN fallback**. If a local recording is unavailable, blocked, or takes more than **850 ms** to start, Lenny stays silent. It never plays unexpectedly later. Changing screens, muting or leaving the tab immediately cancels playback. All text, games, rewards, and the optional microphone still work without audio.
 
-## Device compatibility
-Responsive touch targets and viewport sizing are provided for iPhone/iPad. Speech recognition depends on browser support and device permissions, but voice recording is entirely optional. Physical testing on iOS devices has not been completed.
+## Critical one-time step — archive the completed recordings
+
+The 162 recorded audio clips were already created using your fal credits. Their original download locations are in `assets/voice/remote_paths.txt`. **The ZIP does not contain the MP3 files yet** because the audio files could not be copied directly into this work environment. The included GitHub Action copies them into your repository; it does **not** generate any additional speech or use fal credits.
+
+1. Unzip and upload **all contents**, preserving `.github/workflows/render-lenny-voice.yml`, `archive_existing_voice.py`, `assets/voice/remote_paths.txt`, `assets/voice/available.json`, and `index.html`. Existing `assets/voice/library/*.mp3` files should be kept if your previous workflow saved them.
+2. On GitHub, open **Actions → Save Lenny Australian voice in GitHub → Run workflow** (or allow the push-triggered run). Under **Settings → Actions → General → Workflow permissions**, use **Read and write permissions** if the Action cannot push its files. The workflow runs ffmpeg, downloads the 162 prerecorded WAVs, converts them to small MP3s and commits them alongside the site.
+3. **Verify** the GitHub folder `assets/voice/library/` contains `.mp3` files, and `assets/voice/available.json` lists their IDs. The workflow summary should report **Recorded: 162 of 162**. If some links expired, the workflow shows which clips failed. Those particular clips will be silent unless regenerated.
+4. If GitHub Pages isn't published yet: **Settings → Pages → Deploy from a branch → main → /(root)**. Once Pages has deployed the commit with audio, reload the page (on mobile, close and reopen the tab if an older version was cached).
+
+**Before the archive workflow succeeds, Lenny will intentionally be silent.** That's the behaviour you requested: no odd synthetic voice in its place.
+
+## Audio behaviour and limits
+
+- Recorded lines: 15 full task readings, 15 optional reflections, 80 complete jokes, core welcome/rewards, personalised greetings and hugs for the eight listed hero names and hidden Banksia (162 recorded scripts total).
+- Custom names beyond those recorded, open-ended spoken responses, and anything else without a matching recording are displayed as text **silently**.
+- iPhones and iPads require user interaction to start audio. Tapping the mission, joke or “Hear Lenny” button should provide that interaction. Safari/browser microphone permissions only affect the optional **Tell Lenny** feature.
+- If a sound doesn't start promptly, it is dropped — it never switches to synthetic speech or interrupts another activity later.
+
+No Supabase, Vercel, persistent server or fal API key is required for this static GitHub Pages site. The audio copy Action requires a GitHub Actions runner and write permission to commit to the repository.
+
+## Checks
+
+`index.html` is a single-file HTML/CSS/JavaScript game. Its JavaScript passes `node --check`. The audio implementation is free of browser speech synthesis and live fal-CDN playback. A complete iPhone/iPad physical browser test was not possible in this environment.
