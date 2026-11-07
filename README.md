@@ -1,35 +1,24 @@
-# Lenny’s Little Adventure — expanded Australian Voice Edition
+# Lenny’s Little Adventure — Australian Female Voice, Simplified Edition
 
-**Build:** 7 November 2026. **80 jokes** and **406 finite spoken utterances** prepared for Australian female fal TTS. **10 selectable hero names**, including **Banksia** (pronounced **BANK-see-ah**). The existing game, meat rewards, secret hearts, hugs, and progress are preserved.
+Updated 7 November 2026. The game includes 80 jokes, 15 missions, 5 learning stops, a grand project, meat-treat rewards, and six secret hearts.
 
-## Important truth about the audio
-The connected fal account returned **out of credits** during this update. The game includes the previously completed **8 fal-generated highlight recordings as fal CDN links** in `index.html` (listed at `assets/voice/FEATURED_FAL_AUDIO_URLS.txt`), but **the new complete library has not been generated**. The clips are not yet locally packaged; remote links may expire.
+## What changed
+- **Two screens per mission**: All four real-world steps plus materials on one screen, then a *single optional* show-and-tell screen. No repeated Next pages or microphone prompts through the mission.
+- **Talk to Lenny removed from home.** The microphone is offered only after the activity, and can be skipped without affecting rewards. The grand project is similarly consolidated.
+- **80 jokes**: The question and answer appear on the same screen, and Lenny speaks the whole joke in one recording; use “Another joke” to continue.
+- **Banksia and Captain Banksia remain hidden** and are not suggested as selectable hero names. Typing Banksia into the normal name field triggers a recorded personal greeting, rewards and hugs. Eight public hero names are included.
+- **162 Australian female voice recordings generated with fal (Google Gemini 3.8 TTS, Aoede with explicit Australian-accent instructions)** and linked to their actual spoken scripts. The links are listed in `assets/voice/remote_paths.txt`.
 
-**Until recordings are rendered:** All text still plays through the device’s speech synthesis, prioritising Australian English. Banksia is given a pronunciation hint to improve this fallback. The exact selected voice cannot be guaranteed across Safari devices. Lenny remains playable without audio.
+## How to publish and preserve the recorded voice
+1. Extract this ZIP and upload **all files and folders**, including `.github/`, `assets/voice/`, and `archive_existing_voice.py`, to the root of your GitHub repository. Do not upload the ZIP itself.
+2. Open **GitHub → Actions → Save Lenny Australian voice in GitHub → Run workflow**. The workflow also triggers when the new voice catalogue is pushed. It downloads the **already generated** recordings, converts them to compact MP3, and commits them to `assets/voice/library/`. **No fal API key or additional fal credits are needed.**
+3. In **GitHub → Settings → Pages → Build and deployment**, select **Deploy from a branch → main → /(root)** and save. Wait for your Pages deployment to finish.
+4. Refresh the live site and tap **Hear Lenny** under Grown-ups. On iPhone/iPad tap a button to start audio; mobile Safari prohibits unsolicited autoplay before a tap.
 
-## How to make every scripted line use the recorded fal female voice (one-time)
-1. Add credits to the same **fal** account (https://fal.ai/dashboard/usage-billing/credits). The output is billable, approximately 37,394 characters across 406 utterances. This is a one-time rendering expense, not a fee each time a child plays.
-2. Create a fal API key and save it in **GitHub → repository Settings → Secrets and variables → Actions → New repository secret**, named **`FAL_KEY`**. Do not paste the key into `index.html` or commit it in your repository.
-3. Push this package (including the `.github/workflows` folder) to the `main` branch of your repository.
-4. Go to **Actions → Record Lenny's full Australian voice → Run workflow**. It generates only missing files, creates local MP3s at `assets/voice/library/`, updates `index.html` to use them, and commits the audio back to the repo.
-5. Visit GitHub Pages. When the MP3s are present, Lenny’s mission steps, proof questions, project instructions, joke questions and punchlines, common chat lines, names, and rewards use locally hosted fal recordings. You can repeat the Action after a partial run; already generated files are skipped.
+**Important**: The original fal CDN links can expire, which is why step 2 should be done promptly. I could not transfer the binary WAV files directly into this ChatGPT ZIP; until the GitHub Action copies them, the website plays the completed clips over fal CDN. If the Action fails after URL expiry, missing clips must be recreated from the retained script manifest.
 
-**Note:** Personalised names other than the included 10, open-ended responses that quote a child’s own words, and arbitrary microphone answers cannot all be prerecorded. These use Australian speech synthesis. To make **every possible unscripted response** use the exact same fal voice requires a secure, metered server-side voice endpoint, which GitHub Pages alone cannot run. This release deliberately does not expose a fal API key in the browser.
+## Audio behaviour
+Recorded lines include 15 full activity narrations, 15 optional reflection prompts, 80 complete joke deliveries, recorded greetings/rewards/hugs for hero names, and core celebration lines. A new custom name or free-form response that was not prerecorded can still use device synthesis, with an Australian voice preference. The site has **no live fal API key** and no backend or Supabase requirement.
 
-## Current site features
-- Name entry and hero nickname suggestions, Banksia first
-- 80 shuffled age-appropriate jokes, avoiding immediate repeats
-- 15 activity variants, 5 core stops and 4-part grand project, with spoken steps
-- Pixel meat earned on mission completion, feed Lenny to trigger the animated celebration
-- Six secret hearts; tap any for a hug, find all six for a larger celebration
-- Progress and nicknames stored only in the child’s browser
-- Touch-friendly targets, responsive phone / iPad layout; physical device testing still recommended
-- Browser microphone optional; typing and taps work without it
-
-## Publish on GitHub Pages
-Extract this ZIP, upload the **contents** (including `index.html`, `assets/` and `.github/`) to the repo root. In **Settings → Pages** choose **Deploy from a branch**, branch **main**, folder **/(root)**. No Supabase or Vercel required for pre-generated audio.
-
-## Voice technical details
-Voice engine: `google/gemini-3.8-flash-tts` through fal, voice **Aoede**, with explicit Australian female voice instructions. The available recordings are matched to exact text, so the written script and the voice always agree. Each recorded line is converted to low-bandwidth MP3 for Safari/iOS. The Action uses encrypted `FAL_KEY` and never puts it in frontend JavaScript.
-
-If you prefer running the generation yourself instead of GitHub Actions: install Python 3.11, `ffmpeg`, and `pip install fal-client requests`; set `FAL_KEY` in your environment and run `python generate_all_voice.py`. Run `python generate_all_voice.py --dry-run` first to see the missing count (without generating).
+## Device compatibility
+Responsive touch targets and viewport sizing are provided for iPhone/iPad. Speech recognition depends on browser support and device permissions, but voice recording is entirely optional. Physical testing on iOS devices has not been completed.
