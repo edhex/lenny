@@ -10,9 +10,9 @@ const e = id => document.getElementById(id);
 const escapeText = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const mobileTop = () => {if(matchMedia('(max-width:720px)').matches) requestAnimationFrame(()=>scrollTo({top:0,behavior:'instant'}));};
 let ideaFilter='all', ideaId=-1, arcadeLauncher=null, quickSound=null, quickEpoch=0;
-// ONE audio owner: verified local WAV -> local MP3 -> remote WAV -> ONE device speech fallback.
+// ONE audio owner: verified local WAV -> local MP3 -> remote recorded WAV. No device narration.
 // Local files are bundled using Install-Lenny-Voices-Mac.command or GitHub Actions.
-// Never run media audio and browser narration simultaneously. v11.
+// Never use browser-generated speech; recorded Australian narrator only. v13.
 const remoteClips=window.LENNY_VOICE_REMOTE||{};
 const localClips=new Set(window.LENNY_LOCAL_CLIPS||[]);
 const failedClips=new Set();
@@ -57,25 +57,11 @@ function australianVoice(){
  }
  return voices.sort((a,b)=>rank(b)-rank(a))[0]||null;
 }
-function deviceSpeak(text,reopen=false,reason=''){ // Runs only after all media is stopped.
- const messageText=String(text||'').trim();
- stopVoice();spoken=messageText;
- if(muted||!messageText)return;
- const synth=window.speechSynthesis;
- if(!synth||!window.SpeechSynthesisUtterance){
-  notice('This browser cannot read aloud. You can still play using the words on screen.');return;
- }
- const token=quickEpoch;
- const utterance=new SpeechSynthesisUtterance(messageText);
- const voice=australianVoice();if(voice)utterance.voice=voice;
- utterance.lang=voice?.lang||'en-AU';utterance.rate=.91;utterance.pitch=1.08;utterance.volume=1;
- speakerUtterance=utterance;
- let began=false;
- utterance.onstart=()=>{if(token!==quickEpoch||speakerUtterance!==utterance)return;began=true;activeSource='device';state('LENNY IS TALKING','speaking')};
- utterance.onend=()=>{if(token!==quickEpoch||speakerUtterance!==utterance)return;speakerUtterance=null;activeSource='none';state(mode==='talk'?'YOUR TURN!':'LENNY IS READY');if(reopen&&keepChatting&&mode==='talk')setTimeout(listen,450)};
- utterance.onerror=()=>{if(token!==quickEpoch||speakerUtterance!==utterance)return;speakerUtterance=null;activeSource='none';notice('Tap to hear Lenny. Your browser needs a tap before it can talk.','🔊 Tap to hear Lenny',()=>deviceSpeak(messageText,reopen,reason));state('LENNY IS READY')};
- try{synth.cancel();synth.speak(utterance)}catch(err){utterance.onerror?.(err)}
- if(reason)notice('The recorded voice isn’t on this site yet. Lenny is using your device’s voice.', '🔊 Hear again',()=>deviceSpeak(messageText,reopen,reason));
+// Device speech is intentionally disabled: Lenny only uses recorded Australian narration.
+function deviceSpeak(text,reopen=false,reason=''){
+ const words=String(text||'').trim();
+ spoken=words;
+ if(!muted&&words)notice('Lenny’s recorded voice is unavailable. Follow the words on the screen.');
 }
 function playClip(key,text='',reopen=false){
  const words=String(text||spoken||'').trim();
@@ -130,7 +116,7 @@ function playClip(key,text='',reopen=false){
    });
   }catch(err){error(err)}
  }
- if(!possible.length){failedClips.add(key);deviceSpeak(words,reopen,'missing recording');return;}
+ if(!possible.length){failedClips.add(key);notice('Lenny’s recorded voice is unavailable. Follow the words on the screen.');return;}
  tryNext();
 }
 window.LennyVoiceAudio={
@@ -144,7 +130,7 @@ window.LennyVoiceAudio={
  get remoteClips(){return Object.keys(remoteClips).length},
  get localClips(){return localClips.size},
  play:(key,text='',reopen=false)=>playClip(key,text,reopen),
- get version(){return '12-heart-voice'}
+ get version(){return '13-recorded-only'}
 };
 function keyForSpeech(text){
  if(mode==='home'&&(/Oh, hello|Hi,/.test(String(text||''))))return 'welcome-v7';
@@ -160,11 +146,25 @@ function keyForSpeech(text){
  if(mode==='bonus'){const header=e('content')?.querySelector('h2')?.textContent;const beginning=e('content')?.querySelector('.bonus-step-heading')?.textContent;const idx=quests.findIndex(q=>q[1]===header);if(idx>=0&&beginning==='LET’S GO')return 'mission-'+String(idx).padStart(2,'0');}
  return null;
 }
+function guideForSpeech(text){
+ const words=String(text||'').toLowerCase();
+ if(mode==='reward'||mode==='feed'||/meat treat|feed lenny/.test(words))return 'guide-reward';
+ if(mode==='project')return 'guide-project';
+ if(mode==='journey'){
+   if(/show your thinking|you can tell me your idea|inventors do/.test(words))return 'guide-proof';
+   return 'guide-step';
+ }
+ if(/stuck|don't understand|too hard|ask someone nearby|ask a grown-up/.test(words))return 'guide-help';
+ if(mode==='talk')return 'guide-talk';
+ return 'guide-reply';
+}
 say=function(text=spoken,reopen=false){
- const key=keyForSpeech(text);
- if(key&&voiceKeys.has(key)){playClip(key,text,reopen);return;}
- // Long instructions and free-form responses use exactly one speech owner.
- deviceSpeak(text,reopen);
+ const words=String(text||'');
+ const matched=keyForSpeech(words);
+ const key=matched&&(voiceKeys.has(matched)||localClips.has(matched)||remoteClips[matched])?matched:guideForSpeech(words);
+ // The requested words stay visible on screen. For dynamically composed lines,
+ // Lenny speaks an honest pre-recorded guide instead of reading different text.
+ playClip(key,words,reopen);
 };
 const beforeInterrupt=interrupt;
 interrupt=function(...args){
