@@ -11,21 +11,84 @@ const escapeText = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;'
 const mobileTop = () => {if(matchMedia('(max-width:720px)').matches) requestAnimationFrame(()=>scrollTo({top:0,behavior:'instant'}));};
 let ideaFilter='all', ideaId=-1, arcadeLauncher=null, quickSound=null, quickEpoch=0;
 const soundPath = key => 'assets/voice/'+key+'.mp3';
-function haltLocal(){quickEpoch++; if(quickSound){try{quickSound.pause();quickSound.removeAttribute('src');quickSound.load();}catch{} quickSound=null;}}
-const beforeStopVoice = stopVoice;
-stopVoice = function(...args){haltLocal();return beforeStopVoice(...args)};
-const beforeSay = say;
-function playClip(key,text,reopen=false){
- if(muted){return;}
- if(!voiceKeys.has(key)){beforeSay(text,reopen);return;}
- stopVoice(); spoken=text;
- const token=quickEpoch; const audio=new Audio(soundPath(key));quickSound=audio;
- audio.preload='auto'; audio.volume=1;
- const fallback=()=>{if(token!==quickEpoch||quickSound!==audio)return;quickSound=null;beforeSay(text,reopen)};
- audio.onplay=()=>{if(token===quickEpoch)state('LENNY IS TALKING','speaking')};
- audio.onended=()=>{if(token!==quickEpoch)return;quickSound=null;state('LENNY IS READY');if(reopen&&keepChatting&&mode==='talk')setTimeout(listen,450)};
- audio.onerror=fallback;
- audio.play().catch(fallback);
+// All voices share one owner: a new recording cancels every older recording
+// AND browser speech, even if the browser has an utterance queued.
+let lastRecordedKey=null, lastRecordedText='', lastRecordedMode='';
+let missingClipCount=0, lastClipError='';
+function haltLocal(){
+ quickEpoch++;
+ if(quickSound){
+   const old=quickSound;quickSound=null;
+   old.onplay=old.onended=old.onerror=null;
+   try{old.pause();old.removeAttribute('src');old.load();}catch{}
+ }
+}
+window.LennyVoiceAudio={
+ locked:()=>quickSound!==null,
+ stop:()=>stopVoice(),
+ get activeKey(){return quickSound?.dataset?.lennyKey||null},
+ get lastKey(){return lastRecordedKey},
+ get missingClips(){return missingClipCount},
+ get lastError(){return lastClipError}
+};
+const beforeStopVoice=stopVoice;
+stopVoice=function(...args){
+ haltLocal();
+ return beforeStopVoice(...args);
+};
+const beforeSay=say;
+function showClipError(){
+ // No robotic voice here. A missing recording stays readable on the screen.
+ const el=e('status');
+ if(el)el.textContent='Lenny’s recording is unavailable. You can read the words and try another activity.';
+ state('LENNY IS READY');
+}
+function playClip(key,text='',reopen=false){
+ if(!voiceKeys.has(key)){
+   if(text)beforeSay(text,reopen);
+   return;
+ }
+ // Cancel browser TTS BEFORE audio starts, including phrase continuations.
+ stopVoice();
+ spoken=String(text||spoken||'');
+ lastRecordedKey=key;lastRecordedText=spoken;lastRecordedMode=mode;
+ if(muted)return;
+ const token=quickEpoch;
+ let settled=false;
+ const audio=new Audio();
+ audio.dataset.lennyKey=key;
+ audio.preload='auto';audio.volume=1;
+ quickSound=audio;
+ function fail(err){
+   if(settled||token!==quickEpoch||quickSound!==audio)return;
+   settled=true;
+   missingClipCount++;
+   lastClipError=(err&&err.name)||'Audio unavailable';
+   quickSound=null;
+   try{audio.pause();audio.removeAttribute('src');}catch{}
+   showClipError();
+   // Deliberately DO NOT invoke beforeSay or speechSynthesis. That was
+   // responsible for a second, computer-generated voice overlapping Lenny.
+ }
+ audio.onplay=()=>{
+   if(token!==quickEpoch||quickSound!==audio)return;
+   // Some mobile engines begin a queued computer utterance a tick late.
+   // Reassert recorded-audio priority after onplay.
+   if(synthesis)try{synthesis.cancel()}catch{}
+   state('LENNY IS TALKING','speaking');
+ };
+ audio.onended=()=>{
+   if(token!==quickEpoch||quickSound!==audio)return;
+   settled=true;quickSound=null;
+   state(mode==='talk'?'YOUR TURN!':'LENNY IS READY');
+   if(reopen&&keepChatting&&mode==='talk')setTimeout(listen,450);
+ };
+ audio.onerror=()=>fail(new Error('Recording could not load'));
+ audio.src=soundPath(key);
+ try{
+   const promise=audio.play();
+   if(promise&&typeof promise.catch==='function')promise.catch(fail);
+ }catch(err){fail(err)}
 }
 function keyForSpeech(text){
  if(mode==='home'&&String(text||'').startsWith('Oh, hello,'))return 'welcome-v7';
@@ -35,16 +98,56 @@ function keyForSpeech(text){
   const [q,a]=jokes[jokeIndex];
   if(normalized===q)return 'jokeq-'+String(jokeIndex).padStart(2,'0');
   if(normalized===q+' '+a||normalized===q+' … '+a)return 'jokef-'+String(jokeIndex).padStart(2,'0');
-  if(normalized===a)return 'jokea-'+String(jokeIndex).padStart(2,'0');
+  if(normalized===a)return 'jokef-'+String(jokeIndex).padStart(2,'0');
  }
  if(mode==='journey'&&progress.done.length<5&&taskPage===0){return 'mission-'+String(progress.tasks[progress.done.length]).padStart(2,'0');}
  if(mode==='bonus'){const header=e('content')?.querySelector('h2')?.textContent;const beginning=e('content')?.querySelector('.bonus-step-heading')?.textContent;const idx=quests.findIndex(q=>q[1]===header);if(idx>=0&&beginning==='LET’S GO')return 'mission-'+String(idx).padStart(2,'0');}
  return null;
 }
-say = function(text=spoken,reopen=false){const key=keyForSpeech(text);if(key&&voiceKeys.has(key))playClip(key,text,reopen);else beforeSay(text,reopen)};
+say=function(text=spoken,reopen=false){
+ const key=keyForSpeech(text);
+ if(key&&voiceKeys.has(key)){
+   playClip(key,text,reopen);
+   return;
+ }
+ // Never speak with the computer voice during the recorded joke experience.
+ // This also covers punctuation mismatches and unexpected navigation calls.
+ if(mode==='joke'){
+   stopVoice();spoken=String(text||'');
+   lastRecordedKey=null;lastRecordedText='';lastRecordedMode='';
+   return;
+ }
+ // Unrecorded, longer mission instructions and freeform conversations may
+ // still use the device's reader, but only after all recorded audio stops.
+ stopVoice();
+ lastRecordedKey=null;lastRecordedText='';lastRecordedMode='';
+ beforeSay(text,reopen);
+};
 const beforeInterrupt=interrupt;
-interrupt=function(...args){haltLocal();return beforeInterrupt(...args)};
+interrupt=function(...args){
+ haltLocal();lastRecordedKey=null;lastRecordedText='';lastRecordedMode='';
+ return beforeInterrupt(...args);
+};
 function audioMoment(key,text=''){playClip(key,text||'Well done!')}
+// The main replay button previously invoked say(spoken) and could turn on
+// the device's computer voice even while a recorded navigation line played.
+// Replay the exact recorded asset whenever this screen has one.
+const replayButton=e('hear');
+if(replayButton){
+ const originalReplay=replayButton.onclick;
+ replayButton.onclick=function(event){
+   if(muted){muted=false;updateMute();}
+   cancelMic();
+   if(lastRecordedKey&&lastRecordedMode===mode){
+     playClip(lastRecordedKey,lastRecordedText||spoken);
+   }else if(typeof originalReplay==='function')originalReplay.call(this,event);
+ };
+}
+const v7BaseContent=content;
+content=function(...args){
+ lastRecordedKey=null;lastRecordedText='';lastRecordedMode='';
+ return v7BaseContent(...args);
+};
 function loadIdeas(){
  try{const d=JSON.parse(localStorage.getItem('lenny-v7-ideas-'+encodeURIComponent(playerName.toLowerCase()))||'{}');return {done:Array.isArray(d.done)?d.done.filter(n=>Number.isInteger(n)&&n>=0&&n<ideas.length):[],history:Array.isArray(d.history)?d.history.filter(n=>Number.isInteger(n)&&n>=0&&n<ideas.length):[]}}
  catch{return {done:[],history:[]}}
@@ -64,7 +167,7 @@ function attachHome(){
  container.replaceChildren(
   choice('🏅','Big Missions','35 proper adventures · build real-life skills',openBig,'choice main-choice big-missions'),
   choice('⚡','Lenny Adventure Ideas','48 quick ideas for “I’m bored!”',openIdeas,'choice main-choice quick-ideas'),
-  choice('🤭','Giggle Club','52 jokes · practise telling them yourself',()=>{newJoke();audioMoment('nav-jokes','Time for a laugh!')},'choice main-choice giggle-club')
+  choice('🤭','Giggle Club','52 jokes · practise telling them yourself',()=>newJoke(),'choice main-choice giggle-club')
  );
  e('lennyV7Talk')?.remove();
  const subtitle=container.parentElement.querySelector('.sub');if(subtitle)subtitle.textContent='What are we in the mood for? Pick one!';

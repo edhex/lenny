@@ -1,4 +1,4 @@
-<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Lenny’s Little Adventure</title><meta name="description" content="Five little adventures, a friendly lion and a few giggles. For Prep kids aged 5–6.">
+<!doctype html><html lang="en-AU"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Lenny’s Little Adventure — Jokes and Audio Fix</title><meta name="description" content="Five little adventures, a friendly lion and a few giggles. For Prep kids aged 5–6.">
 <style>
 :root{color-scheme:light;--ink:#203d4a;--purple:#6b4fb8;--yellow:#ffdf6d}*{box-sizing:border-box}body{margin:0;background:#fff8eb;color:var(--ink);font:18px/1.45 ui-rounded,'Trebuchet MS',system-ui,sans-serif}button,input,select{font:inherit}button{cursor:pointer;color:inherit;touch-action:manipulation}button:disabled{cursor:default}button:focus-visible,input:focus-visible,summary:focus-visible,select:focus-visible{outline:4px solid #077e86;outline-offset:4px}[hidden]{display:none!important}
 main{max-width:1080px;padding:20px;margin:auto}header{display:flex;align-items:center;justify-content:space-between;min-height:50px;margin-bottom:18px}.brand{font-size:1.1rem;font-weight:900;letter-spacing:-.04em}.brand span{background:var(--yellow);padding:7px;border-radius:14px;margin-right:9px;display:inline-block;transform:rotate(-8deg)}
@@ -262,7 +262,7 @@ function say(text=spoken, reopen=false){
  const phrases=text.match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[text];
  let index=0;
  function readPhrase(){
-   if(epoch!==speechEpoch||token!==viewToken)return;
+   if(epoch!==speechEpoch||token!==viewToken||window.LennyVoiceAudio?.locked?.())return;
    const message=new SpeechSynthesisUtterance(phrases[index].trim());
    if(voice)message.voice=voice;
    message.lang=voice?.lang||'en-AU';
@@ -287,7 +287,7 @@ function say(text=spoken, reopen=false){
      activeSpeech=null;keepChatting=false;state('LENNY IS READY');
      get('status').textContent=mode==='talk'?'Tap a picture reply to keep playing.':'Sound couldn’t play. You can follow the pictures and tap the big button.';
    };
-   synthesis.speak(message);
+   if(epoch===speechEpoch&&token===viewToken&&!window.LennyVoiceAudio?.locked?.())synthesis.speak(message);
  }
  readPhrase();
 }
@@ -885,6 +885,6 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)interrupt()
 loadVoices();if(synthesis)synthesis.addEventListener('voiceschanged',loadVoices);
 enterName();
 </script>
-<script src="assets/fun-pass.js"></script>
+<script src="assets/fun-pass.js?v=9"></script>
 
-<script src="assets/lenny-v7.js"></script></body></html>
+<script src="assets/lenny-v7.js?v=9"></script></body></html>

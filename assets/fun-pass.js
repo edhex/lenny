@@ -87,7 +87,7 @@ function audioKeyFor(text){
  if(mode==='feed'&&/scrumptious/i.test(t))return 'feeddance';
  return '';
 }
-function fallbackSpeech(text,reopen){baseSay(text,reopen);}
+function fallbackSpeech(text,reopen){state("LENNY IS READY");const el=get("status");if(el)el.textContent="Lenny’s recording couldn’t play. Tap 🔊 Hear Lenny to try again.";}
 function recordedSpeak(key,text,reopen){
  const epoch=activeMediaEpoch;
  const audio=new Audio();
@@ -760,7 +760,7 @@ function completeBonus(){
 
 /* Joke club: kid gets to practise the setup, the punchline, then the whole joke. */
 newJoke=function(){
- interrupt();mode='joke';jokeAnswer=false;jokePractice=-1;
+ interrupt();mode='joke';jokeAnswer=true;jokePractice=-1;
  const history=progress.jokeHistory||[];
  const all=jokes.map((_,id)=>id);
  const unseen=all.filter(id=>!history.includes(id));
@@ -773,24 +773,34 @@ newJoke=function(){
 renderJoke=function(){
  if(jokeIndex<0)jokeIndex=0;
  const [question,answer]=jokes[jokeIndex];
+ // Never hide the punchline. The original Giggle Club worked because kids
+ // could hear the entire joke in one go and then try telling it themselves.
+ jokeAnswer=true;
  const rehearsing=jokePractice>=0;
- const script=rehearsing?(jokePractice===0?question:jokePractice===1?answer:question+' … '+answer):(jokeAnswer?question+' '+answer:question);
- const stepText=['1. Say the question','2. Say the funny answer','3. Put it together!'];
- const stepHint=['Ask the question clearly. Pause so your audience can guess.','Try the punchline with a silly face or funny voice!','Tell the question, pause, then deliver the punchline. You’re the comedian!'];
+ const completeScript=question+' '+answer;
+ const script=rehearsing?(jokePractice===0?question:jokePractice===1?answer:question+' … '+answer):completeScript;
+ const stepText=['1. Ask the question','2. Say the punchline','3. Tell the whole joke'];
+ const stepHint=['Say the question slowly. Let your audience think for a second.',
+ 'Try the funny ending with a big smile or a silly voice!',
+ 'Ask the question, pause, and deliver the punchline. You’re the comedian!'];
  const inside=rehearsing?
-   '<div class="joke-steps">'+stepText.map((s,i)=>'<span class="'+(i===jokePractice?'selected':i<jokePractice?'past':'')+'">'+(i<jokePractice?'✓ ': '')+s+'</span>').join('')+'</div><p class="joke-coach">'+escapeHtml(stepHint[jokePractice])+'</p><div class="joke-spotlight"><span class="joke-tag">'+(jokePractice===0?'ASK':jokePractice===1?'PUNCHLINE':'YOUR FULL JOKE')+'</span><p>'+escapeHtml(script)+'</p></div>':
-   '<div class="joke-spotlight"><span class="joke-tag">THE QUESTION</span><p>'+escapeHtml(question)+'</p></div>'+(jokeAnswer?'<div class="joke-punchline"><span class="joke-tag">THE PUNCHLINE</span><p>'+escapeHtml(answer)+'</p></div>':'<p class="joke-think">🤔 Can you guess the answer?</p>');
+   '<div class="joke-steps">'+stepText.map((s,i)=>'<span class="'+(i===jokePractice?'selected':i<jokePractice?'past':'')+'">'+(i<jokePractice?'✓ ': '')+s+'</span>').join('')+'</div><p class="joke-coach">'+escapeHtml(stepHint[jokePractice])+'</p><div class="joke-spotlight"><span class="joke-tag">'+(jokePractice===0?'QUESTION':jokePractice===1?'PUNCHLINE':'THE WHOLE JOKE')+'</span><p>'+escapeHtml(script)+'</p></div>':
+   '<div class="joke-spotlight"><span class="joke-tag">THE QUESTION</span><p>'+escapeHtml(question)+'</p></div><div class="joke-punchline"><span class="joke-tag">THE PUNCHLINE 😂</span><p>'+escapeHtml(answer)+'</p></div><p class="joke-coach">🎤 Your turn! Can you make someone laugh telling it yourself?</p>';
  const count=(progress.jokesPractised||[]).length;
- content('<p class="eyebrow">Lenny’s Giggle Club</p><h1>'+(rehearsing?'The stage is yours!':jokeAnswer?'BA-HA-HA!':'I’ve got a good one…')+'</h1><p class="sub">🎤 '+jokes.length+' jokes in the collection · '+count+' practised by you</p>'+inside+'<div class="joke-buttons" id="jokeButtons"></div><p class="voice-practice-feedback" id="jokeFeedback" aria-live="polite"></p>',script,true);
+ // The punchline-practice step leaves the audio off, giving the child room
+ // to speak. Every automatic joke playback uses an existing fal recording.
+ const shouldRead=!(rehearsing&&jokePractice===1);
+ content('<p class="eyebrow">Lenny’s Giggle Club</p><h1>'+(rehearsing?'The stage is yours!':'That’s a good one!')+'</h1><p class="sub">🤭 '+jokes.length+' jokes · '+count+' Giggle Stars earned</p>'+inside+'<div class="joke-buttons" id="jokeButtons"></div><p class="voice-practice-feedback" id="jokeFeedback" aria-live="polite"></p>',script,shouldRead);
  const actions=document.getElementById('jokeButtons');
- if(!jokeAnswer){
-   actions.append(makeChoice('Reveal the punchline! 😂',()=>{interrupt();mode='joke';jokeAnswer=true;renderJoke();stage.dataset.expression='giggle';},'big pink'));
-   actions.append(makeChoice('Another joke →',()=>newJoke(),'small'));
- }else if(!rehearsing){
-   actions.append(makeChoice('🎤 My turn! I’ll tell it',()=>{interrupt();mode='joke';jokeAnswer=true;jokePractice=0;renderJoke();},'big pink'));
+ if(!rehearsing){
+   actions.append(makeChoice('🎤 My turn! Tell the whole joke',()=>{interrupt();mode='joke';jokeAnswer=true;jokePractice=2;renderJoke();},'big pink'));
+   actions.append(makeChoice('🪜 Practise it step by step',()=>{interrupt();mode='joke';jokeAnswer=true;jokePractice=0;renderJoke();},'small'));
    actions.append(makeChoice('🤭 Another joke',()=>newJoke(),'small'));
  }else{
-   const speak=makeChoice('🔊 Hear the line again',()=>{if(muted){muted=false;updateMute();}say(script);},'small');
+   const speak=makeChoice(jokePractice===1?'🔊 Hear Lenny tell the full joke':'🔊 Hear Lenny again',()=>{
+     if(muted){muted=false;updateMute();}
+     say(jokePractice===1?completeScript:script);
+   },'small');
    const mic=makeChoice('🎙️ Try the microphone',()=>captureSpeech('jokeFeedback','jokeMicBtn'),'small');mic.id='jokeMicBtn';
    actions.append(speak,mic);
    actions.append(makeChoice(jokePractice===2?'🌟 I told the whole joke!': 'I said it! Next →',()=>{
@@ -798,10 +808,12 @@ renderJoke=function(){
      if(jokePractice<2){jokePractice++;renderJoke();}
      else completeJokePractice();
    },'big pink'));
-   actions.append(makeChoice('← Go back',()=>{
-     interrupt();mode='joke';jokeAnswer=true;jokePractice=Math.max(-1,jokePractice-1);renderJoke();
+   actions.append(makeChoice('← Back to the joke',()=>{
+     interrupt();mode='joke';jokeAnswer=true;
+     if(jokePractice===2){jokePractice=-1;}else if(jokePractice===1){jokePractice=0;}else{jokePractice=-1;}
+     renderJoke();
    },'small'));
-   document.getElementById('jokeFeedback').textContent='No microphone needed. Say it to a person, a teddy, or the room — that counts!';
+   document.getElementById('jokeFeedback').textContent='No microphone needed. Tell a person, a teddy, or the room — that counts!';
  }
 }
 function completeJokePractice(){

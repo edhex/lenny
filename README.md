@@ -1,4 +1,33 @@
-# Lenny’s Little Adventure — v7 (The Three Ways to Play)
+# Lenny v9 — Voice isolation + instant punchlines
+
+This is a direct replacement for Lenny v7/v8. The game still has **Big Missions (35)**, **Lenny Adventure Ideas (48)** and **Giggle Club (52)**, with the same six secret hearts, meat rewards, saved progress, touch animations and Australian female recordings.
+
+## Fixes
+
+- When a joke opens, **both the question and punchline are visible immediately**, and Lenny plays the **full prerecorded joke** (`jokef-XX.mp3`). No reveal button or surprise second voice.
+- Children can tap **My turn! Tell the whole joke**, then speak and mark it complete to earn a Giggle Star. **Practise it step by step** remains optional (question → punchline → whole joke), with no pronunciation grading.
+- The voice manager prioritises the fal recordings and cancels any earlier device narration before starting a clip. Giggle Club never starts browser text-to-speech if a recording is missing or punctuation differs. Longer, unrecorded mission instructions can still use browser narration on their own.
+- Cache-busting version 9 URLs make GitHub Pages load the updated scripts rather than an older cached v7/v8 script.
+
+## Publish
+
+Unzip this package and upload **its contents** to the root of the existing GitHub Pages repository, including `.github/workflows/deploy.yml` and `.nojekyll`. Commit to `main`. The GitHub Action will download previously generated recordings from the 213-item `assets/voice-v7-sources.json` manifest when they aren't already present; no live fal API is needed for a child playing the site. **These audio binaries are not embedded in this ZIP.** If fal's source links have expired, the download job may fail; retained `assets/voice/*.mp3` from earlier successful deployments should be preserved in your repository.
+
+Run a hard reload on iPhone after GitHub Pages publishes if an old version was cached. Previously saved progress uses the same localStorage keys.
+
+# v8: Australian Voice Playback Fix
+
+This is a drop-in replacement for v7. It fixes the computer-generated browser voice speaking at the same time as Lenny's recorded Australian female voice.
+
+**What changed:** All 213 prerecorded clips take priority; the browser voice is cancelled before and after a recording starts, the joke-rehearsal punchline now uses the prerecorded full joke instead of a robot, replay plays the same recording, and a missing MP3 never triggers an overlapping robot voice. Activity steps that do not have recordings can still use device speech *on their own*.
+
+**Important:** The ZIP includes the same manifest and GitHub Actions first-deploy download step for 213 MP3s, not the MP3 binaries themselves. Check the GitHub Actions build logs to ensure all 213 clips are successfully downloaded. A missing clip now shows an on-screen message rather than replacing the recording with a computer voice. The existing eight classic recorded lines retain their hosted-file fallback but never switch to browser TTS if missing.
+
+Keep the same published URL and upload all the ZIP contents to the root of your GitHub repository; saved progress is unchanged.
+
+---
+
+# Lenny’s Little Adventure — v8 (Voice Overlap Fix — Three Ways to Play)
 
 A colourful, touch-friendly and static children's adventure website. The three main buttons are now exactly:
 
