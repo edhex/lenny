@@ -255,42 +255,8 @@ function chooseVoice(){
  };
  return voices.sort((a,b)=>score(b)-score(a))[0];
 }
-function say(text=spoken, reopen=false){
- stopVoice();spoken=text;
- if(muted||!synthesis){keepChatting=false;return;}
- const voice=chooseVoice(),token=viewToken,epoch=speechEpoch;
- const phrases=text.match(/[^.!?]+[.!?]+|[^.!?]+$/g)||[text];
- let index=0;
- function readPhrase(){
-   if(epoch!==speechEpoch||token!==viewToken||window.LennyVoiceAudio?.locked?.())return;
-   const message=new SpeechSynthesisUtterance(phrases[index].trim());
-   if(voice)message.voice=voice;
-   message.lang=voice?.lang||'en-AU';
-   message.pitch=1.08;
-   message.rate=.78;
-   activeSpeech=message;
-   message.onstart=()=>{if(activeSpeech===message)state('LENNY IS TALKING','speaking');};
-   message.onend=()=>{
-     if(activeSpeech!==message||epoch!==speechEpoch)return;
-     activeSpeech=null;
-     state('LENNY IS READY');
-     index++;
-     if(index<phrases.length){
-       speechPause=setTimeout(readPhrase,/[!?]$/.test(phrases[index-1].trim())?480:320);
-       return;
-     }
-     state(mode==='talk'?'YOUR TURN!':'LENNY IS READY');
-     if(reopen&&keepChatting&&mode==='talk'&&token===viewToken)listenTimer=setTimeout(listen,600);
-   };
-   message.onerror=()=>{
-     if(activeSpeech!==message||epoch!==speechEpoch)return;
-     activeSpeech=null;keepChatting=false;state('LENNY IS READY');
-     get('status').textContent=mode==='talk'?'Tap a picture reply to keep playing.':'Sound could not start. Tap Hear Lenny or follow the instructions on screen.';
-   };
-   if(epoch===speechEpoch&&token===viewToken&&!window.LennyVoiceAudio?.locked?.())synthesis.speak(message);
- }
- readPhrase();
-}
+// Never synthesize a computer narrator, including during initial page loading.
+function say(text=spoken, reopen=false){spoken=String(text||'');}
 function button(text,fn,cls='big'){
  const el=document.createElement('button');el.className=cls;el.textContent=text;el.onclick=fn;return el;
 }
@@ -891,6 +857,6 @@ enterName();
 </script>
 <script src="assets/fun-pass.js?v=11"></script>
 
-<script src="assets/voice-source-map.js?v=11"></script>
+<script src="assets/voice-source-map.js?v=13"></script>
 <script src="assets/voice/local-ready.js?v=11"></script>
-<script src="assets/lenny-v7.js?v=12"></script></body></html>
+<script src="assets/lenny-v7.js?v=13"></script></body></html>
