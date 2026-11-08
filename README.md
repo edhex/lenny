@@ -1,3 +1,37 @@
+# Lenny v10 — Audio Rescue (iPhone / iPad / computer)
+
+**The actual cause of the silence:** v9 shipped zero MP3 files; GitHub Pages requires a separate Action to download the 213 generated fal recordings, and the v9 overlap fix suppressed device speech when a clip was missing. This release repairs that failure path.
+
+## How audio now works (one voice at a time)
+
+1. For any prerecorded line, the game uses a verified, locally published `assets/voice/*.mp3` if available.
+2. If the MP3 is not installed, it tries the **original fal-generated WAV** via the 213-clip `assets/voice-source-map.js`, *directly from the browser*. A fal connection or API key is **not** needed at runtime, but these URLs may expire or be blocked.
+3. If neither file plays, it **uses the device's text-to-speech once**, preferring an Australian English voice when one is available. The computer voice and recorded audio cannot play together.
+4. If an iPhone/iPad blocks autoplay, it displays **“Tap to hear Lenny”**, which retries audio from a user tap.
+5. Replays, jokes, missions and quick ideas share this single voice manager. Jokes show both question and punchline at once, then allow speaking practice.
+
+## Important: Getting the permanent Australian female recordings onto your site
+
+This ZIP contains the manifest and URL map, **not 213 binary MP3 files**. The GitHub Actions workflow attempts to download and convert every recording. If some links have expired, the website now deploys anyway and its sound fallback works. **For a permanently consistent Australian voice, you still need to see the MP3s in your repository / deployment.**
+
+1. Unzip and upload **the contents** to the root of your GitHub repository. Include the hidden `.github` folder. Commit to `main`.
+2. Under **Settings → Pages**, select **Build and deployment → GitHub Actions** if you want automatic MP3 installation.
+3. Under **Actions**, open the latest `Publish Lenny to GitHub Pages` run; review `Prepare` / `Attempt local MP3 downloads` for how many clips were fetched. If possible, ensure `assets/voice/*.mp3` are present (ideally 213) afterward. With GitHub Actions write access, the build attempts to commit them.
+4. If using the normal “Deploy from a branch” Pages mode, your uploaded site will still try the generated fal URLs and fall back safely, but you must add MP3s separately for permanent recordings.
+5. On iPhone or iPad, tap a game choice or the **🔊 Tap to hear Lenny** prompt to permit audio. Avoid testing the page in silent mode when checking sound effects.
+
+To download/bundle audio on a local Mac or computer with Python and FFmpeg installed: `python3 scripts/build_voice_library.py`, then upload `assets/voice/*.mp3`. `assets/voice/local-ready.js` is generated alongside them. If the fal links have expired, those clips must be regenerated or recovered from the fal account.
+
+## Content retained
+
+- **35 Big Missions**, **48 Adventure Ideas**, **52 jokes** with visible setup and punchline, plus optional practice.
+- Rewards, special feeding celebration, six hearts, nickname-based progress, all v5 mobile fixes.
+- No secret keys, live fal API calls or backend service during play.
+
+**Status:** This package repairs audio routing and offers safe playback paths, but the actual recorded Australian voice is only guaranteed when hosted MP3s exist or original fal URLs remain live. Do not mistake a 213-link manifest for 213 embedded recordings.
+
+---
+
 # Lenny v9 — Voice isolation + instant punchlines
 
 This is a direct replacement for Lenny v7/v8. The game still has **Big Missions (35)**, **Lenny Adventure Ideas (48)** and **Giggle Club (52)**, with the same six secret hearts, meat rewards, saved progress, touch animations and Australian female recordings.

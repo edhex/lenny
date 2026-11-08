@@ -28,7 +28,7 @@ if not shutil.which('ffmpeg'):
 def one(item):
     key, url = item
     dest = VOICE_DIR/f'{key}.mp3'
-    if dest.is_file() and dest.stat().st_size > 2000 and dest.read_bytes()[:3] in (b'ID3',b'\xff\xfb\x90'):
+    if dest.is_file() and dest.stat().st_size > 2000 and (dest.read_bytes()[:3]==b'ID3' or dest.read_bytes()[:2]==b'\xff\xfb'):
         return key, True, 'already present'
     for attempt in range(3):
         try:
@@ -57,5 +57,9 @@ if __name__=='__main__':
             results.append((key,ok,message))
     failed=[k for k,ok,_ in results if not ok]
     print('Voice clips ready: '+str(len(results)-len(failed))+'/'+str(len(SOURCES)))
+    available=sorted(key for key in SOURCES if (VOICE_DIR/f'{key}.mp3').exists() and (VOICE_DIR/f'{key}.mp3').stat().st_size>2000)
+    (VOICE_DIR/'local-ready.js').write_text('window.LENNY_LOCAL_CLIPS='+json.dumps(available,separators=(',',':'))+';\n',encoding='utf-8')
     if failed:
-        sys.exit('Some prerecorded clips could not be fetched: '+', '.join(failed))
+        print('WARNING: Some recordings missing; website will try hosted fal links and use one device voice if needed: '+', '.join(failed),file=sys.stderr)
+        # Do not block website deployment because some/any fal links expired.
+

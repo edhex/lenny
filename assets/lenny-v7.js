@@ -10,88 +10,141 @@ const e = id => document.getElementById(id);
 const escapeText = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const mobileTop = () => {if(matchMedia('(max-width:720px)').matches) requestAnimationFrame(()=>scrollTo({top:0,behavior:'instant'}));};
 let ideaFilter='all', ideaId=-1, arcadeLauncher=null, quickSound=null, quickEpoch=0;
-const soundPath = key => 'assets/voice/'+key+'.mp3';
-// All voices share one owner: a new recording cancels every older recording
-// AND browser speech, even if the browser has an utterance queued.
-let lastRecordedKey=null, lastRecordedText='', lastRecordedMode='';
-let missingClipCount=0, lastClipError='';
-function haltLocal(){
+// ONE audio owner: local MP3 -> completed fal WAV -> one device TTS fallback.
+// Never run media audio and browser narration simultaneously. v10.
+const remoteClips=window.LENNY_VOICE_REMOTE||{};
+const localClips=new Set(window.LENNY_LOCAL_CLIPS||[]);
+const failedClips=new Set();
+let lastRecordedKey=null,lastRecordedText='',lastRecordedMode='';
+let missingClipCount=0,lastClipError='',activeSource='none',speakerUtterance=null;
+function stopLocalOnly(){
  quickEpoch++;
  if(quickSound){
-   const old=quickSound;quickSound=null;
-   old.onplay=old.onended=old.onerror=null;
-   try{old.pause();old.removeAttribute('src');old.load();}catch{}
+  const old=quickSound;quickSound=null;
+  old.onplay=old.onended=old.onerror=null;
+  try{old.pause();old.removeAttribute('src');old.load();}catch{}
+ }
+ activeSource='none';
+}
+const beforeStopVoice=stopVoice;
+stopVoice=function(...args){stopLocalOnly();speakerUtterance=null;return beforeStopVoice(...args)};
+function notice(message,buttonLabel='',action=null){
+ let box=e('lennyAudioNotice');
+ if(!box){
+  box=document.createElement('div');box.id='lennyAudioNotice';box.className='lenny-audio-notice';
+  box.setAttribute('role','status');box.setAttribute('aria-live','polite');
+  const target=e('status');if(target)target.after(box);else document.querySelector('main')?.append(box);
+ }
+ box.replaceChildren();
+ if(!message){box.hidden=true;return}
+ box.hidden=false;
+ const msg=document.createElement('span');msg.textContent=message;box.append(msg);
+ if(buttonLabel&&action){
+  const button=document.createElement('button');button.type='button';button.className='small';button.textContent=buttonLabel;
+  button.addEventListener('click',action);box.append(button);
  }
 }
+function australianVoice(){
+ if(!window.speechSynthesis)return null;
+ const voices=window.speechSynthesis.getVoices().filter(v=>/^en[-_]/i.test(v.lang));
+ const selected=voices.find(v=>v.voiceURI===voicePreference);if(selected)return selected;
+ function rank(v){
+  const n=v.name.toLowerCase();const au=/^en[-_]au$/i.test(v.lang);
+  const feminine=/karen|matilda|catherine|natasha|olivia|zoe|ava|samantha|tessa|susan|fiona|serena|shelley|female/i.test(n);
+  const male=/daniel|alex|fred|aaron|gordon|arthur|thomas|brian|rishi|male/i.test(n);
+  return (au?1000:0)+(feminine?250:0)-(male?250:0)+(/natural|premium|enhanced/i.test(n)?90:0);
+ }
+ return voices.sort((a,b)=>rank(b)-rank(a))[0]||null;
+}
+function deviceSpeak(text,reopen=false,reason=''){ // Runs only after all media is stopped.
+ const messageText=String(text||'').trim();
+ stopVoice();spoken=messageText;
+ if(muted||!messageText)return;
+ const synth=window.speechSynthesis;
+ if(!synth||!window.SpeechSynthesisUtterance){
+  notice('This browser cannot read aloud. You can still play using the words on screen.');return;
+ }
+ const token=quickEpoch;
+ const utterance=new SpeechSynthesisUtterance(messageText);
+ const voice=australianVoice();if(voice)utterance.voice=voice;
+ utterance.lang=voice?.lang||'en-AU';utterance.rate=.91;utterance.pitch=1.08;utterance.volume=1;
+ speakerUtterance=utterance;
+ let began=false;
+ utterance.onstart=()=>{if(token!==quickEpoch||speakerUtterance!==utterance)return;began=true;activeSource='device';state('LENNY IS TALKING','speaking')};
+ utterance.onend=()=>{if(token!==quickEpoch||speakerUtterance!==utterance)return;speakerUtterance=null;activeSource='none';state(mode==='talk'?'YOUR TURN!':'LENNY IS READY');if(reopen&&keepChatting&&mode==='talk')setTimeout(listen,450)};
+ utterance.onerror=()=>{if(token!==quickEpoch||speakerUtterance!==utterance)return;speakerUtterance=null;activeSource='none';notice('Tap to hear Lenny. Your browser needs a tap before it can talk.','🔊 Tap to hear Lenny',()=>deviceSpeak(messageText,reopen,reason));state('LENNY IS READY')};
+ try{synth.cancel();synth.speak(utterance)}catch(err){utterance.onerror?.(err)}
+ if(reason)notice('The recorded voice isn’t on this site yet. Lenny is using your device’s voice.', '🔊 Hear again',()=>deviceSpeak(messageText,reopen,reason));
+}
+function playClip(key,text='',reopen=false){
+ const words=String(text||spoken||'').trim();
+ if(!voiceKeys.has(key)){deviceSpeak(words,reopen);return;}
+ stopVoice();spoken=words;
+ lastRecordedKey=key;lastRecordedText=words;lastRecordedMode=mode;
+ if(muted)return;
+ notice('');
+ if(failedClips.has(key)){deviceSpeak(words,reopen,'missing recording');return;}
+ const token=quickEpoch;
+ const possible=[];
+ const localUrl='assets/voice/'+key+'.mp3';
+ const remote=remoteClips[key];
+ if(localClips.has(key))possible.push({name:'local',src:localUrl});
+ if(remote)possible.push({name:'fal recording',src:remote});
+ // If GitHub uploaded MP3s without local-ready.js, also check that final local path.
+ if(!localClips.has(key))possible.push({name:'local',src:localUrl});
+ let index=0,done=false;
+ function tryNext(){
+  if(done||token!==quickEpoch)return;
+  if(index>=possible.length){
+   done=true;missingClipCount++;failedClips.add(key);lastClipError='No usable recording for '+key;
+   deviceSpeak(words,reopen,'missing recording');return;
+  }
+  const candidate=possible[index++];
+  const a=new Audio();a.preload='auto';a.volume=1;a.dataset.lennyKey=key;
+  a.dataset.source=candidate.name;
+  quickSound=a;
+  let started=false,closed=false;
+  function release(){a.onplay=a.onplaying=a.onended=a.onerror=null;try{a.pause();a.removeAttribute('src')}catch{}if(quickSound===a)quickSound=null}
+  function error(err){
+   if(closed||done||token!==quickEpoch||quickSound!==a)return;
+   closed=true;
+   lastClipError=String(err?.name||err?.message||'Media error')+' ('+candidate.name+')';
+   release();tryNext();
+  }
+  a.onplay=()=>{if(token!==quickEpoch||quickSound!==a)return;started=true;activeSource=candidate.name;try{synthesis?.cancel()}catch{};notice('');state('LENNY IS TALKING','speaking')};
+  a.onplaying=a.onplay;
+  a.onended=()=>{if(token!==quickEpoch||quickSound!==a)return;done=true;closed=true;release();activeSource='none';state(mode==='talk'?'YOUR TURN!':'LENNY IS READY');if(reopen&&keepChatting&&mode==='talk')setTimeout(listen,450)};
+  a.onerror=()=>error(new Error('Audio could not load'));
+  a.src=candidate.src;
+  try{
+   const p=a.play();
+   if(p?.catch)p.catch(err=>{
+    if(err?.name==='NotAllowedError'){
+      if(closed||token!==quickEpoch||quickSound!==a)return;
+      closed=true;release();activeSource='needs-tap';
+      notice('Tap to hear Lenny. Your browser needs a tap to start audio.', '🔊 Tap to hear Lenny',()=>playClip(key,words,reopen));
+      return;
+    }
+    error(err);
+   });
+  }catch(err){error(err)}
+ }
+ if(!possible.length){failedClips.add(key);deviceSpeak(words,reopen,'missing recording');return;}
+ tryNext();
+}
 window.LennyVoiceAudio={
- locked:()=>quickSound!==null,
+ locked:()=>quickSound!==null||speakerUtterance!==null,
  stop:()=>stopVoice(),
  get activeKey(){return quickSound?.dataset?.lennyKey||null},
  get lastKey(){return lastRecordedKey},
+ get activeSource(){return activeSource},
  get missingClips(){return missingClipCount},
- get lastError(){return lastClipError}
+ get lastError(){return lastClipError},
+ get remoteClips(){return Object.keys(remoteClips).length},
+ get localClips(){return localClips.size}
 };
-const beforeStopVoice=stopVoice;
-stopVoice=function(...args){
- haltLocal();
- return beforeStopVoice(...args);
-};
-const beforeSay=say;
-function showClipError(){
- // No robotic voice here. A missing recording stays readable on the screen.
- const el=e('status');
- if(el)el.textContent='Lenny’s recording is unavailable. You can read the words and try another activity.';
- state('LENNY IS READY');
-}
-function playClip(key,text='',reopen=false){
- if(!voiceKeys.has(key)){
-   if(text)beforeSay(text,reopen);
-   return;
- }
- // Cancel browser TTS BEFORE audio starts, including phrase continuations.
- stopVoice();
- spoken=String(text||spoken||'');
- lastRecordedKey=key;lastRecordedText=spoken;lastRecordedMode=mode;
- if(muted)return;
- const token=quickEpoch;
- let settled=false;
- const audio=new Audio();
- audio.dataset.lennyKey=key;
- audio.preload='auto';audio.volume=1;
- quickSound=audio;
- function fail(err){
-   if(settled||token!==quickEpoch||quickSound!==audio)return;
-   settled=true;
-   missingClipCount++;
-   lastClipError=(err&&err.name)||'Audio unavailable';
-   quickSound=null;
-   try{audio.pause();audio.removeAttribute('src');}catch{}
-   showClipError();
-   // Deliberately DO NOT invoke beforeSay or speechSynthesis. That was
-   // responsible for a second, computer-generated voice overlapping Lenny.
- }
- audio.onplay=()=>{
-   if(token!==quickEpoch||quickSound!==audio)return;
-   // Some mobile engines begin a queued computer utterance a tick late.
-   // Reassert recorded-audio priority after onplay.
-   if(synthesis)try{synthesis.cancel()}catch{}
-   state('LENNY IS TALKING','speaking');
- };
- audio.onended=()=>{
-   if(token!==quickEpoch||quickSound!==audio)return;
-   settled=true;quickSound=null;
-   state(mode==='talk'?'YOUR TURN!':'LENNY IS READY');
-   if(reopen&&keepChatting&&mode==='talk')setTimeout(listen,450);
- };
- audio.onerror=()=>fail(new Error('Recording could not load'));
- audio.src=soundPath(key);
- try{
-   const promise=audio.play();
-   if(promise&&typeof promise.catch==='function')promise.catch(fail);
- }catch(err){fail(err)}
-}
 function keyForSpeech(text){
- if(mode==='home'&&String(text||'').startsWith('Oh, hello,'))return 'welcome-v7';
+ if(mode==='home'&&(/Oh, hello|Hi,/.test(String(text||''))))return 'welcome-v7';
  const normalized=String(text||'').replace(/\s+/g,' ').trim();
  if(mode==='ideas' && ideaId>=0 && normalized.startsWith(ideas[ideaId][2]))return 'idea-'+String(ideaId).padStart(2,'0');
  if(mode==='joke'&&jokeIndex>=0 && jokes[jokeIndex]){
@@ -106,26 +159,13 @@ function keyForSpeech(text){
 }
 say=function(text=spoken,reopen=false){
  const key=keyForSpeech(text);
- if(key&&voiceKeys.has(key)){
-   playClip(key,text,reopen);
-   return;
- }
- // Never speak with the computer voice during the recorded joke experience.
- // This also covers punctuation mismatches and unexpected navigation calls.
- if(mode==='joke'){
-   stopVoice();spoken=String(text||'');
-   lastRecordedKey=null;lastRecordedText='';lastRecordedMode='';
-   return;
- }
- // Unrecorded, longer mission instructions and freeform conversations may
- // still use the device's reader, but only after all recorded audio stops.
- stopVoice();
- lastRecordedKey=null;lastRecordedText='';lastRecordedMode='';
- beforeSay(text,reopen);
+ if(key&&voiceKeys.has(key)){playClip(key,text,reopen);return;}
+ // Long instructions and free-form responses use exactly one speech owner.
+ deviceSpeak(text,reopen);
 };
 const beforeInterrupt=interrupt;
 interrupt=function(...args){
- haltLocal();lastRecordedKey=null;lastRecordedText='';lastRecordedMode='';
+ stopLocalOnly();lastRecordedKey=null;lastRecordedText='';lastRecordedMode='';
  return beforeInterrupt(...args);
 };
 function audioMoment(key,text=''){playClip(key,text||'Well done!')}

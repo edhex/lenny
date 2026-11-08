@@ -44,3 +44,8 @@ body[data-view=bighub] .content{background:linear-gradient(145deg,#f6f1ff,#f7fbf
 @keyframes star-win{from{transform:scale(.94) rotate(-11deg)}to{transform:scale(1.1) rotate(10deg)}}
 @media(max-width:720px){.main-choice{min-height:101px;padding:13px 14px}.main-choice .icon{font-size:2.3rem;width:48px;min-width:48px}.main-choice strong{font-size:1.15rem}.main-choice small{font-size:.74rem}.v7-hub-grid{gap:12px}.idea-filters{gap:6px}.idea-filter{font-size:.72rem;padding:7px 10px}.idea-illustration{height:130px}.idea-sub{padding:17px;font-size:1.06rem}.quick-win-emoji{font-size:4.5rem}}
 @media(prefers-reduced-motion:reduce){.idea-illustration,.quick-win-emoji{animation:none!important}.main-choice:before{display:none}}
+
+/* v10 audio-availability and tap-to-unlock note for Safari and Chrome */
+.lenny-audio-notice{margin:12px auto;max-width:880px;background:#fff9db;color:#483e57;border:2px solid #ffe99a;border-radius:16px;box-shadow:0 4px 0 #9b874533;padding:10px 15px;display:flex;align-items:center;justify-content:center;gap:12px;flex-wrap:wrap;font-size:.88rem;font-weight:750;text-align:center}
+.lenny-audio-notice[hidden]{display:none!important}
+.lenny-audio-notice button{min-height:48px;background:#fff;border-color:#e3b96c}

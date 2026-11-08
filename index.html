@@ -285,7 +285,7 @@ function say(text=spoken, reopen=false){
    message.onerror=()=>{
      if(activeSpeech!==message||epoch!==speechEpoch)return;
      activeSpeech=null;keepChatting=false;state('LENNY IS READY');
-     get('status').textContent=mode==='talk'?'Tap a picture reply to keep playing.':'Sound couldn’t play. You can follow the pictures and tap the big button.';
+     get('status').textContent=mode==='talk'?'Tap a picture reply to keep playing.':'Sound could not start. Tap Hear Lenny or follow the instructions on screen.';
    };
    if(epoch===speechEpoch&&token===viewToken&&!window.LennyVoiceAudio?.locked?.())synthesis.speak(message);
  }
@@ -885,6 +885,8 @@ document.addEventListener('visibilitychange',()=>{if(document.hidden)interrupt()
 loadVoices();if(synthesis)synthesis.addEventListener('voiceschanged',loadVoices);
 enterName();
 </script>
-<script src="assets/fun-pass.js?v=9"></script>
+<script src="assets/fun-pass.js?v=10"></script>
 
-<script src="assets/lenny-v7.js?v=9"></script></body></html>
+<script src="assets/voice-source-map.js?v=10"></script>
+<script src="assets/voice/local-ready.js?v=10"></script>
+<script src="assets/lenny-v7.js?v=10"></script></body></html>
