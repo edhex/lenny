@@ -1,0 +1,50 @@
+name: Publish Lenny with REAL Recorded Voices
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: lenny-pages
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout Lenny
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install and VERIFY all 213 recorded voices
+        run: |
+          python3 scripts/install_voices.py
+          python3 - <<'PY'
+          import json, pathlib, wave
+          root=pathlib.Path('assets/voice')
+          expected=json.loads(pathlib.Path('assets/voice-v7-sources.json').read_text())
+          installed=json.loads((root/'local-ready.js').read_text().split('=',1)[1].rstrip(' ;\n'))
+          missing=[key for key in expected if key not in installed or not (root/(key+'.wav')).is_file()]
+          print(f'Installed verified recordings: {len(expected)-len(missing)}/{len(expected)}')
+          if missing: raise SystemExit('FAILED: missing '+', '.join(missing))
+          PY
+      - name: Setup GitHub Pages
+        uses: actions/configure-pages@v5
+      - name: Package Lenny with actual WAV recordings
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - name: Deploy Lenny
+        id: deployment
+        uses: actions/deploy-pages@v4
