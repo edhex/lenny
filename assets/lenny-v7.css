@@ -1,0 +1,46 @@
+/* Lenny v7: three clear experiences, 48 quick boredom busters. */
+body[data-view="home"] .choices{display:grid;gap:16px}
+.main-choice{min-height:119px;border-radius:27px;padding:20px 18px;position:relative;overflow:hidden;isolation:isolate;box-shadow:0 7px 0 rgba(46,34,68,.17),0 15px 28px rgba(31,24,62,.12)!important;border:3px solid rgba(255,255,255,.85)!important;transition:transform .2s ease,box-shadow .2s ease}
+.main-choice:before{content:"";position:absolute;inset:-60% -35%;background:linear-gradient(110deg,transparent,rgba(255,255,255,.45),transparent);transform:translateX(-65%) rotate(12deg);z-index:-1;transition:transform .5s}
+.main-choice:hover:before{transform:translateX(55%) rotate(12deg)}
+.main-choice:hover{transform:translateY(-3px)}
+.main-choice.big-missions{background:linear-gradient(125deg,#e3dcff 0%,#d9eafc 100%)}
+.main-choice.quick-ideas{background:linear-gradient(125deg,#ffdf9f 0%,#ffd4d6 100%)}
+.main-choice.giggle-club{background:linear-gradient(125deg,#c8f6e7 0%,#d3ecff 100%)}
+.main-choice .icon{font-size:2.8rem;min-width:62px;width:62px;filter:drop-shadow(0 6px 6px rgba(80,49,94,.14))}
+.main-choice strong{font-size:clamp(1.25rem,2.2vw,1.42rem);letter-spacing:-.035em}
+.main-choice small{font-size:.87rem;max-width:33ch}
+.main-choice .arrow{font-size:2rem;font-weight:900}
+.talk-secondary{margin:18px 0 5px;background:rgba(255,255,255,.85);min-width:180px}
+.v7-kicker{display:inline-block;max-width:100%;font-size:.71rem;font-weight:1000;letter-spacing:.14em;color:#6d45a4;background:#fff4df;padding:8px 12px;margin-bottom:13px;border-radius:999px;text-transform:uppercase;border:1px solid rgba(112,78,148,.15)}
+.v7-hub-grid{display:grid;gap:16px;margin:24px 0 18px}
+.v7-hub-grid .choice{background:linear-gradient(120deg,#e6ddff,#e6f3ff)!important;border:2px solid rgba(255,255,255,.94);box-shadow:0 7px 0 #aaa0d544;min-height:104px}
+.idea-stats{padding:10px 14px;border-radius:14px;margin:8px 0 17px;background:#fff9f2;font-size:.84rem;color:#6c4e78;font-weight:800}
+.idea-filters{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:22px}
+.idea-filter{background:#fff;border:2px solid #dbd4e9;color:#71588c;font-size:.76rem;font-weight:900;min-height:44px;padding:9px 12px;border-radius:999px}
+.idea-filter.selected{background:#6746c9;color:#fff;border-color:#6746c9;box-shadow:0 6px 14px #6845bb33}
+.idea-main{display:grid;gap:13px}
+.idea-surprise{background:linear-gradient(135deg,#ffa75d,#ff76a6);border:2px solid #ffca95;box-shadow:0 7px 0 #b962a454;color:#573057}
+.idea-illustration{display:grid;place-items:center;font-size:clamp(4.2rem,13vw,7.2rem);width:min(200px,60vw);height:160px;margin:0 auto 16px;border-radius:35%;background:radial-gradient(circle,#fff9c2 2%,#f6c3dd 53%,transparent 75%);filter:drop-shadow(0 15px 19px #8f5a9633);animation:idea-float 3.6s ease-in-out infinite}
+.idea-sub{background:#fffefa;border:2px solid #e8dde9;border-radius:23px;padding:20px;font-size:1.24rem;line-height:1.42;font-weight:700}
+.idea-twist{margin:17px 0 21px;background:linear-gradient(125deg,#fff2bb,#ffe5ce);border:2px solid #ffe3af;padding:16px 18px;border-radius:23px}
+.idea-twist strong{font-size:1rem;color:#8d4871}
+.idea-twist p{font-size:1rem;margin:7px 0 0}
+.idea-action-area{display:grid;gap:11px}
+.idea-action-area .small{width:100%}
+.idea-tip{font-size:.8rem;color:#667677;margin-top:17px}
+.quick-win{text-align:center;display:flex;flex-direction:column;align-items:center;gap:7px}
+.quick-win h1{font-size:clamp(2rem,5vw,3.3rem);color:#644ab5}
+.quick-win strong{display:block;padding:10px 16px;background:#fff0be;color:#754c80;border-radius:99px;margin-bottom:17px}
+.quick-win .idea-action-area{width:100%;margin:10px 0}
+.quick-win-emoji{font-size:6rem;line-height:1.2;animation:star-win 1.1s cubic-bezier(.15,.9,.22,1.15) infinite alternate;filter:drop-shadow(0 14px 15px rgba(171,112,69,.25))}
+body[data-view=ideas] .content{background:linear-gradient(160deg,#fffef1,#fff7fa);border:4px solid #fff}
+body[data-view=ideas] .stage{filter:drop-shadow(0 14px 38px rgba(128,79,166,.25))}
+body[data-view=ideas][data-idea=movement] .content{background:linear-gradient(155deg,#fff3da,#fff9ee)}
+body[data-view=ideas][data-idea=pretend] .content{background:linear-gradient(155deg,#fae8ff,#fff7fd)}
+body[data-view=ideas][data-idea=outdoors] .content{background:linear-gradient(155deg,#e1fff2,#fffdf1)}
+body[data-view=bighub] .content{background:linear-gradient(145deg,#f6f1ff,#f7fbff)}
+@keyframes idea-float{0%,100%{transform:translateY(2px) rotate(-5deg)}50%{transform:translateY(-10px) rotate(5deg)}}
+@keyframes star-win{from{transform:scale(.94) rotate(-11deg)}to{transform:scale(1.1) rotate(10deg)}}
+@media(max-width:720px){.main-choice{min-height:101px;padding:13px 14px}.main-choice .icon{font-size:2.3rem;width:48px;min-width:48px}.main-choice strong{font-size:1.15rem}.main-choice small{font-size:.74rem}.v7-hub-grid{gap:12px}.idea-filters{gap:6px}.idea-filter{font-size:.72rem;padding:7px 10px}.idea-illustration{height:130px}.idea-sub{padding:17px;font-size:1.06rem}.quick-win-emoji{font-size:4.5rem}}
+@media(prefers-reduced-motion:reduce){.idea-illustration,.quick-win-emoji{animation:none!important}.main-choice:before{display:none}}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1086" height="1448" viewBox="0 0 1086 1448" role="img" aria-label="TOY SHOP illustrated adventure environment">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9d4b78"/><stop offset=".57" stop-color="#f49c8e"/><stop offset="1" stop-color="#ffe2ba"/></linearGradient><radialGradient id="glow"><stop stop-color="#fff1e7" stop-opacity=".88"/><stop offset="1" stop-color="#fff1e7" stop-opacity="0"/></radialGradient><pattern id="fine" width="54" height="54" patternUnits="userSpaceOnUse"><circle cx="5" cy="8" r="2.5" fill="#fff" opacity=".42"/></pattern><filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="15" flood-color="#9d4b78" flood-opacity=".18"/></filter></defs>
+<rect width="1086" height="1448" fill="url(#sky)"/>
+<circle cx="850" cy="270" r="310" fill="url(#glow)" opacity=".6"/>
+<rect width="1086" height="1448" fill="url(#fine)" opacity=".27"/>
+<circle cx="938" cy="186" r="142" fill="#fbd678" opacity=".55"/>
+<circle cx="936" cy="186" r="109" fill="#fff1e7" opacity=".29"/>
+<path d="M0 770Q160 655 330 760T680 716T1086 749V1448H0Z" fill="#ffe2ba" opacity=".20"/>
+<path d="M70 610H1020V1320H70Z" fill="#fff6dc" opacity=".64"/><path d="M55 570h990l-60 -180H116Z" fill="#ff8793"/><g fill="#fff7df"><path d="M150 405h128v225H150Z M406 405h128v225H406Z M662 405h128v225H662Z M918 405h128v225H918Z"/></g><path d="M82 635h920" stroke="#bd6589" stroke-width="29" stroke-linecap="round"/><rect x="130" y="830" width="260" height="360" rx="24" fill="#cfb4e9"/><rect x="698" y="830" width="260" height="360" rx="24" fill="#abd8d2"/><g fill="#f6c85d" stroke="#b87944" stroke-width="12"><circle cx="865" cy="620" r="65"/><circle cx="206" cy="730" r="47"/></g><g fill="#faeab1" font-family="sans-serif" font-size="60" font-weight="bold"><text x="845" y="642">5</text><text x="188" y="750">1</text></g>
+<g stroke="#fff1e7" stroke-width="9" stroke-linecap="round" fill="none" opacity=".55"><path d="M96 448q43 -56 90 0"/><path d="M904 725q43 -56 90 0"/><path d="M87 110l0 25m-13-12h26"/><path d="M1002 340v32m-16-16h32"/></g>
+<g filter="url(#shadow)" transform="translate(770 500) rotate(10)"><rect x="-123" y="-114" width="242" height="222" rx="56" fill="#fffaf4" fill-opacity=".86" stroke="#fff" stroke-width="12"/><text x="0" y="52" text-anchor="middle" font-size="130" font-family="Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif">🛍️</text></g>
+<g opacity=".58" fill="#fff1e7"><circle cx="137" cy="790" r="9"/><circle cx="185" cy="830" r="16"/><circle cx="590" cy="1240" r="11"/><circle cx="1040" cy="880" r="9"/></g>
+</svg>

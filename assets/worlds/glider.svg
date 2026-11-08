@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1086 1448" width="1086" height="1448" role="img" aria-label="GLIDER QUEST illustrated adventure world">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#405eaa"/><stop offset=".56" stop-color="#a7c5f1"/><stop offset="1" stop-color="#fdf0b8"/></linearGradient><radialGradient id="sun"><stop stop-color="#fff" stop-opacity=".58"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient><pattern id="dots" patternUnits="userSpaceOnUse" width="45" height="45"><circle cx="9" cy="9" r="3" fill="white" opacity=".26"/></pattern></defs>
+<rect width="1086" height="1448" fill="url(#sky)"/><circle cx="815" cy="230" r="390" fill="url(#sun)"/><rect width="1086" height="1448" fill="url(#dots)"/>
+<path d="M0 1110Q250 995 520 1100T1086 1070V1448H0Z" fill="#405eaa" opacity=".42"/><path d="M0 1220Q190 1120 440 1230T1086 1170V1448H0Z" fill="#405eaa" opacity=".25"/>
+<g opacity=".46" fill="#fff"><circle cx="151" cy="155" r="33"/><circle cx="207" cy="155" r="50"/><circle cx="278" cy="162" r="31"/><circle cx="880" cy="380" r="27"/><circle cx="930" cy="380" r="41"/><circle cx="988" cy="390" r="26"/></g>
+<g opacity=".9"><path d="M710 700l165 -65 -44 92 109 59 -180 18 -64 -78Z" fill="#fdf0b8" stroke="white" stroke-width="14" stroke-linejoin="round"/><path d="M740 704l126 19" stroke="#405eaa" stroke-width="8"/></g>
+<g fill="none" stroke="#fdf0b8" opacity=".88" stroke-width="13" stroke-linecap="round"><path d="M72 706q130 -120 275 -10" stroke-dasharray="16 21"/><path d="M870 880q92 58 135 -10" stroke-dasharray="15 21"/></g>
+<g fill="white" opacity=".86"><circle cx="92" cy="550" r="11"/><circle cx="998" cy="575" r="12"/><circle cx="118" cy="924" r="7"/><circle cx="980" cy="1070" r="10"/></g>
+</svg>

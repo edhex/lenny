@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1086" height="1448" viewBox="0 0 1086 1448" role="img" aria-label="MAZE LAND illustrated adventure environment">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#5c4d9d"/><stop offset=".57" stop-color="#a58adf"/><stop offset="1" stop-color="#e4d7fd"/></linearGradient><radialGradient id="glow"><stop stop-color="#f8efff" stop-opacity=".88"/><stop offset="1" stop-color="#f8efff" stop-opacity="0"/></radialGradient><pattern id="fine" width="54" height="54" patternUnits="userSpaceOnUse"><circle cx="5" cy="8" r="2.5" fill="#fff" opacity=".42"/></pattern><filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="15" flood-color="#5c4d9d" flood-opacity=".18"/></filter></defs>
+<rect width="1086" height="1448" fill="url(#sky)"/>
+<circle cx="850" cy="270" r="310" fill="url(#glow)" opacity=".6"/>
+<rect width="1086" height="1448" fill="url(#fine)" opacity=".27"/>
+<circle cx="938" cy="186" r="142" fill="#f9d492" opacity=".55"/>
+<circle cx="936" cy="186" r="109" fill="#f8efff" opacity=".29"/>
+<path d="M0 770Q160 655 330 760T680 716T1086 749V1448H0Z" fill="#e4d7fd" opacity=".20"/>
+<g stroke="#dacafb" stroke-width="27" fill="none" stroke-linejoin="round" opacity=".82"><path d="M90 450H460V600H220V770H540"/><path d="M980 360H680V570H920V790H660"/><path d="M70 970H320V1190H520V970H770V1180H990"/><path d="M110 1310H600V1260H900"/></g><g fill="#f9d498"><circle cx="210" cy="345" r="32"/><circle cx="825" cy="915" r="26"/><circle cx="535" cy="1130" r="20"/></g><g stroke="#fff9e5" stroke-width="11" stroke-linecap="round"><path d="M175 240l55 55m-55 0l55 -55"/><path d="M805 670l55 55m-55 0l55 -55"/></g>
+<g stroke="#f8efff" stroke-width="9" stroke-linecap="round" fill="none" opacity=".55"><path d="M96 448q43 -56 90 0"/><path d="M904 725q43 -56 90 0"/><path d="M87 110l0 25m-13-12h26"/><path d="M1002 340v32m-16-16h32"/></g>
+<g filter="url(#shadow)" transform="translate(770 500) rotate(10)"><rect x="-123" y="-114" width="242" height="222" rx="56" fill="#fffaf4" fill-opacity=".86" stroke="#fff" stroke-width="12"/><text x="0" y="52" text-anchor="middle" font-size="130" font-family="Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif">🌀</text></g>
+<g opacity=".58" fill="#f8efff"><circle cx="137" cy="790" r="9"/><circle cx="185" cy="830" r="16"/><circle cx="590" cy="1240" r="11"/><circle cx="1040" cy="880" r="9"/></g>
+</svg>

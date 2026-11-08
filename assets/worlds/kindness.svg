@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1086" height="1448" viewBox="0 0 1086 1448" role="img" aria-label="KINDNESS STREET illustrated adventure environment">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#9b6280"/><stop offset=".57" stop-color="#eaa8b3"/><stop offset="1" stop-color="#f7e0eb"/></linearGradient><radialGradient id="glow"><stop stop-color="#fff6e8" stop-opacity=".88"/><stop offset="1" stop-color="#fff6e8" stop-opacity="0"/></radialGradient><pattern id="fine" width="54" height="54" patternUnits="userSpaceOnUse"><circle cx="5" cy="8" r="2.5" fill="#fff" opacity=".42"/></pattern><filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="15" flood-color="#9b6280" flood-opacity=".18"/></filter></defs>
+<rect width="1086" height="1448" fill="url(#sky)"/>
+<circle cx="850" cy="270" r="310" fill="url(#glow)" opacity=".6"/>
+<rect width="1086" height="1448" fill="url(#fine)" opacity=".27"/>
+<circle cx="938" cy="186" r="142" fill="#f7e3a0" opacity=".55"/>
+<circle cx="936" cy="186" r="109" fill="#fff6e8" opacity=".29"/>
+<path d="M0 770Q160 655 330 760T680 716T1086 749V1448H0Z" fill="#f7e0eb" opacity=".20"/>
+<path d="M0 1040Q250 930 550 1010T1086 1020V1448H0Z" fill="#cdb5ca"/><g stroke="#f9edcd" stroke-width="18"><path d="M80 715h285v430H80Z" fill="#ffe4a5"/><path d="M80 715L220 555 365 715Z" fill="#e67a9e"/><path d="M750 730h280v450H750Z" fill="#d4f5ec"/><path d="M750 730L890 570 1030 730Z" fill="#9ebdd4"/></g><g fill="#fff9ed"><rect x="180" y="835" width="100" height="110" rx="12"/><rect x="830" y="845" width="100" height="110" rx="12"/></g><path d="M510 300C470 220 360 245 370 345Q380 430 510 510Q660 418 650 336Q637 226 535 276Z" fill="#f9d6d5" opacity=".75"/>
+<g stroke="#fff6e8" stroke-width="9" stroke-linecap="round" fill="none" opacity=".55"><path d="M96 448q43 -56 90 0"/><path d="M904 725q43 -56 90 0"/><path d="M87 110l0 25m-13-12h26"/><path d="M1002 340v32m-16-16h32"/></g>
+<g filter="url(#shadow)" transform="translate(770 500) rotate(10)"><rect x="-123" y="-114" width="242" height="222" rx="56" fill="#fffaf4" fill-opacity=".86" stroke="#fff" stroke-width="12"/><text x="0" y="52" text-anchor="middle" font-size="130" font-family="Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif">💛</text></g>
+<g opacity=".58" fill="#fff6e8"><circle cx="137" cy="790" r="9"/><circle cx="185" cy="830" r="16"/><circle cx="590" cy="1240" r="11"/><circle cx="1040" cy="880" r="9"/></g>
+</svg>

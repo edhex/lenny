@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1086" height="1448" viewBox="0 0 1086 1448" role="img" aria-label="INVENTION LAB illustrated adventure environment">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#18797f"/><stop offset=".57" stop-color="#62d5c6"/><stop offset="1" stop-color="#d6fff5"/></linearGradient><radialGradient id="glow"><stop stop-color="#edfdfa" stop-opacity=".88"/><stop offset="1" stop-color="#edfdfa" stop-opacity="0"/></radialGradient><pattern id="fine" width="54" height="54" patternUnits="userSpaceOnUse"><circle cx="5" cy="8" r="2.5" fill="#fff" opacity=".42"/></pattern><filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="15" flood-color="#18797f" flood-opacity=".18"/></filter></defs>
+<rect width="1086" height="1448" fill="url(#sky)"/>
+<circle cx="850" cy="270" r="310" fill="url(#glow)" opacity=".6"/>
+<rect width="1086" height="1448" fill="url(#fine)" opacity=".27"/>
+<circle cx="938" cy="186" r="142" fill="#e7c477" opacity=".55"/>
+<circle cx="936" cy="186" r="109" fill="#edfdfa" opacity=".29"/>
+<path d="M0 770Q160 655 330 760T680 716T1086 749V1448H0Z" fill="#d6fff5" opacity=".20"/>
+<g stroke="#d5fff5" stroke-width="12" fill="none" opacity=".55"><path d="M0 300H220V445h130v-80h250V200h340"/><path d="M1086 800H900V600H735v180H600"/><path d="M100 1050h230V935h250v240H920"/></g><g fill="#e0fff8" stroke="#7ce3dd" stroke-width="15"><path d="M830 540v220l170 240Q1075 1110 950 1150H725Q615 1110 695 1000l160 -240V540"/><path d="M725 910h255l-35 180H760Z" fill="#feacbd"/></g><g fill="#fffecf"><circle cx="815" cy="945" r="30"/><circle cx="910" cy="1020" r="18"/><circle cx="882" cy="884" r="16"/></g><g fill="#b2e5ed" opacity=".9"><circle cx="235" cy="670" r="35"/><circle cx="180" cy="760" r="22"/><circle cx="320" cy="590" r="18"/></g>
+<g stroke="#edfdfa" stroke-width="9" stroke-linecap="round" fill="none" opacity=".55"><path d="M96 448q43 -56 90 0"/><path d="M904 725q43 -56 90 0"/><path d="M87 110l0 25m-13-12h26"/><path d="M1002 340v32m-16-16h32"/></g>
+<g filter="url(#shadow)" transform="translate(770 500) rotate(10)"><rect x="-123" y="-114" width="242" height="222" rx="56" fill="#fffaf4" fill-opacity=".86" stroke="#fff" stroke-width="12"/><text x="0" y="52" text-anchor="middle" font-size="130" font-family="Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif">⚗️</text></g>
+<g opacity=".58" fill="#edfdfa"><circle cx="137" cy="790" r="9"/><circle cx="185" cy="830" r="16"/><circle cx="590" cy="1240" r="11"/><circle cx="1040" cy="880" r="9"/></g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1086" height="1448" viewBox="0 0 1086 1448" role="img" aria-label="FAIR PLAY PARK illustrated adventure environment">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#377c68"/><stop offset=".57" stop-color="#87cd89"/><stop offset="1" stop-color="#e1f4c4"/></linearGradient><radialGradient id="glow"><stop stop-color="#f2ffe9" stop-opacity=".88"/><stop offset="1" stop-color="#f2ffe9" stop-opacity="0"/></radialGradient><pattern id="fine" width="54" height="54" patternUnits="userSpaceOnUse"><circle cx="5" cy="8" r="2.5" fill="#fff" opacity=".42"/></pattern><filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="15" flood-color="#377c68" flood-opacity=".18"/></filter></defs>
+<rect width="1086" height="1448" fill="url(#sky)"/>
+<circle cx="850" cy="270" r="310" fill="url(#glow)" opacity=".6"/>
+<rect width="1086" height="1448" fill="url(#fine)" opacity=".27"/>
+<circle cx="938" cy="186" r="142" fill="#f8cf7a" opacity=".55"/>
+<circle cx="936" cy="186" r="109" fill="#f2ffe9" opacity=".29"/>
+<path d="M0 770Q160 655 330 760T680 716T1086 749V1448H0Z" fill="#e1f4c4" opacity=".20"/>
+<path d="M0 940Q160 820 340 910T705 870T1086 900V1448H0Z" fill="#8bd4a5"/><path d="M0 1185Q330 1105 550 1190T1086 1160V1448H0Z" fill="#469e83"/><g fill="#f7f2c7" stroke="#b7e8b9" stroke-width="11"><path d="M765 390h136v120q-60-25-60 39t60 40v100H765v-100q-65 27-65-38t65-42Z"/><path d="M920 810h110v110q-45-25-45 25t45 25v100H920v-100q-45 25-45-25t45-25Z"/></g><path d="M170 1040Q250 940 280 820Q410 820 445 925" fill="none" stroke="#f9e5ad" stroke-width="37" stroke-linecap="round"/><g fill="#f7d394"><circle cx="245" cy="760" r="22"/><circle cx="365" cy="755" r="15"/></g>
+<g stroke="#f2ffe9" stroke-width="9" stroke-linecap="round" fill="none" opacity=".55"><path d="M96 448q43 -56 90 0"/><path d="M904 725q43 -56 90 0"/><path d="M87 110l0 25m-13-12h26"/><path d="M1002 340v32m-16-16h32"/></g>
+<g filter="url(#shadow)" transform="translate(770 500) rotate(10)"><rect x="-123" y="-114" width="242" height="222" rx="56" fill="#fffaf4" fill-opacity=".86" stroke="#fff" stroke-width="12"/><text x="0" y="52" text-anchor="middle" font-size="130" font-family="Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif">🧩</text></g>
+<g opacity=".58" fill="#f2ffe9"><circle cx="137" cy="790" r="9"/><circle cx="185" cy="830" r="16"/><circle cx="590" cy="1240" r="11"/><circle cx="1040" cy="880" r="9"/></g>
+</svg>

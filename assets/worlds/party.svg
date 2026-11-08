@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1086" height="1448" viewBox="0 0 1086 1448" role="img" aria-label="PARTY PLANET illustrated adventure environment">
+<defs><linearGradient id="sky" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#964dbe"/><stop offset=".57" stop-color="#f08ac6"/><stop offset="1" stop-color="#ffd9ee"/></linearGradient><radialGradient id="glow"><stop stop-color="#fff0f9" stop-opacity=".88"/><stop offset="1" stop-color="#fff0f9" stop-opacity="0"/></radialGradient><pattern id="fine" width="54" height="54" patternUnits="userSpaceOnUse"><circle cx="5" cy="8" r="2.5" fill="#fff" opacity=".42"/></pattern><filter id="shadow"><feDropShadow dx="0" dy="14" stdDeviation="15" flood-color="#964dbe" flood-opacity=".18"/></filter></defs>
+<rect width="1086" height="1448" fill="url(#sky)"/>
+<circle cx="850" cy="270" r="310" fill="url(#glow)" opacity=".6"/>
+<rect width="1086" height="1448" fill="url(#fine)" opacity=".27"/>
+<circle cx="938" cy="186" r="142" fill="#ffd77f" opacity=".55"/>
+<circle cx="936" cy="186" r="109" fill="#fff0f9" opacity=".29"/>
+<path d="M0 770Q160 655 330 760T680 716T1086 749V1448H0Z" fill="#ffd9ee" opacity=".20"/>
+<g fill="none" stroke="#fff8d2" stroke-width="8" opacity=".75"><path d="M0 320Q240 150 530 335T1086 300"/></g><g transform="translate(810 530)"><ellipse cx="-90" cy="-78" rx="86" ry="115" fill="#ffe06f"/><ellipse cx="89" cy="-60" rx="83" ry="115" fill="#f58fb2"/><ellipse cx="14" cy="-190" rx="75" ry="104" fill="#a2e0fc"/><path d="M-90 38q-50 275 140 410M90 48q-90 295 -28 400M16 -80q-100 320 -15 500" fill="none" stroke="#ffe9dd" stroke-width="7"/></g><path d="M0 1180Q543 1060 1086 1180V1448H0Z" fill="#ecafd9"/><g fill="#fff7db"><path d="M70 580l18 26 31 -10-18 29 19 27-34 -7 -17 31-4 -33-35 -5 29 -18Z"/><path d="M940 960l18 26 31 -10-18 29 19 27-34 -7 -17 31-4 -33-35 -5 29 -18Z"/></g><g fill="#f8db93" opacity=".8"><circle cx="190" cy="390" r="12"/><circle cx="320" cy="545" r="14"/><circle cx="750" cy="280" r="9"/><circle cx="1000" cy="730" r="15"/></g>
+<g stroke="#fff0f9" stroke-width="9" stroke-linecap="round" fill="none" opacity=".55"><path d="M96 448q43 -56 90 0"/><path d="M904 725q43 -56 90 0"/><path d="M87 110l0 25m-13-12h26"/><path d="M1002 340v32m-16-16h32"/></g>
+<g filter="url(#shadow)" transform="translate(770 500) rotate(10)"><rect x="-123" y="-114" width="242" height="222" rx="56" fill="#fffaf4" fill-opacity=".86" stroke="#fff" stroke-width="12"/><text x="0" y="52" text-anchor="middle" font-size="130" font-family="Apple Color Emoji,Segoe UI Emoji,Noto Color Emoji,sans-serif">🎈</text></g>
+<g opacity=".58" fill="#fff0f9"><circle cx="137" cy="790" r="9"/><circle cx="185" cy="830" r="16"/><circle cx="590" cy="1240" r="11"/><circle cx="1040" cy="880" r="9"/></g>
+</svg>
