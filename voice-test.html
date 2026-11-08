@@ -6,18 +6,20 @@
 <button data-clip="jokef-00">2. Hear a whole joke</button>
 <button data-clip="idea-00">3. Hear a quick adventure</button>
 <button data-clip="mission-00">4. Hear a Big Mission</button>
+<button data-clip="hug-all">5. Hear six-heart giant lion hug</button>
+<button data-clip="guide-step">6. Hear Lenny explain a step</button>
 <div id="report" role="status">Tap one of the buttons to test the recorded voice.</div>
 <p><small>The total should be <b>213 / 213</b> new voice files. If it says zero, the recordings were never uploaded to GitHub Pages. On iPhone and iPad, tap a button to permit sound.</small></p><p><a href="./">Return to Lenny</a></p></main>
-<script src="assets/voice/local-ready.js?v=11"></script><script>
+<script src="assets/voice/local-ready.js?v=13"></script><script>
 const list=window.LENNY_LOCAL_CLIPS||[];const count=document.getElementById('count');
 const newCount=list.filter(k=>/^(mission-|jokef-|jokeq-|idea-|cheer-|star-|quick-win-|nav-|welcome-v7)/.test(k)).length;
-count.textContent=`Installed new recordings: ${newCount} / 213`+(newCount===213?' ✅':' ⚠️');
+count.textContent=`Installed new recordings: ${newCount} / 213`+(newCount===213?' ✅':' ⚠️')+` · New heart and guide recordings: ${list.filter(k=>k.startsWith('hug-')||k.startsWith('guide-')).length} / 9`;
 let active=null;
 document.querySelectorAll('button[data-clip]').forEach(b=>b.addEventListener('click',async()=>{
  const k=b.dataset.clip;const report=document.getElementById('report');
  if(active){active.pause();active.removeAttribute('src');active=null;}
  if(!list.includes(k)){report.textContent=`Not installed: assets/voice/${k}.wav`;return}
- const a=new Audio('assets/voice/'+k+'.wav?v=11');active=a;
+ const a=new Audio('assets/voice/'+k+'.wav?v=13');active=a;
  a.onplaying=()=>report.textContent=`Playing REAL recording: ${k}`;
  a.onerror=()=>report.textContent=`File missing or unreadable: assets/voice/${k}.wav`;
  a.onended=()=>report.textContent=`Playback completed successfully: ${k} ✅`;
