@@ -727,7 +727,11 @@ function findHeart(id){
  get('hugText').textContent=line;
  get('hugCount').textContent=all?'You found every secret heart!':progress.hearts.length+' of 6 secret hearts found';
  const taskSpeech=spoken;
- say(line+' You found a secret heart. Squeeeze!');
+ if(window.LennyVoiceAudio?.play){
+   window.LennyVoiceAudio.play(all?'hug-all':'hug-one',line);
+ }else{
+   get('hugText').textContent=line;
+ }
  spoken=taskSpeech;
  hugTimer=setTimeout(closeHug,all?6000:4200);
 }
@@ -889,4 +893,4 @@ enterName();
 
 <script src="assets/voice-source-map.js?v=11"></script>
 <script src="assets/voice/local-ready.js?v=11"></script>
-<script src="assets/lenny-v7.js?v=11"></script></body></html>
+<script src="assets/lenny-v7.js?v=12"></script></body></html>
