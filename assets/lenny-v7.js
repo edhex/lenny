@@ -79,7 +79,7 @@ function deviceSpeak(text,reopen=false,reason=''){ // Runs only after all media 
 }
 function playClip(key,text='',reopen=false){
  const words=String(text||spoken||'').trim();
- if(!voiceKeys.has(key)){deviceSpeak(words,reopen);return;}
+ if(!voiceKeys.has(key)&&!localClips.has(key)&&!remoteClips[key]){notice('This Lenny recording is not installed yet.');return;}
  stopVoice();spoken=words;
  lastRecordedKey=key;lastRecordedText=words;lastRecordedMode=mode;
  if(muted)return;
@@ -98,7 +98,7 @@ function playClip(key,text='',reopen=false){
   if(done||token!==quickEpoch)return;
   if(index>=possible.length){
    done=true;missingClipCount++;failedClips.add(key);lastClipError='No usable recording for '+key;
-   deviceSpeak(words,reopen,'missing recording');return;
+   notice('Lenny’s recorded voice is unavailable. Please tap to retry.','🔊 Retry Lenny’s voice',()=>playClip(key,words,reopen));return;
   }
   const candidate=possible[index++];
   const a=new Audio();a.preload='auto';a.volume=1;a.dataset.lennyKey=key;
@@ -143,7 +143,8 @@ window.LennyVoiceAudio={
  get lastError(){return lastClipError},
  get remoteClips(){return Object.keys(remoteClips).length},
  get localClips(){return localClips.size},
- get version(){return '11-local-audio'}
+ play:(key,text='',reopen=false)=>playClip(key,text,reopen),
+ get version(){return '12-heart-voice'}
 };
 function keyForSpeech(text){
  if(mode==='home'&&(/Oh, hello|Hi,/.test(String(text||''))))return 'welcome-v7';
