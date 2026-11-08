@@ -10,8 +10,9 @@ const e = id => document.getElementById(id);
 const escapeText = s => String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const mobileTop = () => {if(matchMedia('(max-width:720px)').matches) requestAnimationFrame(()=>scrollTo({top:0,behavior:'instant'}));};
 let ideaFilter='all', ideaId=-1, arcadeLauncher=null, quickSound=null, quickEpoch=0;
-// ONE audio owner: local MP3 -> completed fal WAV -> one device TTS fallback.
-// Never run media audio and browser narration simultaneously. v10.
+// ONE audio owner: verified local WAV -> local MP3 -> remote WAV -> ONE device speech fallback.
+// Local files are bundled using Install-Lenny-Voices-Mac.command or GitHub Actions.
+// Never run media audio and browser narration simultaneously. v11.
 const remoteClips=window.LENNY_VOICE_REMOTE||{};
 const localClips=new Set(window.LENNY_LOCAL_CLIPS||[]);
 const failedClips=new Set();
@@ -83,15 +84,15 @@ function playClip(key,text='',reopen=false){
  lastRecordedKey=key;lastRecordedText=words;lastRecordedMode=mode;
  if(muted)return;
  notice('');
- if(failedClips.has(key)){deviceSpeak(words,reopen,'missing recording');return;}
+ // Always retry on a fresh tap: recordings may have been installed since the last attempt.
  const token=quickEpoch;
  const possible=[];
- const localUrl='assets/voice/'+key+'.mp3';
+ const localWav='assets/voice/'+key+'.wav';
+ const localMp3='assets/voice/'+key+'.mp3';
  const remote=remoteClips[key];
- if(localClips.has(key))possible.push({name:'local',src:localUrl});
+ if(localClips.has(key)){possible.push({name:'local WAV',src:localWav});possible.push({name:'local MP3',src:localMp3});}
+ if(!localClips.has(key)){possible.push({name:'local WAV',src:localWav});possible.push({name:'local MP3',src:localMp3});}
  if(remote)possible.push({name:'fal recording',src:remote});
- // If GitHub uploaded MP3s without local-ready.js, also check that final local path.
- if(!localClips.has(key))possible.push({name:'local',src:localUrl});
  let index=0,done=false;
  function tryNext(){
   if(done||token!==quickEpoch)return;
@@ -141,7 +142,8 @@ window.LennyVoiceAudio={
  get missingClips(){return missingClipCount},
  get lastError(){return lastClipError},
  get remoteClips(){return Object.keys(remoteClips).length},
- get localClips(){return localClips.size}
+ get localClips(){return localClips.size},
+ get version(){return '11-local-audio'}
 };
 function keyForSpeech(text){
  if(mode==='home'&&(/Oh, hello|Hi,/.test(String(text||''))))return 'welcome-v7';
