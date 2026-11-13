@@ -207,6 +207,10 @@ function readProgress(key){
 }
 progress=readProgress(profileKey);
 function save(){try{localStorage.setItem(profileKey,JSON.stringify(progress));}catch{}}
+function trackGameplay(eventName){
+ if(typeof window.plausible!=='function')return;
+ try{window.plausible(eventName);}catch{}
+}
 function enterName(){
  interrupt();mode='welcome';playerName='';
  content('<p class="eyebrow">Your adventure starts here</p><h1>Hello, explorer!</h1><p class="sub">What should Lenny call you?</p><form id="nameForm"><label for="playerName">Your name or nickname</label><input id="playerName" name="nickname" maxlength="24" autocomplete="off" enterkeyhint="go" required><p class="name-note">A made-up name is fine.</p><button class="big" type="submit">Let’s play! 🐾</button></form>',
@@ -224,6 +228,7 @@ function enterName(){
    }catch{}
    progress=readProgress(claimLegacy?'lenny-journey-v1':profileKey);save();
    try{localStorage.setItem('lenny-last-player',name);localStorage.setItem('lenny-legacy-claimed','yes');}catch{}
+   trackGameplay('Play Started');
    home(true);
  };
 }
@@ -333,6 +338,7 @@ function completeTask(index){
  if(index!==progress.done.length||mode!=='journey'||taskPage!==quests[progress.tasks[index]][4].length+2)return;
  progress.done.push(index);progress.page=0;
  earnSnack();
+ trackGameplay('Mission Completed');
  showEarnedSnack('journey');
 }
 function earnSnack(){
@@ -365,6 +371,7 @@ function feedLenny(destination){
  if(feeding||!progress.snacks.length)return;
  interrupt();mode='feed';
  const snack=progress.snacks.shift();save();
+ trackGameplay('Lenny Fed');
  content('<p class="eyebrow">Lenny’s snack time</p><h1>Nom, nom, nom!</h1><p class="sub">Watch those little lion chompers.</p>', 'Nom, nom, nom!');
  feeding=true;get('homeButton').disabled=true;
  get('feedingFoodUse').setAttribute('href','#pixel-'+snack);
@@ -689,6 +696,7 @@ function findHeart(id){
  cancelMic();stopVoice();keepChatting=false;clearReward();
  closeHug();get('hugScene').hidden=false;get('stage').dataset.hug='true';
  const all=progress.hearts.length===6;
+ if(all&&isNew)trackGameplay('All Six Hearts Found');
  const line=all&&isNew?'All six! A giant lion hug, '+playerName+'!':'A little lion hug, '+playerName+'!';
  get('hugText').textContent=line;
  get('hugCount').textContent=all?'You found every secret heart!':progress.hearts.length+' of 6 secret hearts found';
